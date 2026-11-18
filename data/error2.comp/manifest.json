@@ -1,0 +1,84 @@
+{
+  "activeLayerID" : "73E74D88-8F67-4F7B-AE2F-D03CC0B6F4C4",
+  "colorSpace" : "sRGB",
+  "documentID" : "D5936574-3650-4049-9E1F-966E9C289194",
+  "format" : "com.compositor.project",
+  "height" : 130,
+  "layers" : [
+    {
+      "blendMode" : "Normal",
+      "id" : "4D11361E-5163-4FB5-B91E-B379D7D6F416",
+      "imageFile" : "4D11361E-5163-4FB5-B91E-B379D7D6F416.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "test_image - 1 (2)",
+      "opacity" : 1,
+      "transform" : {
+        "flipX" : false,
+        "flipY" : false,
+        "origin" : [
+          0,
+          0
+        ],
+        "rotation" : 0,
+        "sampling" : "High quality",
+        "size" : [
+          387,
+          130
+        ]
+      }
+    },
+    {
+      "blendMode" : "Normal",
+      "effects" : {
+        "shadow" : {
+          "angle" : 122.45880681818187,
+          "blue" : 0,
+          "blur" : 1.1115056818181817,
+          "distance" : 1.3813920454545454,
+          "green" : 0,
+          "opacity" : 0.23568892045454548,
+          "red" : 0
+        }
+      },
+      "id" : "73E74D88-8F67-4F7B-AE2F-D03CC0B6F4C4",
+      "imageFile" : "73E74D88-8F67-4F7B-AE2F-D03CC0B6F4C4.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "This device run faster on USB 3.0",
+      "opacity" : 1,
+      "text" : {
+        "alignment" : "Left",
+        "blue" : 0.8313725490196079,
+        "boxSize" : [
+          301,
+          57
+        ],
+        "content" : "This device run faster on USB 3.0\n",
+        "fontName" : "SegoePro-SemiLight",
+        "fontSize" : 16,
+        "green" : 0.34509803921568627,
+        "leading" : 0,
+        "red" : 0.2901960784313726,
+        "tracking" : 0
+      },
+      "transform" : {
+        "flipX" : false,
+        "flipY" : false,
+        "origin" : [
+          50,
+          17
+        ],
+        "rotation" : 0,
+        "sampling" : "High quality",
+        "size" : [
+          301,
+          57
+        ]
+      }
+    }
+  ],
+  "resolution" : 72,
+  "version" : 11,
+  "width" : 387
+}

@@ -1,0 +1,9 @@
+Input filename: test image 4.png
+Format: PNG
+Size (height, width): (3840, 2160)
+JPEG quality: 80
+Display max: 20
+Overlay alpha: 0.5
+Mean absolute error: 1.1698
+Analysis time, memory JPEG round trip (ms): 86.68
+ELA values are pixel differences, not forgery probabilities.

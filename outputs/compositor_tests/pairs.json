@@ -1,0 +1,46 @@
+{
+  "pairs": [
+    {
+      "name": "duyuru",
+      "source_package": "data/duyuru.comp",
+      "width": 2160,
+      "height": 3840,
+      "control": "duyuru_control.png",
+      "render": "duyuru_render.png",
+      "control_definition": "First opaque full-canvas background layer",
+      "render_definition": "All visible layers with position, size, rotation, flips, opacity and supported shadow",
+      "changed_pixels": 87963,
+      "source_manifest_sha256": "61be5bb5c602ba2a4077da30e1341064e89f6accacf2131b4e148223089f20e7",
+      "native_compositor_export": false,
+      "uses_shadow": false
+    },
+    {
+      "name": "karga",
+      "source_package": "data/karga.comp",
+      "width": 4284,
+      "height": 5712,
+      "control": "karga_control.png",
+      "render": "karga_render.png",
+      "control_definition": "First opaque full-canvas background layer",
+      "render_definition": "All visible layers with position, size, rotation, flips, opacity and supported shadow",
+      "changed_pixels": 22814,
+      "source_manifest_sha256": "89adbd6b7381e855a42d93c41669c73fcfa34617c5cc6bbac438cb80201af35c",
+      "native_compositor_export": false,
+      "uses_shadow": false
+    },
+    {
+      "name": "error",
+      "source_package": "data/error.comp",
+      "width": 387,
+      "height": 130,
+      "control": "error_control.png",
+      "render": "error_render.png",
+      "control_definition": "First opaque full-canvas background layer",
+      "render_definition": "All visible layers with position, size, rotation, flips, opacity and supported shadow",
+      "changed_pixels": 2914,
+      "source_manifest_sha256": "7a861562c43da4b6067a737e168572a10b33584d7a0c85503ecdc6125bdb53f1",
+      "native_compositor_export": false,
+      "uses_shadow": true
+    }
+  ]
+}

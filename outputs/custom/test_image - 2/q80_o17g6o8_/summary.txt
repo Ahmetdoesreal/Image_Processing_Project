@@ -1,0 +1,9 @@
+Input filename: test_image - 2.jpeg
+Format: MPO
+Size (height, width): (5712, 4284)
+JPEG quality: 80
+Display max: 20
+Overlay alpha: 0.5
+Mean absolute error: 0.8027
+Analysis time, memory JPEG round trip (ms): 299.26
+ELA values are pixel differences, not forgery probabilities.

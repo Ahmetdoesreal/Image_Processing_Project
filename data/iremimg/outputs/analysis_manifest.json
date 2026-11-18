@@ -1,0 +1,3204 @@
+{
+  "source_directory": "data/iremimg",
+  "source_count": 6,
+  "qualities": [
+    5,
+    10,
+    20,
+    40,
+    60,
+    80,
+    90,
+    95
+  ],
+  "display_max": 20,
+  "overlay_alpha": 0.55,
+  "analysis_resolution": "Full decoded pixel resolution for every view; no pre-analysis resize",
+  "split_protocol": "Whole collage and left/right midpoint crops are analyzed independently; cropped JPEG recompression is a separate experiment",
+  "timing_scope": "JPEG encode, decode, absolute difference and channel averaging; excludes source loading, statistics, plotting and export",
+  "authenticity_labels": false,
+  "ground_truth_masks_available": false,
+  "format_note": "Non-JPEG inputs measure AVIF/WebP/PNG-to-JPEG differences, not a verified original JPEG history",
+  "edge_parameters": {
+    "method": "Canny",
+    "low_threshold": 100,
+    "high_threshold": 200
+  },
+  "images": [
+    {
+      "id": "01",
+      "source_file": "596fa37556152c22b45c6eb2.avif",
+      "source_sha256": "ad1b652b50d5848d48cdf47646f90c841bbd87535e1293b690196d6d8ede9cad",
+      "source_format": "AVIF",
+      "source_bytes": 225949,
+      "source_size": [
+        1920,
+        640
+      ],
+      "decoded_size": [
+        1920,
+        640
+      ],
+      "has_alpha": false,
+      "split_x": 960,
+      "folder": "images/01_596fa37556152c22b45c6eb2",
+      "views": {
+        "whole": {
+          "view": "whole",
+          "width": 1920,
+          "height": 640,
+          "source": "images/01_596fa37556152c22b45c6eb2/whole/source.png",
+          "edges": "images/01_596fa37556152c22b45c6eb2/whole/edges.png",
+          "histogram": "images/01_596fa37556152c22b45c6eb2/whole/histogram.png",
+          "raw_maps": "images/01_596fa37556152c22b45c6eb2/whole/raw_ela_maps.npz",
+          "metrics_csv": "images/01_596fa37556152c22b45c6eb2/whole/metrics.csv",
+          "overview_q20": "images/01_596fa37556152c22b45c6eb2/whole/overview_q20.png",
+          "jpeg_comparison": "images/01_596fa37556152c22b45c6eb2/whole/jpeg_comparison.png",
+          "ela_comparison": "images/01_596fa37556152c22b45c6eb2/whole/ela_comparison.png",
+          "overlay_comparison": "images/01_596fa37556152c22b45c6eb2/whole/overlay_comparison.png",
+          "rgb_difference_q20": "images/01_596fa37556152c22b45c6eb2/whole/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q05.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q05.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 12.032445204152634,
+                "median_error": 9.666666984558105,
+                "p90_error": 23.33333396911621,
+                "p95_error": 30.33333396911621,
+                "p99_error": 46.0,
+                "max_error": 121.0,
+                "channel_rmse": 16.24086016000936,
+                "display_clipped_percent": 13.628580729166666,
+                "jpeg_bytes": 34745,
+                "analysis_ms": 16.486833977978677
+              }
+            },
+            "10": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q10.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q10.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 8.436581217512673,
+                "median_error": 6.0,
+                "p90_error": 17.66666603088379,
+                "p95_error": 23.0,
+                "p99_error": 35.33333206176758,
+                "max_error": 113.33333587646484,
+                "channel_rmse": 11.757343798336183,
+                "display_clipped_percent": 7.11572265625,
+                "jpeg_bytes": 52677,
+                "analysis_ms": 13.3382499916479
+              }
+            },
+            "20": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q20.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q20.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 6.064025607178895,
+                "median_error": 4.333333492279053,
+                "p90_error": 13.0,
+                "p95_error": 17.33333396911621,
+                "p99_error": 26.66666603088379,
+                "max_error": 74.33333587646484,
+                "channel_rmse": 8.655404340962678,
+                "display_clipped_percent": 3.0828450520833335,
+                "jpeg_bytes": 83292,
+                "analysis_ms": 14.226708968635648
+              }
+            },
+            "40": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q40.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q40.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 4.412356500576667,
+                "median_error": 3.0,
+                "p90_error": 10.0,
+                "p95_error": 13.0,
+                "p99_error": 20.33333396911621,
+                "max_error": 61.33333206176758,
+                "channel_rmse": 6.4559806492633784,
+                "display_clipped_percent": 1.0310872395833333,
+                "jpeg_bytes": 126564,
+                "analysis_ms": 14.092166966293007
+              }
+            },
+            "60": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q60.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q60.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.5859708673038644,
+                "median_error": 2.3333332538604736,
+                "p90_error": 8.0,
+                "p95_error": 10.666666984558105,
+                "p99_error": 16.66666603088379,
+                "max_error": 47.33333206176758,
+                "channel_rmse": 5.263759431927419,
+                "display_clipped_percent": 0.3521321614583333,
+                "jpeg_bytes": 166145,
+                "analysis_ms": 14.531707973219454
+              }
+            },
+            "80": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q80.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q80.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.4371202274592116,
+                "median_error": 1.6666666269302368,
+                "p90_error": 5.666666507720947,
+                "p95_error": 7.333333492279053,
+                "p99_error": 11.333333015441895,
+                "max_error": 27.33333396911621,
+                "channel_rmse": 3.670817593018656,
+                "display_clipped_percent": 0.012939453125,
+                "jpeg_bytes": 238342,
+                "analysis_ms": 15.293707954697311
+              }
+            },
+            "90": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q90.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q90.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.5045328802732063,
+                "median_error": 1.0,
+                "p90_error": 3.3333332538604736,
+                "p95_error": 4.333333492279053,
+                "p99_error": 6.666666507720947,
+                "max_error": 17.66666603088379,
+                "channel_rmse": 2.303900583641915,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 345555,
+                "analysis_ms": 16.04624994797632
+              }
+            },
+            "95": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q95.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q95.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.8784931134847284,
+                "median_error": 1.0,
+                "p90_error": 2.0,
+                "p95_error": 2.3333332538604736,
+                "p99_error": 3.3333332538604736,
+                "max_error": 14.333333015441895,
+                "channel_rmse": 1.3925999357903167,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 467265,
+                "analysis_ms": 16.58966700779274
+              }
+            }
+          }
+        },
+        "left": {
+          "view": "left",
+          "width": 960,
+          "height": 640,
+          "source": "images/01_596fa37556152c22b45c6eb2/left/source.png",
+          "edges": "images/01_596fa37556152c22b45c6eb2/left/edges.png",
+          "histogram": "images/01_596fa37556152c22b45c6eb2/left/histogram.png",
+          "raw_maps": "images/01_596fa37556152c22b45c6eb2/left/raw_ela_maps.npz",
+          "metrics_csv": "images/01_596fa37556152c22b45c6eb2/left/metrics.csv",
+          "overview_q20": "images/01_596fa37556152c22b45c6eb2/left/overview_q20.png",
+          "jpeg_comparison": "images/01_596fa37556152c22b45c6eb2/left/jpeg_comparison.png",
+          "ela_comparison": "images/01_596fa37556152c22b45c6eb2/left/ela_comparison.png",
+          "overlay_comparison": "images/01_596fa37556152c22b45c6eb2/left/overlay_comparison.png",
+          "rgb_difference_q20": "images/01_596fa37556152c22b45c6eb2/left/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q05.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q05.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 12.026113282188938,
+                "median_error": 9.666666984558105,
+                "p90_error": 23.33333396911621,
+                "p95_error": 30.33333396911621,
+                "p99_error": 46.0,
+                "max_error": 121.0,
+                "channel_rmse": 16.23296302409596,
+                "display_clipped_percent": 13.60595703125,
+                "jpeg_bytes": 17664,
+                "analysis_ms": 6.7428749753162265
+              }
+            },
+            "10": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q10.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q10.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 8.446207139564503,
+                "median_error": 6.0,
+                "p90_error": 17.66666603088379,
+                "p95_error": 23.0,
+                "p99_error": 35.33333206176758,
+                "max_error": 83.33333587646484,
+                "channel_rmse": 11.774784619808633,
+                "display_clipped_percent": 7.159016927083333,
+                "jpeg_bytes": 26625,
+                "analysis_ms": 6.54554198263213
+              }
+            },
+            "20": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q20.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q20.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 6.057861869729871,
+                "median_error": 4.333333492279053,
+                "p90_error": 13.0,
+                "p95_error": 17.33333396911621,
+                "p99_error": 26.66666603088379,
+                "max_error": 73.0,
+                "channel_rmse": 8.642437115335854,
+                "display_clipped_percent": 3.0548502604166665,
+                "jpeg_bytes": 41971,
+                "analysis_ms": 7.154625025577843
+              }
+            },
+            "40": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q40.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q40.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 4.414249133116536,
+                "median_error": 3.0,
+                "p90_error": 10.0,
+                "p95_error": 13.0,
+                "p99_error": 20.33333396911621,
+                "max_error": 61.33333206176758,
+                "channel_rmse": 6.458268816882053,
+                "display_clipped_percent": 1.0341796875,
+                "jpeg_bytes": 63521,
+                "analysis_ms": 6.879125023260713
+              }
+            },
+            "60": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q60.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q60.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.590037436314839,
+                "median_error": 2.3333332538604736,
+                "p90_error": 8.0,
+                "p95_error": 10.666666984558105,
+                "p99_error": 16.66666603088379,
+                "max_error": 38.66666793823242,
+                "channel_rmse": 5.267561927386726,
+                "display_clipped_percent": 0.35302734375,
+                "jpeg_bytes": 83363,
+                "analysis_ms": 7.439333014190197
+              }
+            },
+            "80": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q80.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q80.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.4391623281788393,
+                "median_error": 1.6666666269302368,
+                "p90_error": 5.666666507720947,
+                "p95_error": 7.333333492279053,
+                "p99_error": 11.333333015441895,
+                "max_error": 27.33333396911621,
+                "channel_rmse": 3.672535401604955,
+                "display_clipped_percent": 0.013671875,
+                "jpeg_bytes": 119475,
+                "analysis_ms": 7.338916999287903
+              }
+            },
+            "90": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q90.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q90.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.5056532144951051,
+                "median_error": 1.0,
+                "p90_error": 3.3333332538604736,
+                "p95_error": 4.333333492279053,
+                "p99_error": 6.666666507720947,
+                "max_error": 17.66666603088379,
+                "channel_rmse": 2.3051532603754232,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 173259,
+                "analysis_ms": 7.8566669835709035
+              }
+            },
+            "95": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q95.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q95.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.87764106268849,
+                "median_error": 1.0,
+                "p90_error": 2.0,
+                "p95_error": 2.3333332538604736,
+                "p99_error": 3.3333332538604736,
+                "max_error": 14.333333015441895,
+                "channel_rmse": 1.39202566789174,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 234046,
+                "analysis_ms": 8.587874996010214
+              }
+            }
+          }
+        },
+        "right": {
+          "view": "right",
+          "width": 960,
+          "height": 640,
+          "source": "images/01_596fa37556152c22b45c6eb2/right/source.png",
+          "edges": "images/01_596fa37556152c22b45c6eb2/right/edges.png",
+          "histogram": "images/01_596fa37556152c22b45c6eb2/right/histogram.png",
+          "raw_maps": "images/01_596fa37556152c22b45c6eb2/right/raw_ela_maps.npz",
+          "metrics_csv": "images/01_596fa37556152c22b45c6eb2/right/metrics.csv",
+          "overview_q20": "images/01_596fa37556152c22b45c6eb2/right/overview_q20.png",
+          "jpeg_comparison": "images/01_596fa37556152c22b45c6eb2/right/jpeg_comparison.png",
+          "ela_comparison": "images/01_596fa37556152c22b45c6eb2/right/ela_comparison.png",
+          "overlay_comparison": "images/01_596fa37556152c22b45c6eb2/right/overlay_comparison.png",
+          "rgb_difference_q20": "images/01_596fa37556152c22b45c6eb2/right/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q05.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q05.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 12.039278428239292,
+                "median_error": 9.666666984558105,
+                "p90_error": 23.33333396911621,
+                "p95_error": 30.33333396911621,
+                "p99_error": 46.0,
+                "max_error": 114.33333587646484,
+                "channel_rmse": 16.250106002592293,
+                "display_clipped_percent": 13.6513671875,
+                "jpeg_bytes": 17700,
+                "analysis_ms": 6.208458973560482
+              }
+            },
+            "10": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q10.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q10.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 8.427770725116279,
+                "median_error": 6.0,
+                "p90_error": 17.33333396911621,
+                "p95_error": 23.0,
+                "p99_error": 35.33333206176758,
+                "max_error": 113.33333587646484,
+                "channel_rmse": 11.741379239111218,
+                "display_clipped_percent": 7.07275390625,
+                "jpeg_bytes": 26657,
+                "analysis_ms": 7.560666999779642
+              }
+            },
+            "20": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q20.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q20.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 6.070837673613326,
+                "median_error": 4.333333492279053,
+                "p90_error": 13.0,
+                "p95_error": 17.33333396911621,
+                "p99_error": 27.0,
+                "max_error": 74.33333587646484,
+                "channel_rmse": 8.669448359176641,
+                "display_clipped_percent": 3.11083984375,
+                "jpeg_bytes": 41962,
+                "analysis_ms": 7.133709033951163
+              }
+            },
+            "40": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q40.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q40.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 4.411015083330518,
+                "median_error": 3.0,
+                "p90_error": 10.0,
+                "p95_error": 13.0,
+                "p99_error": 20.33333396911621,
+                "max_error": 59.33333206176758,
+                "channel_rmse": 6.454507561405676,
+                "display_clipped_percent": 1.0279947916666667,
+                "jpeg_bytes": 63688,
+                "analysis_ms": 6.990750029217452
+              }
+            },
+            "60": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q60.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q60.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.5824614814494757,
+                "median_error": 2.3333332538604736,
+                "p90_error": 8.0,
+                "p95_error": 10.666666984558105,
+                "p99_error": 16.66666603088379,
+                "max_error": 47.33333206176758,
+                "channel_rmse": 5.260813361692515,
+                "display_clipped_percent": 0.3512369791666667,
+                "jpeg_bytes": 83396,
+                "analysis_ms": 6.9847500417381525
+              }
+            },
+            "80": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q80.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q80.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.4355056440989817,
+                "median_error": 1.6666666269302368,
+                "p90_error": 5.666666507720947,
+                "p95_error": 7.333333492279053,
+                "p99_error": 11.333333015441895,
+                "max_error": 27.33333396911621,
+                "channel_rmse": 3.6697304612172963,
+                "display_clipped_percent": 0.01220703125,
+                "jpeg_bytes": 119565,
+                "analysis_ms": 7.514709024690092
+              }
+            },
+            "90": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q90.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q90.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.5037179931003386,
+                "median_error": 1.0,
+                "p90_error": 3.3333332538604736,
+                "p95_error": 4.333333492279053,
+                "p99_error": 6.666666507720947,
+                "max_error": 17.0,
+                "channel_rmse": 2.303175056933785,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 172989,
+                "analysis_ms": 8.031499979551882
+              }
+            },
+            "95": {
+              "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q95.jpg",
+              "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q95.png",
+              "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.8795442745224864,
+                "median_error": 1.0,
+                "p90_error": 2.0,
+                "p95_error": 2.3333332538604736,
+                "p99_error": 3.3333332538604736,
+                "max_error": 14.0,
+                "channel_rmse": 1.393561973490355,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 233811,
+                "analysis_ms": 8.024417038541287
+              }
+            }
+          }
+        }
+      },
+      "report": "images/01_596fa37556152c22b45c6eb2/report.html",
+      "status": "Unverified side-by-side comparison image; left/right are spatial labels, not authenticity labels"
+    },
+    {
+      "id": "02",
+      "source_file": "596fa37556152c22b45c6eb3.avif",
+      "source_sha256": "8c53d7fb097294e218a3380edcc840eec7b873903e0b8982e8b6a2af21896ab4",
+      "source_format": "AVIF",
+      "source_bytes": 190146,
+      "source_size": [
+        1920,
+        641
+      ],
+      "decoded_size": [
+        1920,
+        641
+      ],
+      "has_alpha": false,
+      "split_x": 960,
+      "folder": "images/02_596fa37556152c22b45c6eb3",
+      "views": {
+        "whole": {
+          "view": "whole",
+          "width": 1920,
+          "height": 641,
+          "source": "images/02_596fa37556152c22b45c6eb3/whole/source.png",
+          "edges": "images/02_596fa37556152c22b45c6eb3/whole/edges.png",
+          "histogram": "images/02_596fa37556152c22b45c6eb3/whole/histogram.png",
+          "raw_maps": "images/02_596fa37556152c22b45c6eb3/whole/raw_ela_maps.npz",
+          "metrics_csv": "images/02_596fa37556152c22b45c6eb3/whole/metrics.csv",
+          "overview_q20": "images/02_596fa37556152c22b45c6eb3/whole/overview_q20.png",
+          "jpeg_comparison": "images/02_596fa37556152c22b45c6eb3/whole/jpeg_comparison.png",
+          "ela_comparison": "images/02_596fa37556152c22b45c6eb3/whole/ela_comparison.png",
+          "overlay_comparison": "images/02_596fa37556152c22b45c6eb3/whole/overlay_comparison.png",
+          "rgb_difference_q20": "images/02_596fa37556152c22b45c6eb3/whole/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/whole/jpeg/q05.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/whole/ela/q05.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/whole/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 10.557844454692981,
+                "median_error": 8.333333015441895,
+                "p90_error": 21.0,
+                "p95_error": 27.33333396911621,
+                "p99_error": 42.33333206176758,
+                "max_error": 129.6666717529297,
+                "channel_rmse": 14.62306104391525,
+                "display_clipped_percent": 10.894273270930837,
+                "jpeg_bytes": 33233,
+                "analysis_ms": 13.491625024471432
+              }
+            },
+            "10": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/whole/jpeg/q10.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/whole/ela/q10.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/whole/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 7.545873689091073,
+                "median_error": 5.666666507720947,
+                "p90_error": 15.333333015441895,
+                "p95_error": 20.0,
+                "p99_error": 31.33333396911621,
+                "max_error": 88.0,
+                "channel_rmse": 10.57922200321749,
+                "display_clipped_percent": 4.967417446697868,
+                "jpeg_bytes": 48182,
+                "analysis_ms": 13.4818340302445
+              }
+            },
+            "20": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/whole/jpeg/q20.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/whole/ela/q20.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/whole/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 5.445325769580323,
+                "median_error": 4.0,
+                "p90_error": 11.333333015441895,
+                "p95_error": 15.0,
+                "p99_error": 23.33333396911621,
+                "max_error": 81.66666412353516,
+                "channel_rmse": 7.7346762839191925,
+                "display_clipped_percent": 1.8615932137285491,
+                "jpeg_bytes": 72965,
+                "analysis_ms": 14.149333001114428
+              }
+            },
+            "40": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/whole/jpeg/q40.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/whole/ela/q40.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/whole/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 3.8357281390707834,
+                "median_error": 2.6666667461395264,
+                "p90_error": 8.333333015441895,
+                "p95_error": 11.0,
+                "p99_error": 17.33333396911621,
+                "max_error": 50.33333206176758,
+                "channel_rmse": 5.602214303339114,
+                "display_clipped_percent": 0.5170144305772231,
+                "jpeg_bytes": 113139,
+                "analysis_ms": 13.95808398956433
+              }
+            },
+            "60": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/whole/jpeg/q60.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/whole/ela/q60.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/whole/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.1147060272115312,
+                "median_error": 2.3333332538604736,
+                "p90_error": 6.666666507720947,
+                "p95_error": 8.666666984558105,
+                "p99_error": 14.0,
+                "max_error": 38.0,
+                "channel_rmse": 4.56752156655705,
+                "display_clipped_percent": 0.15364989599583984,
+                "jpeg_bytes": 151067,
+                "analysis_ms": 13.958540977910161
+              }
+            },
+            "80": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/whole/jpeg/q80.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/whole/ela/q80.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/whole/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.132868295007381,
+                "median_error": 1.6666666269302368,
+                "p90_error": 4.666666507720947,
+                "p95_error": 6.0,
+                "p99_error": 9.666666984558105,
+                "max_error": 25.0,
+                "channel_rmse": 3.2049487536767076,
+                "display_clipped_percent": 0.0038189027561102446,
+                "jpeg_bytes": 220459,
+                "analysis_ms": 14.923916023690253
+              }
+            },
+            "90": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/whole/jpeg/q90.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/whole/ela/q90.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/whole/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.3353554577396207,
+                "median_error": 1.0,
+                "p90_error": 3.0,
+                "p95_error": 4.0,
+                "p99_error": 6.0,
+                "max_error": 17.0,
+                "channel_rmse": 2.067086021944471,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 318837,
+                "analysis_ms": 15.347917040344328
+              }
+            },
+            "95": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/whole/jpeg/q95.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/whole/ela/q95.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/whole/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.8438429022819294,
+                "median_error": 1.0,
+                "p90_error": 2.0,
+                "p95_error": 2.3333332538604736,
+                "p99_error": 3.3333332538604736,
+                "max_error": 15.0,
+                "channel_rmse": 1.3638872185902327,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 433901,
+                "analysis_ms": 15.912749979179353
+              }
+            }
+          }
+        },
+        "left": {
+          "view": "left",
+          "width": 960,
+          "height": 641,
+          "source": "images/02_596fa37556152c22b45c6eb3/left/source.png",
+          "edges": "images/02_596fa37556152c22b45c6eb3/left/edges.png",
+          "histogram": "images/02_596fa37556152c22b45c6eb3/left/histogram.png",
+          "raw_maps": "images/02_596fa37556152c22b45c6eb3/left/raw_ela_maps.npz",
+          "metrics_csv": "images/02_596fa37556152c22b45c6eb3/left/metrics.csv",
+          "overview_q20": "images/02_596fa37556152c22b45c6eb3/left/overview_q20.png",
+          "jpeg_comparison": "images/02_596fa37556152c22b45c6eb3/left/jpeg_comparison.png",
+          "ela_comparison": "images/02_596fa37556152c22b45c6eb3/left/ela_comparison.png",
+          "overlay_comparison": "images/02_596fa37556152c22b45c6eb3/left/overlay_comparison.png",
+          "rgb_difference_q20": "images/02_596fa37556152c22b45c6eb3/left/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/left/jpeg/q05.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/left/ela/q05.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/left/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 10.596968165581666,
+                "median_error": 8.333333015441895,
+                "p90_error": 21.0,
+                "p95_error": 27.33333396911621,
+                "p99_error": 42.33333206176758,
+                "max_error": 122.66666412353516,
+                "channel_rmse": 14.624199020101779,
+                "display_clipped_percent": 10.867134685387416,
+                "jpeg_bytes": 16900,
+                "analysis_ms": 6.616832979489118
+              }
+            },
+            "10": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/left/jpeg/q10.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/left/ela/q10.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/left/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 7.562614295881308,
+                "median_error": 5.666666507720947,
+                "p90_error": 15.333333015441895,
+                "p95_error": 20.0,
+                "p99_error": 31.33333396911621,
+                "max_error": 87.33333587646484,
+                "channel_rmse": 10.564678932933626,
+                "display_clipped_percent": 4.916796671866875,
+                "jpeg_bytes": 24447,
+                "analysis_ms": 6.690583017189056
+              }
+            },
+            "20": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/left/jpeg/q20.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/left/ela/q20.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/left/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 5.478860069576213,
+                "median_error": 4.0,
+                "p90_error": 11.333333015441895,
+                "p95_error": 15.0,
+                "p99_error": 23.33333396911621,
+                "max_error": 67.66666412353516,
+                "channel_rmse": 7.754728021166654,
+                "display_clipped_percent": 1.861186947477899,
+                "jpeg_bytes": 36877,
+                "analysis_ms": 6.958209036383778
+              }
+            },
+            "40": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/left/jpeg/q40.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/left/ela/q40.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/left/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 3.8768969941100186,
+                "median_error": 3.0,
+                "p90_error": 8.333333015441895,
+                "p95_error": 11.0,
+                "p99_error": 17.33333396911621,
+                "max_error": 50.33333206176758,
+                "channel_rmse": 5.623323694291022,
+                "display_clipped_percent": 0.5084828393135725,
+                "jpeg_bytes": 57278,
+                "analysis_ms": 7.070332998409867
+              }
+            },
+            "60": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/left/jpeg/q60.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/left/ela/q60.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/left/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.1520058733402414,
+                "median_error": 2.3333332538604736,
+                "p90_error": 6.666666507720947,
+                "p95_error": 9.0,
+                "p99_error": 14.0,
+                "max_error": 36.66666793823242,
+                "channel_rmse": 4.5896751496940595,
+                "display_clipped_percent": 0.14593083723348935,
+                "jpeg_bytes": 76527,
+                "analysis_ms": 7.239457976538688
+              }
+            },
+            "80": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/left/jpeg/q80.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/left/ela/q80.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/left/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.165402367124329,
+                "median_error": 1.6666666269302368,
+                "p90_error": 4.666666507720947,
+                "p95_error": 6.0,
+                "p99_error": 9.666666984558105,
+                "max_error": 23.66666603088379,
+                "channel_rmse": 3.2258021196759645,
+                "display_clipped_percent": 0.0039001560062402497,
+                "jpeg_bytes": 111745,
+                "analysis_ms": 7.24499998614192
+              }
+            },
+            "90": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/left/jpeg/q90.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/left/ela/q90.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/left/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.3544147617766247,
+                "median_error": 1.0,
+                "p90_error": 3.0,
+                "p95_error": 4.0,
+                "p99_error": 6.0,
+                "max_error": 17.0,
+                "channel_rmse": 2.082356245130645,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 161542,
+                "analysis_ms": 7.793041004333645
+              }
+            },
+            "95": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/left/jpeg/q95.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/left/ela/q95.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/left/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.8559802418911768,
+                "median_error": 1.0,
+                "p90_error": 2.0,
+                "p95_error": 2.3333332538604736,
+                "p99_error": 3.3333332538604736,
+                "max_error": 15.0,
+                "channel_rmse": 1.3748768835030738,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 219645,
+                "analysis_ms": 8.304958988446742
+              }
+            }
+          }
+        },
+        "right": {
+          "view": "right",
+          "width": 960,
+          "height": 641,
+          "source": "images/02_596fa37556152c22b45c6eb3/right/source.png",
+          "edges": "images/02_596fa37556152c22b45c6eb3/right/edges.png",
+          "histogram": "images/02_596fa37556152c22b45c6eb3/right/histogram.png",
+          "raw_maps": "images/02_596fa37556152c22b45c6eb3/right/raw_ela_maps.npz",
+          "metrics_csv": "images/02_596fa37556152c22b45c6eb3/right/metrics.csv",
+          "overview_q20": "images/02_596fa37556152c22b45c6eb3/right/overview_q20.png",
+          "jpeg_comparison": "images/02_596fa37556152c22b45c6eb3/right/jpeg_comparison.png",
+          "ela_comparison": "images/02_596fa37556152c22b45c6eb3/right/ela_comparison.png",
+          "overlay_comparison": "images/02_596fa37556152c22b45c6eb3/right/overlay_comparison.png",
+          "rgb_difference_q20": "images/02_596fa37556152c22b45c6eb3/right/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/right/jpeg/q05.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/right/ela/q05.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/right/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 10.51974886827039,
+                "median_error": 8.0,
+                "p90_error": 21.0,
+                "p95_error": 27.33333396911621,
+                "p99_error": 42.66666793823242,
+                "max_error": 129.6666717529297,
+                "channel_rmse": 14.624770044549564,
+                "display_clipped_percent": 10.929049661986479,
+                "jpeg_bytes": 16968,
+                "analysis_ms": 6.1905409675091505
+              }
+            },
+            "10": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/right/jpeg/q10.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/right/ela/q10.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/right/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 7.529650936333111,
+                "median_error": 5.666666507720947,
+                "p90_error": 15.333333015441895,
+                "p95_error": 20.33333396911621,
+                "p99_error": 31.66666603088379,
+                "max_error": 88.0,
+                "channel_rmse": 10.5946615231813,
+                "display_clipped_percent": 5.0188507540301615,
+                "jpeg_bytes": 24370,
+                "analysis_ms": 6.546416028868407
+              }
+            },
+            "20": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/right/jpeg/q20.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/right/ela/q20.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/right/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 5.412505956492142,
+                "median_error": 4.0,
+                "p90_error": 11.333333015441895,
+                "p95_error": 15.0,
+                "p99_error": 23.66666603088379,
+                "max_error": 81.66666412353516,
+                "channel_rmse": 7.715932432281401,
+                "display_clipped_percent": 1.8623244929797191,
+                "jpeg_bytes": 36756,
+                "analysis_ms": 7.1501670172438025
+              }
+            },
+            "40": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/right/jpeg/q40.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/right/ela/q40.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/right/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 3.795005635202301,
+                "median_error": 2.6666667461395264,
+                "p90_error": 8.0,
+                "p95_error": 11.0,
+                "p99_error": 17.66666603088379,
+                "max_error": 49.33333206176758,
+                "channel_rmse": 5.581907071732949,
+                "display_clipped_percent": 0.5257085283411337,
+                "jpeg_bytes": 56489,
+                "analysis_ms": 6.981625047046691
+              }
+            },
+            "60": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/right/jpeg/q60.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/right/ela/q60.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/right/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.07780486369429,
+                "median_error": 2.0,
+                "p90_error": 6.666666507720947,
+                "p95_error": 8.666666984558105,
+                "p99_error": 14.333333015441895,
+                "max_error": 38.0,
+                "channel_rmse": 4.546324010943402,
+                "display_clipped_percent": 0.16136895475819032,
+                "jpeg_bytes": 75243,
+                "analysis_ms": 7.593000016640872
+              }
+            },
+            "80": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/right/jpeg/q80.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/right/ela/q80.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/right/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.100624026144403,
+                "median_error": 1.6666666269302368,
+                "p90_error": 4.666666507720947,
+                "p95_error": 6.0,
+                "p99_error": 9.666666984558105,
+                "max_error": 25.0,
+                "channel_rmse": 3.1844690766906,
+                "display_clipped_percent": 0.003737649505980239,
+                "jpeg_bytes": 109375,
+                "analysis_ms": 7.15979200322181
+              }
+            },
+            "90": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/right/jpeg/q90.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/right/ela/q90.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/right/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.31662820865605,
+                "median_error": 1.0,
+                "p90_error": 3.0,
+                "p95_error": 3.6666667461395264,
+                "p99_error": 6.0,
+                "max_error": 15.666666984558105,
+                "channel_rmse": 2.0523994377487575,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 157969,
+                "analysis_ms": 8.060499967541546
+              }
+            },
+            "95": {
+              "jpeg": "images/02_596fa37556152c22b45c6eb3/right/jpeg/q95.jpg",
+              "ela": "images/02_596fa37556152c22b45c6eb3/right/ela/q95.png",
+              "overlay": "images/02_596fa37556152c22b45c6eb3/right/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.8319807403507821,
+                "median_error": 1.0,
+                "p90_error": 2.0,
+                "p95_error": 2.3333332538604736,
+                "p99_error": 3.3333332538604736,
+                "max_error": 13.333333015441895,
+                "channel_rmse": 1.353395566288371,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 214977,
+                "analysis_ms": 8.120334008708596
+              }
+            }
+          }
+        }
+      },
+      "report": "images/02_596fa37556152c22b45c6eb3/report.html",
+      "status": "Unverified side-by-side comparison image; left/right are spatial labels, not authenticity labels"
+    },
+    {
+      "id": "03",
+      "source_file": "kh-composite-man-2.webp",
+      "source_sha256": "009b7371819c6654df82343c0c92a9e1e3e2d96592c954f087d2f0d52da3dde4",
+      "source_format": "WEBP",
+      "source_bytes": 52672,
+      "source_size": [
+        1024,
+        370
+      ],
+      "decoded_size": [
+        1024,
+        370
+      ],
+      "has_alpha": false,
+      "split_x": 512,
+      "folder": "images/03_kh-composite-man-2",
+      "views": {
+        "whole": {
+          "view": "whole",
+          "width": 1024,
+          "height": 370,
+          "source": "images/03_kh-composite-man-2/whole/source.png",
+          "edges": "images/03_kh-composite-man-2/whole/edges.png",
+          "histogram": "images/03_kh-composite-man-2/whole/histogram.png",
+          "raw_maps": "images/03_kh-composite-man-2/whole/raw_ela_maps.npz",
+          "metrics_csv": "images/03_kh-composite-man-2/whole/metrics.csv",
+          "overview_q20": "images/03_kh-composite-man-2/whole/overview_q20.png",
+          "jpeg_comparison": "images/03_kh-composite-man-2/whole/jpeg_comparison.png",
+          "ela_comparison": "images/03_kh-composite-man-2/whole/ela_comparison.png",
+          "overlay_comparison": "images/03_kh-composite-man-2/whole/overlay_comparison.png",
+          "rgb_difference_q20": "images/03_kh-composite-man-2/whole/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/03_kh-composite-man-2/whole/jpeg/q05.jpg",
+              "ela": "images/03_kh-composite-man-2/whole/ela/q05.png",
+              "overlay": "images/03_kh-composite-man-2/whole/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 11.195774386530644,
+                "median_error": 9.0,
+                "p90_error": 21.0,
+                "p95_error": 26.66666603088379,
+                "p99_error": 39.66666793823242,
+                "max_error": 98.66666412353516,
+                "channel_rmse": 14.7295313091993,
+                "display_clipped_percent": 10.962309966216216,
+                "jpeg_bytes": 10750,
+                "analysis_ms": 4.019125015474856
+              }
+            },
+            "10": {
+              "jpeg": "images/03_kh-composite-man-2/whole/jpeg/q10.jpg",
+              "ela": "images/03_kh-composite-man-2/whole/ela/q10.png",
+              "overlay": "images/03_kh-composite-man-2/whole/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 8.003399493933555,
+                "median_error": 6.333333492279053,
+                "p90_error": 15.333333015441895,
+                "p95_error": 19.33333396911621,
+                "p99_error": 29.0,
+                "max_error": 82.0,
+                "channel_rmse": 10.621494602592678,
+                "display_clipped_percent": 4.4333298141891895,
+                "jpeg_bytes": 15880,
+                "analysis_ms": 4.316582984756678
+              }
+            },
+            "20": {
+              "jpeg": "images/03_kh-composite-man-2/whole/jpeg/q20.jpg",
+              "ela": "images/03_kh-composite-man-2/whole/ela/q20.png",
+              "overlay": "images/03_kh-composite-man-2/whole/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 5.281301028164641,
+                "median_error": 4.0,
+                "p90_error": 11.0,
+                "p95_error": 14.0,
+                "p99_error": 21.0,
+                "max_error": 54.0,
+                "channel_rmse": 7.2666313298535385,
+                "display_clipped_percent": 1.195365287162162,
+                "jpeg_bytes": 24449,
+                "analysis_ms": 4.191291984170675
+              }
+            },
+            "40": {
+              "jpeg": "images/03_kh-composite-man-2/whole/jpeg/q40.jpg",
+              "ela": "images/03_kh-composite-man-2/whole/ela/q40.png",
+              "overlay": "images/03_kh-composite-man-2/whole/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 3.726766610950329,
+                "median_error": 2.6666667461395264,
+                "p90_error": 8.0,
+                "p95_error": 10.0,
+                "p99_error": 15.333333015441895,
+                "max_error": 44.0,
+                "channel_rmse": 5.210670703000969,
+                "display_clipped_percent": 0.21616342905405406,
+                "jpeg_bytes": 36929,
+                "analysis_ms": 4.367625049781054
+              }
+            },
+            "60": {
+              "jpeg": "images/03_kh-composite-man-2/whole/jpeg/q60.jpg",
+              "ela": "images/03_kh-composite-man-2/whole/ela/q60.png",
+              "overlay": "images/03_kh-composite-man-2/whole/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.0328987205707834,
+                "median_error": 2.3333332538604736,
+                "p90_error": 6.333333492279053,
+                "p95_error": 8.333333015441895,
+                "p99_error": 12.333333015441895,
+                "max_error": 34.0,
+                "channel_rmse": 4.244031066134568,
+                "display_clipped_percent": 0.0512035472972973,
+                "jpeg_bytes": 47486,
+                "analysis_ms": 4.453625006135553
+              }
+            },
+            "80": {
+              "jpeg": "images/03_kh-composite-man-2/whole/jpeg/q80.jpg",
+              "ela": "images/03_kh-composite-man-2/whole/ela/q80.png",
+              "overlay": "images/03_kh-composite-man-2/whole/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.1930452951121557,
+                "median_error": 1.6666666269302368,
+                "p90_error": 4.666666507720947,
+                "p95_error": 6.0,
+                "p99_error": 9.0,
+                "max_error": 22.33333396911621,
+                "channel_rmse": 3.087190043301061,
+                "display_clipped_percent": 0.0007918074324324325,
+                "jpeg_bytes": 68568,
+                "analysis_ms": 4.84962499467656
+              }
+            },
+            "90": {
+              "jpeg": "images/03_kh-composite-man-2/whole/jpeg/q90.jpg",
+              "ela": "images/03_kh-composite-man-2/whole/ela/q90.png",
+              "overlay": "images/03_kh-composite-man-2/whole/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.5855336833966274,
+                "median_error": 1.3333333730697632,
+                "p90_error": 3.3333332538604736,
+                "p95_error": 4.0,
+                "p99_error": 6.0,
+                "max_error": 16.33333396911621,
+                "channel_rmse": 2.2194689784839756,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 98739,
+                "analysis_ms": 5.003875005058944
+              }
+            },
+            "95": {
+              "jpeg": "images/03_kh-composite-man-2/whole/jpeg/q95.jpg",
+              "ela": "images/03_kh-composite-man-2/whole/ela/q95.png",
+              "overlay": "images/03_kh-composite-man-2/whole/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 1.1460902374312503,
+                "median_error": 1.0,
+                "p90_error": 2.3333332538604736,
+                "p95_error": 2.6666667461395264,
+                "p99_error": 4.0,
+                "max_error": 15.333333015441895,
+                "channel_rmse": 1.5987759693669483,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 140388,
+                "analysis_ms": 5.199374980293214
+              }
+            }
+          }
+        },
+        "left": {
+          "view": "left",
+          "width": 512,
+          "height": 370,
+          "source": "images/03_kh-composite-man-2/left/source.png",
+          "edges": "images/03_kh-composite-man-2/left/edges.png",
+          "histogram": "images/03_kh-composite-man-2/left/histogram.png",
+          "raw_maps": "images/03_kh-composite-man-2/left/raw_ela_maps.npz",
+          "metrics_csv": "images/03_kh-composite-man-2/left/metrics.csv",
+          "overview_q20": "images/03_kh-composite-man-2/left/overview_q20.png",
+          "jpeg_comparison": "images/03_kh-composite-man-2/left/jpeg_comparison.png",
+          "ela_comparison": "images/03_kh-composite-man-2/left/ela_comparison.png",
+          "overlay_comparison": "images/03_kh-composite-man-2/left/overlay_comparison.png",
+          "rgb_difference_q20": "images/03_kh-composite-man-2/left/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/03_kh-composite-man-2/left/jpeg/q05.jpg",
+              "ela": "images/03_kh-composite-man-2/left/ela/q05.png",
+              "overlay": "images/03_kh-composite-man-2/left/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 11.040577489689836,
+                "median_error": 9.0,
+                "p90_error": 20.66666603088379,
+                "p95_error": 26.33333396911621,
+                "p99_error": 39.66666793823242,
+                "max_error": 98.33333587646484,
+                "channel_rmse": 14.52416615089973,
+                "display_clipped_percent": 10.586465371621621,
+                "jpeg_bytes": 5635,
+                "analysis_ms": 2.004584006499499
+              }
+            },
+            "10": {
+              "jpeg": "images/03_kh-composite-man-2/left/jpeg/q10.jpg",
+              "ela": "images/03_kh-composite-man-2/left/ela/q10.png",
+              "overlay": "images/03_kh-composite-man-2/left/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 7.91155335141544,
+                "median_error": 6.333333492279053,
+                "p90_error": 15.0,
+                "p95_error": 19.0,
+                "p99_error": 28.33333396911621,
+                "max_error": 82.0,
+                "channel_rmse": 10.46156310049462,
+                "display_clipped_percent": 4.196579391891892,
+                "jpeg_bytes": 8204,
+                "analysis_ms": 2.1525000338442624
+              }
+            },
+            "20": {
+              "jpeg": "images/03_kh-composite-man-2/left/jpeg/q20.jpg",
+              "ela": "images/03_kh-composite-man-2/left/ela/q20.png",
+              "overlay": "images/03_kh-composite-man-2/left/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 5.196132461741768,
+                "median_error": 3.6666667461395264,
+                "p90_error": 10.666666984558105,
+                "p95_error": 13.666666984558105,
+                "p99_error": 20.66666603088379,
+                "max_error": 54.0,
+                "channel_rmse": 7.125932203518649,
+                "display_clipped_percent": 1.0916385135135136,
+                "jpeg_bytes": 12420,
+                "analysis_ms": 2.1681669750250876
+              }
+            },
+            "40": {
+              "jpeg": "images/03_kh-composite-man-2/left/jpeg/q40.jpg",
+              "ela": "images/03_kh-composite-man-2/left/ela/q40.png",
+              "overlay": "images/03_kh-composite-man-2/left/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 3.6666349952244452,
+                "median_error": 2.6666667461395264,
+                "p90_error": 7.666666507720947,
+                "p95_error": 10.0,
+                "p99_error": 15.0,
+                "max_error": 36.66666793823242,
+                "channel_rmse": 5.11725374544494,
+                "display_clipped_percent": 0.19320101351351351,
+                "jpeg_bytes": 18594,
+                "analysis_ms": 2.1764590055681765
+              }
+            },
+            "60": {
+              "jpeg": "images/03_kh-composite-man-2/left/jpeg/q60.jpg",
+              "ela": "images/03_kh-composite-man-2/left/ela/q60.png",
+              "overlay": "images/03_kh-composite-man-2/left/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 2.989678352065007,
+                "median_error": 2.3333332538604736,
+                "p90_error": 6.333333492279053,
+                "p95_error": 8.0,
+                "p99_error": 12.333333015441895,
+                "max_error": 34.0,
+                "channel_rmse": 4.174035853905029,
+                "display_clipped_percent": 0.04170185810810811,
+                "jpeg_bytes": 23838,
+                "analysis_ms": 2.1912080119363964
+              }
+            },
+            "80": {
+              "jpeg": "images/03_kh-composite-man-2/left/jpeg/q80.jpg",
+              "ela": "images/03_kh-composite-man-2/left/ela/q80.png",
+              "overlay": "images/03_kh-composite-man-2/left/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.1655106315950903,
+                "median_error": 1.6666666269302368,
+                "p90_error": 4.666666507720947,
+                "p95_error": 6.0,
+                "p99_error": 9.0,
+                "max_error": 19.33333396911621,
+                "channel_rmse": 3.0452755532763995,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 34257,
+                "analysis_ms": 2.2966249962337315
+              }
+            },
+            "90": {
+              "jpeg": "images/03_kh-composite-man-2/left/jpeg/q90.jpg",
+              "ela": "images/03_kh-composite-man-2/left/ela/q90.png",
+              "overlay": "images/03_kh-composite-man-2/left/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.565162237901461,
+                "median_error": 1.3333333730697632,
+                "p90_error": 3.3333332538604736,
+                "p95_error": 4.0,
+                "p99_error": 6.0,
+                "max_error": 14.666666984558105,
+                "channel_rmse": 2.1849498488018617,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 49203,
+                "analysis_ms": 2.410207991488278
+              }
+            },
+            "95": {
+              "jpeg": "images/03_kh-composite-man-2/left/jpeg/q95.jpg",
+              "ela": "images/03_kh-composite-man-2/left/ela/q95.png",
+              "overlay": "images/03_kh-composite-man-2/left/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 1.1384466563420672,
+                "median_error": 1.0,
+                "p90_error": 2.3333332538604736,
+                "p95_error": 2.6666667461395264,
+                "p99_error": 4.0,
+                "max_error": 10.333333015441895,
+                "channel_rmse": 1.5845094020058843,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 70011,
+                "analysis_ms": 2.98400002066046
+              }
+            }
+          }
+        },
+        "right": {
+          "view": "right",
+          "width": 512,
+          "height": 370,
+          "source": "images/03_kh-composite-man-2/right/source.png",
+          "edges": "images/03_kh-composite-man-2/right/edges.png",
+          "histogram": "images/03_kh-composite-man-2/right/histogram.png",
+          "raw_maps": "images/03_kh-composite-man-2/right/raw_ela_maps.npz",
+          "metrics_csv": "images/03_kh-composite-man-2/right/metrics.csv",
+          "overview_q20": "images/03_kh-composite-man-2/right/overview_q20.png",
+          "jpeg_comparison": "images/03_kh-composite-man-2/right/jpeg_comparison.png",
+          "ela_comparison": "images/03_kh-composite-man-2/right/ela_comparison.png",
+          "overlay_comparison": "images/03_kh-composite-man-2/right/overlay_comparison.png",
+          "rgb_difference_q20": "images/03_kh-composite-man-2/right/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/03_kh-composite-man-2/right/jpeg/q05.jpg",
+              "ela": "images/03_kh-composite-man-2/right/ela/q05.png",
+              "overlay": "images/03_kh-composite-man-2/right/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 11.352109726496053,
+                "median_error": 9.333333015441895,
+                "p90_error": 21.33333396911621,
+                "p95_error": 27.0,
+                "p99_error": 40.0,
+                "max_error": 98.66666412353516,
+                "channel_rmse": 14.934567013402676,
+                "display_clipped_percent": 11.342377533783784,
+                "jpeg_bytes": 5743,
+                "analysis_ms": 1.982416957616806
+              }
+            },
+            "10": {
+              "jpeg": "images/03_kh-composite-man-2/right/jpeg/q10.jpg",
+              "ela": "images/03_kh-composite-man-2/right/ela/q10.png",
+              "overlay": "images/03_kh-composite-man-2/right/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 8.09901463979937,
+                "median_error": 6.333333492279053,
+                "p90_error": 15.333333015441895,
+                "p95_error": 19.66666603088379,
+                "p99_error": 29.66666603088379,
+                "max_error": 78.0,
+                "channel_rmse": 10.783511073124059,
+                "display_clipped_percent": 4.672719594594595,
+                "jpeg_bytes": 8304,
+                "analysis_ms": 2.069207956083119
+              }
+            },
+            "20": {
+              "jpeg": "images/03_kh-composite-man-2/right/jpeg/q20.jpg",
+              "ela": "images/03_kh-composite-man-2/right/ela/q20.png",
+              "overlay": "images/03_kh-composite-man-2/right/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 5.3675605291961626,
+                "median_error": 4.0,
+                "p90_error": 11.0,
+                "p95_error": 14.0,
+                "p99_error": 21.33333396911621,
+                "max_error": 52.0,
+                "channel_rmse": 7.406587236211601,
+                "display_clipped_percent": 1.3017314189189189,
+                "jpeg_bytes": 12651,
+                "analysis_ms": 3.0097499839030206
+              }
+            },
+            "40": {
+              "jpeg": "images/03_kh-composite-man-2/right/jpeg/q40.jpg",
+              "ela": "images/03_kh-composite-man-2/right/ela/q40.png",
+              "overlay": "images/03_kh-composite-man-2/right/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 3.7874683280329133,
+                "median_error": 2.6666667461395264,
+                "p90_error": 8.0,
+                "p95_error": 10.333333015441895,
+                "p99_error": 15.666666984558105,
+                "max_error": 44.0,
+                "channel_rmse": 5.303556661348602,
+                "display_clipped_percent": 0.2391258445945946,
+                "jpeg_bytes": 18983,
+                "analysis_ms": 2.290666976477951
+              }
+            },
+            "60": {
+              "jpeg": "images/03_kh-composite-man-2/right/jpeg/q60.jpg",
+              "ela": "images/03_kh-composite-man-2/right/ela/q60.png",
+              "overlay": "images/03_kh-composite-man-2/right/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.076615288445248,
+                "median_error": 2.3333332538604736,
+                "p90_error": 6.666666507720947,
+                "p95_error": 8.333333015441895,
+                "p99_error": 12.666666984558105,
+                "max_error": 30.0,
+                "channel_rmse": 4.313528079570509,
+                "display_clipped_percent": 0.060705236486486486,
+                "jpeg_bytes": 24263,
+                "analysis_ms": 2.276749990414828
+              }
+            },
+            "80": {
+              "jpeg": "images/03_kh-composite-man-2/right/jpeg/q80.jpg",
+              "ela": "images/03_kh-composite-man-2/right/ela/q80.png",
+              "overlay": "images/03_kh-composite-man-2/right/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.221032168647759,
+                "median_error": 1.6666666269302368,
+                "p90_error": 4.666666507720947,
+                "p95_error": 6.0,
+                "p99_error": 9.0,
+                "max_error": 22.33333396911621,
+                "channel_rmse": 3.129351418623153,
+                "display_clipped_percent": 0.001583614864864865,
+                "jpeg_bytes": 34938,
+                "analysis_ms": 2.418333024252206
+              }
+            },
+            "90": {
+              "jpeg": "images/03_kh-composite-man-2/right/jpeg/q90.jpg",
+              "ela": "images/03_kh-composite-man-2/right/ela/q90.png",
+              "overlay": "images/03_kh-composite-man-2/right/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.606174343421967,
+                "median_error": 1.3333333730697632,
+                "p90_error": 3.3333332538604736,
+                "p95_error": 4.333333492279053,
+                "p99_error": 6.333333492279053,
+                "max_error": 16.33333396911621,
+                "channel_rmse": 2.25384704587372,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 50188,
+                "analysis_ms": 3.1017079600133
+              }
+            },
+            "95": {
+              "jpeg": "images/03_kh-composite-man-2/right/jpeg/q95.jpg",
+              "ela": "images/03_kh-composite-man-2/right/ela/q95.png",
+              "overlay": "images/03_kh-composite-man-2/right/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 1.1540083117627324,
+                "median_error": 1.0,
+                "p90_error": 2.3333332538604736,
+                "p95_error": 3.0,
+                "p99_error": 4.0,
+                "max_error": 15.333333015441895,
+                "channel_rmse": 1.6133417559902248,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 71013,
+                "analysis_ms": 2.5638749939389527
+              }
+            }
+          }
+        }
+      },
+      "report": "images/03_kh-composite-man-2/report.html",
+      "status": "Unverified side-by-side comparison image; left/right are spatial labels, not authenticity labels"
+    },
+    {
+      "id": "04",
+      "source_file": "maxresdefault.jpg",
+      "source_sha256": "545499c04768b46a8fe1e98772b4cfeeb52b9354542ac43cd57516336a21c805",
+      "source_format": "JPEG",
+      "source_bytes": 183564,
+      "source_size": [
+        1280,
+        720
+      ],
+      "decoded_size": [
+        1280,
+        720
+      ],
+      "has_alpha": false,
+      "split_x": 640,
+      "folder": "images/04_maxresdefault",
+      "views": {
+        "whole": {
+          "view": "whole",
+          "width": 1280,
+          "height": 720,
+          "source": "images/04_maxresdefault/whole/source.png",
+          "edges": "images/04_maxresdefault/whole/edges.png",
+          "histogram": "images/04_maxresdefault/whole/histogram.png",
+          "raw_maps": "images/04_maxresdefault/whole/raw_ela_maps.npz",
+          "metrics_csv": "images/04_maxresdefault/whole/metrics.csv",
+          "overview_q20": "images/04_maxresdefault/whole/overview_q20.png",
+          "jpeg_comparison": "images/04_maxresdefault/whole/jpeg_comparison.png",
+          "ela_comparison": "images/04_maxresdefault/whole/ela_comparison.png",
+          "overlay_comparison": "images/04_maxresdefault/whole/overlay_comparison.png",
+          "rgb_difference_q20": "images/04_maxresdefault/whole/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/04_maxresdefault/whole/jpeg/q05.jpg",
+              "ela": "images/04_maxresdefault/whole/ela/q05.png",
+              "overlay": "images/04_maxresdefault/whole/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 12.77057906472344,
+                "median_error": 10.0,
+                "p90_error": 23.33333396911621,
+                "p95_error": 31.66666603088379,
+                "p99_error": 52.66666793823242,
+                "max_error": 154.6666717529297,
+                "channel_rmse": 17.431131219052027,
+                "display_clipped_percent": 13.444769965277779,
+                "jpeg_bytes": 22562,
+                "analysis_ms": 9.674291999544948
+              }
+            },
+            "10": {
+              "jpeg": "images/04_maxresdefault/whole/jpeg/q10.jpg",
+              "ela": "images/04_maxresdefault/whole/ela/q10.png",
+              "overlay": "images/04_maxresdefault/whole/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 9.052448279966322,
+                "median_error": 6.0,
+                "p90_error": 18.66666603088379,
+                "p95_error": 26.66666603088379,
+                "p99_error": 45.0,
+                "max_error": 175.3333282470703,
+                "channel_rmse": 13.359437648759322,
+                "display_clipped_percent": 8.82052951388889,
+                "jpeg_bytes": 34527,
+                "analysis_ms": 10.293375002220273
+              }
+            },
+            "20": {
+              "jpeg": "images/04_maxresdefault/whole/jpeg/q20.jpg",
+              "ela": "images/04_maxresdefault/whole/ela/q20.png",
+              "overlay": "images/04_maxresdefault/whole/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 6.715408347531209,
+                "median_error": 4.0,
+                "p90_error": 15.333333015441895,
+                "p95_error": 22.0,
+                "p99_error": 37.66666793823242,
+                "max_error": 125.33333587646484,
+                "channel_rmse": 10.580189086873856,
+                "display_clipped_percent": 6.038953993055555,
+                "jpeg_bytes": 56165,
+                "analysis_ms": 10.404625034425408
+              }
+            },
+            "40": {
+              "jpeg": "images/04_maxresdefault/whole/jpeg/q40.jpg",
+              "ela": "images/04_maxresdefault/whole/ela/q40.png",
+              "overlay": "images/04_maxresdefault/whole/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 4.948062427837511,
+                "median_error": 2.6666667461395264,
+                "p90_error": 12.0,
+                "p95_error": 17.66666603088379,
+                "p99_error": 29.66666603088379,
+                "max_error": 82.33333587646484,
+                "channel_rmse": 8.15627942292834,
+                "display_clipped_percent": 3.5668402777777777,
+                "jpeg_bytes": 90799,
+                "analysis_ms": 10.672874981537461
+              }
+            },
+            "60": {
+              "jpeg": "images/04_maxresdefault/whole/jpeg/q60.jpg",
+              "ela": "images/04_maxresdefault/whole/ela/q60.png",
+              "overlay": "images/04_maxresdefault/whole/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.9178465004645275,
+                "median_error": 2.0,
+                "p90_error": 10.0,
+                "p95_error": 14.333333015441895,
+                "p99_error": 23.66666603088379,
+                "max_error": 79.33333587646484,
+                "channel_rmse": 6.567971539575665,
+                "display_clipped_percent": 1.8577473958333333,
+                "jpeg_bytes": 119289,
+                "analysis_ms": 10.535583016462624
+              }
+            },
+            "80": {
+              "jpeg": "images/04_maxresdefault/whole/jpeg/q80.jpg",
+              "ela": "images/04_maxresdefault/whole/ela/q80.png",
+              "overlay": "images/04_maxresdefault/whole/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.4910684345134197,
+                "median_error": 1.0,
+                "p90_error": 7.0,
+                "p95_error": 9.666666984558105,
+                "p99_error": 15.666666984558105,
+                "max_error": 41.0,
+                "channel_rmse": 4.394744056061404,
+                "display_clipped_percent": 0.24674479166666666,
+                "jpeg_bytes": 176035,
+                "analysis_ms": 11.28475001314655
+              }
+            },
+            "90": {
+              "jpeg": "images/04_maxresdefault/whole/jpeg/q90.jpg",
+              "ela": "images/04_maxresdefault/whole/ela/q90.png",
+              "overlay": "images/04_maxresdefault/whole/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 0.8498506255535176,
+                "median_error": 0.6666666865348816,
+                "p90_error": 2.0,
+                "p95_error": 2.6666667461395264,
+                "p99_error": 4.333333492279053,
+                "max_error": 11.666666984558105,
+                "channel_rmse": 1.4497147358682392,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 246753,
+                "analysis_ms": 12.057333020493388
+              }
+            },
+            "95": {
+              "jpeg": "images/04_maxresdefault/whole/jpeg/q95.jpg",
+              "ela": "images/04_maxresdefault/whole/ela/q95.png",
+              "overlay": "images/04_maxresdefault/whole/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.6210782002214303,
+                "median_error": 0.3333333432674408,
+                "p90_error": 1.6666666269302368,
+                "p95_error": 2.0,
+                "p99_error": 3.3333332538604736,
+                "max_error": 8.0,
+                "channel_rmse": 1.1773197587045379,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 322529,
+                "analysis_ms": 12.583374977111816
+              }
+            }
+          }
+        },
+        "left": {
+          "view": "left",
+          "width": 640,
+          "height": 720,
+          "source": "images/04_maxresdefault/left/source.png",
+          "edges": "images/04_maxresdefault/left/edges.png",
+          "histogram": "images/04_maxresdefault/left/histogram.png",
+          "raw_maps": "images/04_maxresdefault/left/raw_ela_maps.npz",
+          "metrics_csv": "images/04_maxresdefault/left/metrics.csv",
+          "overview_q20": "images/04_maxresdefault/left/overview_q20.png",
+          "jpeg_comparison": "images/04_maxresdefault/left/jpeg_comparison.png",
+          "ela_comparison": "images/04_maxresdefault/left/ela_comparison.png",
+          "overlay_comparison": "images/04_maxresdefault/left/overlay_comparison.png",
+          "rgb_difference_q20": "images/04_maxresdefault/left/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/04_maxresdefault/left/jpeg/q05.jpg",
+              "ela": "images/04_maxresdefault/left/ela/q05.png",
+              "overlay": "images/04_maxresdefault/left/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 13.389356914007285,
+                "median_error": 10.333333015441895,
+                "p90_error": 25.33333396911621,
+                "p95_error": 34.33333206176758,
+                "p99_error": 55.0,
+                "max_error": 154.6666717529297,
+                "channel_rmse": 18.272285175276256,
+                "display_clipped_percent": 15.78342013888889,
+                "jpeg_bytes": 11415,
+                "analysis_ms": 4.791874962393194
+              }
+            },
+            "10": {
+              "jpeg": "images/04_maxresdefault/left/jpeg/q10.jpg",
+              "ela": "images/04_maxresdefault/left/ela/q10.png",
+              "overlay": "images/04_maxresdefault/left/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 9.927776332039567,
+                "median_error": 6.666666507720947,
+                "p90_error": 21.33333396911621,
+                "p95_error": 29.33333396911621,
+                "p99_error": 48.0,
+                "max_error": 175.3333282470703,
+                "channel_rmse": 14.510601518324838,
+                "display_clipped_percent": 11.178385416666666,
+                "jpeg_bytes": 18062,
+                "analysis_ms": 4.864124988671392
+              }
+            },
+            "20": {
+              "jpeg": "images/04_maxresdefault/left/jpeg/q20.jpg",
+              "ela": "images/04_maxresdefault/left/ela/q20.png",
+              "overlay": "images/04_maxresdefault/left/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 7.623899738586948,
+                "median_error": 4.666666507720947,
+                "p90_error": 18.0,
+                "p95_error": 24.66666603088379,
+                "p99_error": 40.33333206176758,
+                "max_error": 118.0,
+                "channel_rmse": 11.747253822357724,
+                "display_clipped_percent": 7.963975694444445,
+                "jpeg_bytes": 30425,
+                "analysis_ms": 5.157708015758544
+              }
+            },
+            "40": {
+              "jpeg": "images/04_maxresdefault/left/jpeg/q40.jpg",
+              "ela": "images/04_maxresdefault/left/ela/q40.png",
+              "overlay": "images/04_maxresdefault/left/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 5.7376171877454425,
+                "median_error": 3.0,
+                "p90_error": 14.333333015441895,
+                "p95_error": 19.66666603088379,
+                "p99_error": 31.66666603088379,
+                "max_error": 82.33333587646484,
+                "channel_rmse": 9.127943462349657,
+                "display_clipped_percent": 4.693142361111111,
+                "jpeg_bytes": 50449,
+                "analysis_ms": 5.268084001727402
+              }
+            },
+            "60": {
+              "jpeg": "images/04_maxresdefault/left/jpeg/q60.jpg",
+              "ela": "images/04_maxresdefault/left/ela/q60.png",
+              "overlay": "images/04_maxresdefault/left/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 4.582047166015901,
+                "median_error": 2.3333332538604736,
+                "p90_error": 11.666666984558105,
+                "p95_error": 16.0,
+                "p99_error": 25.0,
+                "max_error": 71.0,
+                "channel_rmse": 7.364476562953833,
+                "display_clipped_percent": 2.4370659722222223,
+                "jpeg_bytes": 66987,
+                "analysis_ms": 5.381292023230344
+              }
+            },
+            "80": {
+              "jpeg": "images/04_maxresdefault/left/jpeg/q80.jpg",
+              "ela": "images/04_maxresdefault/left/ela/q80.png",
+              "overlay": "images/04_maxresdefault/left/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.9648669006433597,
+                "median_error": 1.3333333730697632,
+                "p90_error": 8.0,
+                "p95_error": 11.0,
+                "p99_error": 16.66666603088379,
+                "max_error": 41.0,
+                "channel_rmse": 4.943284527649233,
+                "display_clipped_percent": 0.3272569444444444,
+                "jpeg_bytes": 99562,
+                "analysis_ms": 5.726959032472223
+              }
+            },
+            "90": {
+              "jpeg": "images/04_maxresdefault/left/jpeg/q90.jpg",
+              "ela": "images/04_maxresdefault/left/ela/q90.png",
+              "overlay": "images/04_maxresdefault/left/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 0.9695638054679795,
+                "median_error": 1.0,
+                "p90_error": 2.3333332538604736,
+                "p95_error": 3.0,
+                "p99_error": 4.666666507720947,
+                "max_error": 11.666666984558105,
+                "channel_rmse": 1.5867381611022493,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 140555,
+                "analysis_ms": 6.00741698872298
+              }
+            },
+            "95": {
+              "jpeg": "images/04_maxresdefault/left/jpeg/q95.jpg",
+              "ela": "images/04_maxresdefault/left/ela/q95.png",
+              "overlay": "images/04_maxresdefault/left/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.7129680296832359,
+                "median_error": 0.6666666865348816,
+                "p90_error": 1.6666666269302368,
+                "p95_error": 2.3333332538604736,
+                "p99_error": 3.3333332538604736,
+                "max_error": 8.0,
+                "channel_rmse": 1.2724196042601494,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 183804,
+                "analysis_ms": 6.17658399278298
+              }
+            }
+          }
+        },
+        "right": {
+          "view": "right",
+          "width": 640,
+          "height": 720,
+          "source": "images/04_maxresdefault/right/source.png",
+          "edges": "images/04_maxresdefault/right/edges.png",
+          "histogram": "images/04_maxresdefault/right/histogram.png",
+          "raw_maps": "images/04_maxresdefault/right/raw_ela_maps.npz",
+          "metrics_csv": "images/04_maxresdefault/right/metrics.csv",
+          "overview_q20": "images/04_maxresdefault/right/overview_q20.png",
+          "jpeg_comparison": "images/04_maxresdefault/right/jpeg_comparison.png",
+          "ela_comparison": "images/04_maxresdefault/right/ela_comparison.png",
+          "overlay_comparison": "images/04_maxresdefault/right/overlay_comparison.png",
+          "rgb_difference_q20": "images/04_maxresdefault/right/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/04_maxresdefault/right/jpeg/q05.jpg",
+              "ela": "images/04_maxresdefault/right/ela/q05.png",
+              "overlay": "images/04_maxresdefault/right/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 12.152874710812338,
+                "median_error": 9.666666984558105,
+                "p90_error": 21.33333396911621,
+                "p95_error": 28.66666603088379,
+                "p99_error": 49.66666793823242,
+                "max_error": 141.3333282470703,
+                "channel_rmse": 16.55129626301551,
+                "display_clipped_percent": 11.107855902777779,
+                "jpeg_bytes": 11777,
+                "analysis_ms": 4.876290971878916
+              }
+            },
+            "10": {
+              "jpeg": "images/04_maxresdefault/right/jpeg/q10.jpg",
+              "ela": "images/04_maxresdefault/right/ela/q10.png",
+              "overlay": "images/04_maxresdefault/right/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 8.178460650348958,
+                "median_error": 5.666666507720947,
+                "p90_error": 16.0,
+                "p95_error": 23.0,
+                "p99_error": 41.0,
+                "max_error": 117.66666412353516,
+                "channel_rmse": 12.102047708484127,
+                "display_clipped_percent": 6.463758680555555,
+                "jpeg_bytes": 17085,
+                "analysis_ms": 5.277749965898693
+              }
+            },
+            "20": {
+              "jpeg": "images/04_maxresdefault/right/jpeg/q20.jpg",
+              "ela": "images/04_maxresdefault/right/ela/q20.png",
+              "overlay": "images/04_maxresdefault/right/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 5.807840712269147,
+                "median_error": 3.6666667461395264,
+                "p90_error": 12.333333015441895,
+                "p95_error": 18.33333396911621,
+                "p99_error": 34.0,
+                "max_error": 125.33333587646484,
+                "channel_rmse": 9.268551022126841,
+                "display_clipped_percent": 4.114366319444445,
+                "jpeg_bytes": 26355,
+                "analysis_ms": 5.02458302071318
+              }
+            },
+            "40": {
+              "jpeg": "images/04_maxresdefault/right/jpeg/q40.jpg",
+              "ela": "images/04_maxresdefault/right/ela/q40.png",
+              "overlay": "images/04_maxresdefault/right/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 4.159267939914587,
+                "median_error": 2.3333332538604736,
+                "p90_error": 9.666666984558105,
+                "p95_error": 14.666666984558105,
+                "p99_error": 27.0,
+                "max_error": 82.0,
+                "channel_rmse": 7.052794769628562,
+                "display_clipped_percent": 2.4405381944444446,
+                "jpeg_bytes": 40983,
+                "analysis_ms": 5.084250005893409
+              }
+            },
+            "60": {
+              "jpeg": "images/04_maxresdefault/right/jpeg/q60.jpg",
+              "ela": "images/04_maxresdefault/right/ela/q60.png",
+              "overlay": "images/04_maxresdefault/right/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.254277345339069,
+                "median_error": 1.6666666269302368,
+                "p90_error": 7.666666507720947,
+                "p95_error": 12.0,
+                "p99_error": 21.66666603088379,
+                "max_error": 79.33333587646484,
+                "channel_rmse": 5.661164927744145,
+                "display_clipped_percent": 1.2784288194444444,
+                "jpeg_bytes": 52905,
+                "analysis_ms": 5.411792022641748
+              }
+            },
+            "80": {
+              "jpeg": "images/04_maxresdefault/right/jpeg/q80.jpg",
+              "ela": "images/04_maxresdefault/right/ela/q80.png",
+              "overlay": "images/04_maxresdefault/right/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.018054111914955,
+                "median_error": 1.0,
+                "p90_error": 5.333333492279053,
+                "p95_error": 8.0,
+                "p99_error": 14.333333015441895,
+                "max_error": 34.0,
+                "channel_rmse": 3.7680451247961457,
+                "display_clipped_percent": 0.1662326388888889,
+                "jpeg_bytes": 77143,
+                "analysis_ms": 5.514749966096133
+              }
+            },
+            "90": {
+              "jpeg": "images/04_maxresdefault/right/jpeg/q90.jpg",
+              "ela": "images/04_maxresdefault/right/ela/q90.png",
+              "overlay": "images/04_maxresdefault/right/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 0.7304709236526914,
+                "median_error": 0.6666666865348816,
+                "p90_error": 1.6666666269302368,
+                "p95_error": 2.3333332538604736,
+                "p99_error": 4.0,
+                "max_error": 11.0,
+                "channel_rmse": 1.2987042264596178,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 106880,
+                "analysis_ms": 5.756416998337954
+              }
+            },
+            "95": {
+              "jpeg": "images/04_maxresdefault/right/jpeg/q95.jpg",
+              "ela": "images/04_maxresdefault/right/ela/q95.png",
+              "overlay": "images/04_maxresdefault/right/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.5293742793278459,
+                "median_error": 0.0,
+                "p90_error": 1.3333333730697632,
+                "p95_error": 2.0,
+                "p99_error": 3.0,
+                "max_error": 7.666666507720947,
+                "channel_rmse": 1.0740834405522313,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 139311,
+                "analysis_ms": 6.392374983988702
+              }
+            }
+          }
+        }
+      },
+      "report": "images/04_maxresdefault/report.html",
+      "status": "Unverified side-by-side comparison image; left/right are spatial labels, not authenticity labels"
+    },
+    {
+      "id": "05",
+      "source_file": "nintchdbpict000339476175.webp",
+      "source_sha256": "cb7d7ad690a9b526702f31b9fa0b2e2e06b402720dee220635470f25ee60f665",
+      "source_format": "WEBP",
+      "source_bytes": 75884,
+      "source_size": [
+        1024,
+        385
+      ],
+      "decoded_size": [
+        1024,
+        385
+      ],
+      "has_alpha": false,
+      "split_x": 512,
+      "folder": "images/05_nintchdbpict000339476175",
+      "views": {
+        "whole": {
+          "view": "whole",
+          "width": 1024,
+          "height": 385,
+          "source": "images/05_nintchdbpict000339476175/whole/source.png",
+          "edges": "images/05_nintchdbpict000339476175/whole/edges.png",
+          "histogram": "images/05_nintchdbpict000339476175/whole/histogram.png",
+          "raw_maps": "images/05_nintchdbpict000339476175/whole/raw_ela_maps.npz",
+          "metrics_csv": "images/05_nintchdbpict000339476175/whole/metrics.csv",
+          "overview_q20": "images/05_nintchdbpict000339476175/whole/overview_q20.png",
+          "jpeg_comparison": "images/05_nintchdbpict000339476175/whole/jpeg_comparison.png",
+          "ela_comparison": "images/05_nintchdbpict000339476175/whole/ela_comparison.png",
+          "overlay_comparison": "images/05_nintchdbpict000339476175/whole/overlay_comparison.png",
+          "rgb_difference_q20": "images/05_nintchdbpict000339476175/whole/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/05_nintchdbpict000339476175/whole/jpeg/q05.jpg",
+              "ela": "images/05_nintchdbpict000339476175/whole/ela/q05.png",
+              "overlay": "images/05_nintchdbpict000339476175/whole/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 12.651971726080587,
+                "median_error": 10.333333015441895,
+                "p90_error": 23.0,
+                "p95_error": 29.33333396911621,
+                "p99_error": 45.0,
+                "max_error": 125.0,
+                "channel_rmse": 16.691115472033545,
+                "display_clipped_percent": 14.150010146103897,
+                "jpeg_bytes": 10754,
+                "analysis_ms": 4.204625030979514
+              }
+            },
+            "10": {
+              "jpeg": "images/05_nintchdbpict000339476175/whole/jpeg/q10.jpg",
+              "ela": "images/05_nintchdbpict000339476175/whole/ela/q10.png",
+              "overlay": "images/05_nintchdbpict000339476175/whole/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 8.8882922417203,
+                "median_error": 7.0,
+                "p90_error": 18.33333396911621,
+                "p95_error": 23.66666603088379,
+                "p99_error": 37.33333206176758,
+                "max_error": 90.66666412353516,
+                "channel_rmse": 12.548052693013135,
+                "display_clipped_percent": 7.825689935064935,
+                "jpeg_bytes": 16257,
+                "analysis_ms": 4.287999996449798
+              }
+            },
+            "20": {
+              "jpeg": "images/05_nintchdbpict000339476175/whole/jpeg/q20.jpg",
+              "ela": "images/05_nintchdbpict000339476175/whole/ela/q20.png",
+              "overlay": "images/05_nintchdbpict000339476175/whole/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 6.898394379344566,
+                "median_error": 5.0,
+                "p90_error": 14.666666984558105,
+                "p95_error": 19.33333396911621,
+                "p99_error": 30.66666603088379,
+                "max_error": 80.0,
+                "channel_rmse": 9.938481762538892,
+                "display_clipped_percent": 4.414569805194805,
+                "jpeg_bytes": 26151,
+                "analysis_ms": 4.60941600613296
+              }
+            },
+            "40": {
+              "jpeg": "images/05_nintchdbpict000339476175/whole/jpeg/q40.jpg",
+              "ela": "images/05_nintchdbpict000339476175/whole/ela/q40.png",
+              "overlay": "images/05_nintchdbpict000339476175/whole/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 5.401914232324161,
+                "median_error": 4.0,
+                "p90_error": 11.666666984558105,
+                "p95_error": 15.333333015441895,
+                "p99_error": 24.0,
+                "max_error": 60.33333206176758,
+                "channel_rmse": 7.81391740388937,
+                "display_clipped_percent": 2.0845170454545454,
+                "jpeg_bytes": 41957,
+                "analysis_ms": 5.289209017064422
+              }
+            },
+            "60": {
+              "jpeg": "images/05_nintchdbpict000339476175/whole/jpeg/q60.jpg",
+              "ela": "images/05_nintchdbpict000339476175/whole/ela/q60.png",
+              "overlay": "images/05_nintchdbpict000339476175/whole/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 4.586372937751305,
+                "median_error": 3.3333332538604736,
+                "p90_error": 10.0,
+                "p95_error": 13.0,
+                "p99_error": 20.0,
+                "max_error": 49.0,
+                "channel_rmse": 6.616464052429269,
+                "display_clipped_percent": 0.9750405844155844,
+                "jpeg_bytes": 56378,
+                "analysis_ms": 4.7332909889519215
+              }
+            },
+            "80": {
+              "jpeg": "images/05_nintchdbpict000339476175/whole/jpeg/q80.jpg",
+              "ela": "images/05_nintchdbpict000339476175/whole/ela/q80.png",
+              "overlay": "images/05_nintchdbpict000339476175/whole/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 3.3930304732279515,
+                "median_error": 2.6666667461395264,
+                "p90_error": 7.333333492279053,
+                "p95_error": 9.666666984558105,
+                "p99_error": 14.333333015441895,
+                "max_error": 34.0,
+                "channel_rmse": 4.941796225981336,
+                "display_clipped_percent": 0.09638798701298701,
+                "jpeg_bytes": 86138,
+                "analysis_ms": 4.817957989871502
+              }
+            },
+            "90": {
+              "jpeg": "images/05_nintchdbpict000339476175/whole/jpeg/q90.jpg",
+              "ela": "images/05_nintchdbpict000339476175/whole/ela/q90.png",
+              "overlay": "images/05_nintchdbpict000339476175/whole/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 2.3887327536640464,
+                "median_error": 2.0,
+                "p90_error": 5.0,
+                "p95_error": 6.333333492279053,
+                "p99_error": 9.0,
+                "max_error": 18.33333396911621,
+                "channel_rmse": 3.4342064111294217,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 127726,
+                "analysis_ms": 5.388208024669439
+              }
+            },
+            "95": {
+              "jpeg": "images/05_nintchdbpict000339476175/whole/jpeg/q95.jpg",
+              "ela": "images/05_nintchdbpict000339476175/whole/ela/q95.png",
+              "overlay": "images/05_nintchdbpict000339476175/whole/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 1.5832673860785653,
+                "median_error": 1.3333333730697632,
+                "p90_error": 3.0,
+                "p95_error": 3.6666667461395264,
+                "p99_error": 5.0,
+                "max_error": 10.666666984558105,
+                "channel_rmse": 2.268816372623396,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 179569,
+                "analysis_ms": 5.624415993224829
+              }
+            }
+          }
+        },
+        "left": {
+          "view": "left",
+          "width": 512,
+          "height": 385,
+          "source": "images/05_nintchdbpict000339476175/left/source.png",
+          "edges": "images/05_nintchdbpict000339476175/left/edges.png",
+          "histogram": "images/05_nintchdbpict000339476175/left/histogram.png",
+          "raw_maps": "images/05_nintchdbpict000339476175/left/raw_ela_maps.npz",
+          "metrics_csv": "images/05_nintchdbpict000339476175/left/metrics.csv",
+          "overview_q20": "images/05_nintchdbpict000339476175/left/overview_q20.png",
+          "jpeg_comparison": "images/05_nintchdbpict000339476175/left/jpeg_comparison.png",
+          "ela_comparison": "images/05_nintchdbpict000339476175/left/ela_comparison.png",
+          "overlay_comparison": "images/05_nintchdbpict000339476175/left/overlay_comparison.png",
+          "rgb_difference_q20": "images/05_nintchdbpict000339476175/left/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/05_nintchdbpict000339476175/left/jpeg/q05.jpg",
+              "ela": "images/05_nintchdbpict000339476175/left/ela/q05.png",
+              "overlay": "images/05_nintchdbpict000339476175/left/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 12.626953124719394,
+                "median_error": 10.333333015441895,
+                "p90_error": 23.0,
+                "p95_error": 29.33333396911621,
+                "p99_error": 45.0,
+                "max_error": 107.66666412353516,
+                "channel_rmse": 16.663066254103306,
+                "display_clipped_percent": 14.037642045454545,
+                "jpeg_bytes": 5608,
+                "analysis_ms": 2.0782920182682574
+              }
+            },
+            "10": {
+              "jpeg": "images/05_nintchdbpict000339476175/left/jpeg/q10.jpg",
+              "ela": "images/05_nintchdbpict000339476175/left/ela/q10.png",
+              "overlay": "images/05_nintchdbpict000339476175/left/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 8.916123849986569,
+                "median_error": 7.0,
+                "p90_error": 18.33333396911621,
+                "p95_error": 23.66666603088379,
+                "p99_error": 37.33333206176758,
+                "max_error": 90.66666412353516,
+                "channel_rmse": 12.582712345095375,
+                "display_clipped_percent": 7.829748376623376,
+                "jpeg_bytes": 8355,
+                "analysis_ms": 2.2162090172059834
+              }
+            },
+            "20": {
+              "jpeg": "images/05_nintchdbpict000339476175/left/jpeg/q20.jpg",
+              "ela": "images/05_nintchdbpict000339476175/left/ela/q20.png",
+              "overlay": "images/05_nintchdbpict000339476175/left/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 6.918134469565385,
+                "median_error": 5.0,
+                "p90_error": 14.666666984558105,
+                "p95_error": 19.33333396911621,
+                "p99_error": 30.66666603088379,
+                "max_error": 80.0,
+                "channel_rmse": 9.955528141912692,
+                "display_clipped_percent": 4.427759740259741,
+                "jpeg_bytes": 13315,
+                "analysis_ms": 2.3209170321933925
+              }
+            },
+            "40": {
+              "jpeg": "images/05_nintchdbpict000339476175/left/jpeg/q40.jpg",
+              "ela": "images/05_nintchdbpict000339476175/left/ela/q40.png",
+              "overlay": "images/05_nintchdbpict000339476175/left/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 5.438142587581208,
+                "median_error": 4.0,
+                "p90_error": 11.666666984558105,
+                "p95_error": 15.666666984558105,
+                "p99_error": 24.0,
+                "max_error": 59.0,
+                "channel_rmse": 7.859874543585864,
+                "display_clipped_percent": 2.146408279220779,
+                "jpeg_bytes": 21241,
+                "analysis_ms": 2.351457951590419
+              }
+            },
+            "60": {
+              "jpeg": "images/05_nintchdbpict000339476175/left/jpeg/q60.jpg",
+              "ela": "images/05_nintchdbpict000339476175/left/ela/q60.png",
+              "overlay": "images/05_nintchdbpict000339476175/left/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 4.636074473042579,
+                "median_error": 3.3333332538604736,
+                "p90_error": 10.0,
+                "p95_error": 13.333333015441895,
+                "p99_error": 20.0,
+                "max_error": 47.0,
+                "channel_rmse": 6.6749496619614,
+                "display_clipped_percent": 0.9856939935064936,
+                "jpeg_bytes": 28471,
+                "analysis_ms": 2.479374990798533
+              }
+            },
+            "80": {
+              "jpeg": "images/05_nintchdbpict000339476175/left/jpeg/q80.jpg",
+              "ela": "images/05_nintchdbpict000339476175/left/ela/q80.png",
+              "overlay": "images/05_nintchdbpict000339476175/left/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 3.4388984723462626,
+                "median_error": 2.6666667461395264,
+                "p90_error": 7.333333492279053,
+                "p95_error": 9.666666984558105,
+                "p99_error": 14.333333015441895,
+                "max_error": 34.0,
+                "channel_rmse": 5.002177387099841,
+                "display_clipped_percent": 0.09993912337662338,
+                "jpeg_bytes": 43501,
+                "analysis_ms": 2.5511669809930027
+              }
+            },
+            "90": {
+              "jpeg": "images/05_nintchdbpict000339476175/left/jpeg/q90.jpg",
+              "ela": "images/05_nintchdbpict000339476175/left/ela/q90.png",
+              "overlay": "images/05_nintchdbpict000339476175/left/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 2.4306885840259373,
+                "median_error": 2.0,
+                "p90_error": 5.0,
+                "p95_error": 6.333333492279053,
+                "p99_error": 9.0,
+                "max_error": 18.33333396911621,
+                "channel_rmse": 3.488460801877207,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 64408,
+                "analysis_ms": 2.6612080400809646
+              }
+            },
+            "95": {
+              "jpeg": "images/05_nintchdbpict000339476175/left/jpeg/q95.jpg",
+              "ela": "images/05_nintchdbpict000339476175/left/ela/q95.png",
+              "overlay": "images/05_nintchdbpict000339476175/left/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 1.617583200089065,
+                "median_error": 1.3333333730697632,
+                "p90_error": 3.3333332538604736,
+                "p95_error": 3.6666667461395264,
+                "p99_error": 5.0,
+                "max_error": 10.333333015441895,
+                "channel_rmse": 2.316616203240598,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 90634,
+                "analysis_ms": 2.8879170422442257
+              }
+            }
+          }
+        },
+        "right": {
+          "view": "right",
+          "width": 512,
+          "height": 385,
+          "source": "images/05_nintchdbpict000339476175/right/source.png",
+          "edges": "images/05_nintchdbpict000339476175/right/edges.png",
+          "histogram": "images/05_nintchdbpict000339476175/right/histogram.png",
+          "raw_maps": "images/05_nintchdbpict000339476175/right/raw_ela_maps.npz",
+          "metrics_csv": "images/05_nintchdbpict000339476175/right/metrics.csv",
+          "overview_q20": "images/05_nintchdbpict000339476175/right/overview_q20.png",
+          "jpeg_comparison": "images/05_nintchdbpict000339476175/right/jpeg_comparison.png",
+          "ela_comparison": "images/05_nintchdbpict000339476175/right/ela_comparison.png",
+          "overlay_comparison": "images/05_nintchdbpict000339476175/right/overlay_comparison.png",
+          "rgb_difference_q20": "images/05_nintchdbpict000339476175/right/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/05_nintchdbpict000339476175/right/jpeg/q05.jpg",
+              "ela": "images/05_nintchdbpict000339476175/right/ela/q05.png",
+              "overlay": "images/05_nintchdbpict000339476175/right/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 12.680604031445101,
+                "median_error": 10.666666984558105,
+                "p90_error": 23.33333396911621,
+                "p95_error": 29.33333396911621,
+                "p99_error": 45.0,
+                "max_error": 125.0,
+                "channel_rmse": 16.725610696341835,
+                "display_clipped_percent": 14.271002435064934,
+                "jpeg_bytes": 5768,
+                "analysis_ms": 2.046208013780415
+              }
+            },
+            "10": {
+              "jpeg": "images/05_nintchdbpict000339476175/right/jpeg/q10.jpg",
+              "ela": "images/05_nintchdbpict000339476175/right/ela/q10.png",
+              "overlay": "images/05_nintchdbpict000339476175/right/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 8.862677557081703,
+                "median_error": 6.666666507720947,
+                "p90_error": 18.33333396911621,
+                "p95_error": 23.66666603088379,
+                "p99_error": 37.0,
+                "max_error": 88.0,
+                "channel_rmse": 12.518752910947093,
+                "display_clipped_percent": 7.840401785714286,
+                "jpeg_bytes": 8537,
+                "analysis_ms": 2.1172919659875333
+              }
+            },
+            "20": {
+              "jpeg": "images/05_nintchdbpict000339476175/right/jpeg/q20.jpg",
+              "ela": "images/05_nintchdbpict000339476175/right/ela/q20.png",
+              "overlay": "images/05_nintchdbpict000339476175/right/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 6.88124492759393,
+                "median_error": 5.0,
+                "p90_error": 14.666666984558105,
+                "p95_error": 19.33333396911621,
+                "p99_error": 30.66666603088379,
+                "max_error": 67.66666412353516,
+                "channel_rmse": 9.92662942764719,
+                "display_clipped_percent": 4.404423701298701,
+                "jpeg_bytes": 13473,
+                "analysis_ms": 2.2067080135457218
+              }
+            },
+            "40": {
+              "jpeg": "images/05_nintchdbpict000339476175/right/jpeg/q40.jpg",
+              "ela": "images/05_nintchdbpict000339476175/right/ela/q40.png",
+              "overlay": "images/05_nintchdbpict000339476175/right/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 5.3679129468954425,
+                "median_error": 4.0,
+                "p90_error": 11.666666984558105,
+                "p95_error": 15.333333015441895,
+                "p99_error": 24.0,
+                "max_error": 60.33333206176758,
+                "channel_rmse": 7.771697454072739,
+                "display_clipped_percent": 2.022625811688312,
+                "jpeg_bytes": 21352,
+                "analysis_ms": 2.3407090338878334
+              }
+            },
+            "60": {
+              "jpeg": "images/05_nintchdbpict000339476175/right/jpeg/q60.jpg",
+              "ela": "images/05_nintchdbpict000339476175/right/ela/q60.png",
+              "overlay": "images/05_nintchdbpict000339476175/right/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 4.5388477416798265,
+                "median_error": 3.3333332538604736,
+                "p90_error": 10.0,
+                "p95_error": 13.0,
+                "p99_error": 20.0,
+                "max_error": 49.0,
+                "channel_rmse": 6.561259287992212,
+                "display_clipped_percent": 0.9643871753246753,
+                "jpeg_bytes": 28529,
+                "analysis_ms": 2.37800000468269
+              }
+            },
+            "80": {
+              "jpeg": "images/05_nintchdbpict000339476175/right/jpeg/q80.jpg",
+              "ela": "images/05_nintchdbpict000339476175/right/ela/q80.png",
+              "overlay": "images/05_nintchdbpict000339476175/right/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 3.3488737836567832,
+                "median_error": 2.3333332538604736,
+                "p90_error": 7.333333492279053,
+                "p95_error": 9.333333015441895,
+                "p99_error": 14.0,
+                "max_error": 32.0,
+                "channel_rmse": 4.883165544596122,
+                "display_clipped_percent": 0.09334415584415584,
+                "jpeg_bytes": 43283,
+                "analysis_ms": 2.741083037108183
+              }
+            },
+            "90": {
+              "jpeg": "images/05_nintchdbpict000339476175/right/jpeg/q90.jpg",
+              "ela": "images/05_nintchdbpict000339476175/right/ela/q90.png",
+              "overlay": "images/05_nintchdbpict000339476175/right/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 2.3480806976665636,
+                "median_error": 2.0,
+                "p90_error": 5.0,
+                "p95_error": 6.333333492279053,
+                "p99_error": 8.936666727065264,
+                "max_error": 18.33333396911621,
+                "channel_rmse": 3.3813755017878315,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 63899,
+                "analysis_ms": 3.2607499742880464
+              }
+            },
+            "95": {
+              "jpeg": "images/05_nintchdbpict000339476175/right/jpeg/q95.jpg",
+              "ela": "images/05_nintchdbpict000339476175/right/ela/q95.png",
+              "overlay": "images/05_nintchdbpict000339476175/right/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 1.550267183534535,
+                "median_error": 1.3333333730697632,
+                "p90_error": 3.0,
+                "p95_error": 3.6666667461395264,
+                "p99_error": 5.0,
+                "max_error": 10.666666984558105,
+                "channel_rmse": 2.2223294019517494,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 89607,
+                "analysis_ms": 2.8274580254219472
+              }
+            }
+          }
+        }
+      },
+      "report": "images/05_nintchdbpict000339476175/report.html",
+      "status": "Unverified side-by-side comparison image; left/right are spatial labels, not authenticity labels"
+    },
+    {
+      "id": "06",
+      "source_file": "plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-13.jpg",
+      "source_sha256": "811d4c64d7ea4f24ce9a087dd6c85b161e4a8b09433d8dd1187ef28e42d81df8",
+      "source_format": "JPEG",
+      "source_bytes": 107115,
+      "source_size": [
+        880,
+        663
+      ],
+      "decoded_size": [
+        880,
+        663
+      ],
+      "has_alpha": false,
+      "split_x": 440,
+      "folder": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1",
+      "views": {
+        "whole": {
+          "view": "whole",
+          "width": 880,
+          "height": 663,
+          "source": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/source.png",
+          "edges": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/edges.png",
+          "histogram": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/histogram.png",
+          "raw_maps": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/raw_ela_maps.npz",
+          "metrics_csv": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/metrics.csv",
+          "overview_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overview_q20.png",
+          "jpeg_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg_comparison.png",
+          "ela_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela_comparison.png",
+          "overlay_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay_comparison.png",
+          "rgb_difference_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q05.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q05.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 10.176792249603364,
+                "median_error": 8.666666984558105,
+                "p90_error": 19.33333396911621,
+                "p95_error": 24.0,
+                "p99_error": 36.33333206176758,
+                "max_error": 157.6666717529297,
+                "channel_rmse": 14.194572836377343,
+                "display_clipped_percent": 8.872377622377622,
+                "jpeg_bytes": 13635,
+                "analysis_ms": 6.477999966591597
+              }
+            },
+            "10": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q10.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q10.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 7.028299980151091,
+                "median_error": 5.333333492279053,
+                "p90_error": 14.0,
+                "p95_error": 17.66666603088379,
+                "p99_error": 27.33333396911621,
+                "max_error": 105.33333587646484,
+                "channel_rmse": 10.116370125346508,
+                "display_clipped_percent": 3.275572466748937,
+                "jpeg_bytes": 18353,
+                "analysis_ms": 6.858290988020599
+              }
+            },
+            "20": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q20.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q20.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 4.861475611342881,
+                "median_error": 3.0,
+                "p90_error": 10.666666984558105,
+                "p95_error": 13.666666984558105,
+                "p99_error": 20.66666603088379,
+                "max_error": 88.33333587646484,
+                "channel_rmse": 7.527519783631648,
+                "display_clipped_percent": 1.10105580693816,
+                "jpeg_bytes": 26756,
+                "analysis_ms": 6.311249977443367
+              }
+            },
+            "40": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q40.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q40.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 3.516066205927822,
+                "median_error": 2.0,
+                "p90_error": 8.333333015441895,
+                "p95_error": 10.666666984558105,
+                "p99_error": 15.666666984558105,
+                "max_error": 47.0,
+                "channel_rmse": 5.842160712350356,
+                "display_clipped_percent": 0.28211984094337034,
+                "jpeg_bytes": 40510,
+                "analysis_ms": 6.867291987873614
+              }
+            },
+            "60": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q60.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q60.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 2.996680035606184,
+                "median_error": 2.0,
+                "p90_error": 7.333333492279053,
+                "p95_error": 9.0,
+                "p99_error": 13.333333015441895,
+                "max_error": 37.66666793823242,
+                "channel_rmse": 5.0791092496760575,
+                "display_clipped_percent": 0.07575757575757576,
+                "jpeg_bytes": 53497,
+                "analysis_ms": 6.576708983629942
+              }
+            },
+            "80": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q80.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q80.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 1.873903630283325,
+                "median_error": 1.0,
+                "p90_error": 5.0,
+                "p95_error": 6.666666507720947,
+                "p99_error": 9.666666984558105,
+                "max_error": 26.33333396911621,
+                "channel_rmse": 3.6629704922250808,
+                "display_clipped_percent": 0.002913752913752914,
+                "jpeg_bytes": 83652,
+                "analysis_ms": 7.122708018869162
+              }
+            },
+            "90": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q90.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q90.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.2209213186851253,
+                "median_error": 0.6666666865348816,
+                "p90_error": 3.3333332538604736,
+                "p95_error": 4.666666507720947,
+                "p99_error": 7.333333492279053,
+                "max_error": 24.0,
+                "channel_rmse": 2.6300567616316672,
+                "display_clipped_percent": 0.0005141916906622789,
+                "jpeg_bytes": 111892,
+                "analysis_ms": 7.715041982010007
+              }
+            },
+            "95": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q95.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q95.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.9426173517179884,
+                "median_error": 0.3333333432674408,
+                "p90_error": 2.6666667461395264,
+                "p95_error": 3.6666667461395264,
+                "p99_error": 6.0,
+                "max_error": 19.33333396911621,
+                "channel_rmse": 2.177287042532258,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 151836,
+                "analysis_ms": 7.923999975901097
+              }
+            }
+          }
+        },
+        "left": {
+          "view": "left",
+          "width": 440,
+          "height": 663,
+          "source": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/source.png",
+          "edges": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/edges.png",
+          "histogram": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/histogram.png",
+          "raw_maps": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/raw_ela_maps.npz",
+          "metrics_csv": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/metrics.csv",
+          "overview_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overview_q20.png",
+          "jpeg_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg_comparison.png",
+          "ela_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela_comparison.png",
+          "overlay_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay_comparison.png",
+          "rgb_difference_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q05.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q05.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 10.923490565107647,
+                "median_error": 9.333333015441895,
+                "p90_error": 20.66666603088379,
+                "p95_error": 25.33333396911621,
+                "p99_error": 37.0,
+                "max_error": 157.6666717529297,
+                "channel_rmse": 15.069685852481813,
+                "display_clipped_percent": 10.650966680378446,
+                "jpeg_bytes": 7453,
+                "analysis_ms": 2.98024999210611
+              }
+            },
+            "10": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q10.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q10.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 7.6104929450293035,
+                "median_error": 5.666666507720947,
+                "p90_error": 15.0,
+                "p95_error": 18.66666603088379,
+                "p99_error": 28.0,
+                "max_error": 98.0,
+                "channel_rmse": 10.828879412244069,
+                "display_clipped_percent": 3.744343891402715,
+                "jpeg_bytes": 10302,
+                "analysis_ms": 3.121624991763383
+              }
+            },
+            "20": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q20.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q20.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 5.460329537214087,
+                "median_error": 4.0,
+                "p90_error": 11.333333015441895,
+                "p95_error": 14.0,
+                "p99_error": 21.0,
+                "max_error": 88.33333587646484,
+                "channel_rmse": 8.16407220994118,
+                "display_clipped_percent": 1.2179487179487178,
+                "jpeg_bytes": 15424,
+                "analysis_ms": 3.152332967147231
+              }
+            },
+            "40": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q40.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q40.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 4.100038850513318,
+                "median_error": 3.0,
+                "p90_error": 9.0,
+                "p95_error": 11.0,
+                "p99_error": 16.0,
+                "max_error": 47.0,
+                "channel_rmse": 6.377454439954067,
+                "display_clipped_percent": 0.31228575346222404,
+                "jpeg_bytes": 23572,
+                "analysis_ms": 3.2629999914206564
+              }
+            },
+            "60": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q60.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q60.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 3.5093274368449534,
+                "median_error": 2.6666667461395264,
+                "p90_error": 7.666666507720947,
+                "p95_error": 9.333333015441895,
+                "p99_error": 13.333333015441895,
+                "max_error": 37.66666793823242,
+                "channel_rmse": 5.535042766979011,
+                "display_clipped_percent": 0.08055669820375702,
+                "jpeg_bytes": 31460,
+                "analysis_ms": 3.4072090056724846
+              }
+            },
+            "80": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q80.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q80.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 2.266432425129766,
+                "median_error": 1.6666666269302368,
+                "p90_error": 5.333333492279053,
+                "p95_error": 6.666666507720947,
+                "p99_error": 9.666666984558105,
+                "max_error": 21.33333396911621,
+                "channel_rmse": 3.9497010343103662,
+                "display_clipped_percent": 0.0006855889208830385,
+                "jpeg_bytes": 49754,
+                "analysis_ms": 3.561708959750831
+              }
+            },
+            "90": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q90.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q90.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 1.4645584822619475,
+                "median_error": 1.0,
+                "p90_error": 3.6666667461395264,
+                "p95_error": 4.666666507720947,
+                "p99_error": 7.0,
+                "max_error": 15.0,
+                "channel_rmse": 2.7409014145005566,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 66747,
+                "analysis_ms": 3.601333999540657
+              }
+            },
+            "95": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q95.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q95.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 1.1153560510701306,
+                "median_error": 1.0,
+                "p90_error": 3.0,
+                "p95_error": 3.6666667461395264,
+                "p99_error": 5.666666507720947,
+                "max_error": 15.0,
+                "channel_rmse": 2.203613150974148,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 90530,
+                "analysis_ms": 4.145416954997927
+              }
+            }
+          }
+        },
+        "right": {
+          "view": "right",
+          "width": 440,
+          "height": 663,
+          "source": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/source.png",
+          "edges": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/edges.png",
+          "histogram": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/histogram.png",
+          "raw_maps": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/raw_ela_maps.npz",
+          "metrics_csv": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/metrics.csv",
+          "overview_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overview_q20.png",
+          "jpeg_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg_comparison.png",
+          "ela_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela_comparison.png",
+          "overlay_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay_comparison.png",
+          "rgb_difference_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/difference_rgb_q20_gain10.png",
+          "qualities": {
+            "5": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q05.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q05.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q05.png",
+              "stats": {
+                "jpeg_quality": 5,
+                "mean_error": 9.412550856224017,
+                "median_error": 8.0,
+                "p90_error": 17.66666603088379,
+                "p95_error": 23.0,
+                "p99_error": 35.0,
+                "max_error": 155.6666717529297,
+                "channel_rmse": 13.238367068140738,
+                "display_clipped_percent": 7.142122583299054,
+                "jpeg_bytes": 6974,
+                "analysis_ms": 3.520291007589549
+              }
+            },
+            "10": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q10.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q10.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q10.png",
+              "stats": {
+                "jpeg_quality": 10,
+                "mean_error": 6.429441491420661,
+                "median_error": 4.666666507720947,
+                "p90_error": 12.666666984558105,
+                "p95_error": 16.66666603088379,
+                "p99_error": 26.66666603088379,
+                "max_error": 105.66666412353516,
+                "channel_rmse": 9.317846129963097,
+                "display_clipped_percent": 2.8270259152612094,
+                "jpeg_bytes": 8841,
+                "analysis_ms": 3.5564590361900628
+              }
+            },
+            "20": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q20.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q20.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q20.png",
+              "stats": {
+                "jpeg_quality": 20,
+                "mean_error": 4.262491423487316,
+                "median_error": 2.6666667461395264,
+                "p90_error": 9.666666984558105,
+                "p95_error": 13.0,
+                "p99_error": 20.0,
+                "max_error": 71.33333587646484,
+                "channel_rmse": 6.833246380038913,
+                "display_clipped_percent": 0.9886192239133416,
+                "jpeg_bytes": 12135,
+                "analysis_ms": 3.196417004801333
+              }
+            },
+            "40": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q40.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q40.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q40.png",
+              "stats": {
+                "jpeg_quality": 40,
+                "mean_error": 2.9279560317014504,
+                "median_error": 1.3333333730697632,
+                "p90_error": 7.666666507720947,
+                "p95_error": 10.0,
+                "p99_error": 15.666666984558105,
+                "max_error": 49.0,
+                "channel_rmse": 5.248034331519328,
+                "display_clipped_percent": 0.24646921705745234,
+                "jpeg_bytes": 17668,
+                "analysis_ms": 3.232999995816499
+              }
+            },
+            "60": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q60.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q60.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q60.png",
+              "stats": {
+                "jpeg_quality": 60,
+                "mean_error": 2.4915192648492592,
+                "median_error": 1.3333333730697632,
+                "p90_error": 6.666666507720947,
+                "p95_error": 8.666666984558105,
+                "p99_error": 13.333333015441895,
+                "max_error": 32.33333206176758,
+                "channel_rmse": 4.573980897180467,
+                "display_clipped_percent": 0.07027286439051145,
+                "jpeg_bytes": 22805,
+                "analysis_ms": 3.2206670148298144
+              }
+            },
+            "80": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q80.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q80.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q80.png",
+              "stats": {
+                "jpeg_quality": 80,
+                "mean_error": 1.491346726743904,
+                "median_error": 0.6666666865348816,
+                "p90_error": 4.666666507720947,
+                "p95_error": 6.333333492279053,
+                "p99_error": 10.0,
+                "max_error": 24.66666603088379,
+                "channel_rmse": 3.381121687518418,
+                "display_clipped_percent": 0.006855889208830386,
+                "jpeg_bytes": 34613,
+                "analysis_ms": 3.3620409667491913
+              }
+            },
+            "90": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q90.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q90.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q90.png",
+              "stats": {
+                "jpeg_quality": 90,
+                "mean_error": 0.9926093529520106,
+                "median_error": 0.0,
+                "p90_error": 3.0,
+                "p95_error": 4.333333492279053,
+                "p99_error": 8.0,
+                "max_error": 21.0,
+                "channel_rmse": 2.546468362221537,
+                "display_clipped_percent": 0.0006855889208830385,
+                "jpeg_bytes": 45878,
+                "analysis_ms": 3.784500004258007
+              }
+            },
+            "95": {
+              "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q95.jpg",
+              "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q95.png",
+              "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q95.png",
+              "stats": {
+                "jpeg_quality": 95,
+                "mean_error": 0.7729946540518176,
+                "median_error": 0.0,
+                "p90_error": 2.3333332538604736,
+                "p95_error": 3.6666667461395264,
+                "p99_error": 6.666666507720947,
+                "max_error": 19.66666603088379,
+                "channel_rmse": 2.1536833203222328,
+                "display_clipped_percent": 0.0,
+                "jpeg_bytes": 62253,
+                "analysis_ms": 3.575667040422559
+              }
+            }
+          }
+        }
+      },
+      "report": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/report.html",
+      "status": "Unverified side-by-side comparison image; left/right are spatial labels, not authenticity labels"
+    }
+  ],
+  "references_q20": [
+    {
+      "name": "duyuru",
+      "files": {
+        "control": {
+          "jpeg": "reference_pairs_q20/duyuru_control_q20.jpg",
+          "ela_preview": "reference_pairs_q20/duyuru_control_ela_q20_preview.png",
+          "overlay_preview": "reference_pairs_q20/duyuru_control_overlay_q20_preview.png",
+          "width": 2160,
+          "height": 3840,
+          "source_sha256": "e7ae7417ecd2878d3469e08b0f7cdd31641ddf9acb3c253eccfdc21a31395ebd",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 3.1798955064192653,
+            "median_error": 2.3333332538604736,
+            "p90_error": 5.333333492279053,
+            "p95_error": 7.333333492279053,
+            "p99_error": 14.0,
+            "max_error": 66.66666412353516,
+            "channel_rmse": 4.347769626670053,
+            "display_clipped_percent": 0.25015673225308643,
+            "jpeg_bytes": 263953,
+            "analysis_ms": 93.59316702466458
+          }
+        },
+        "render": {
+          "jpeg": "reference_pairs_q20/duyuru_render_q20.jpg",
+          "ela_preview": "reference_pairs_q20/duyuru_render_ela_q20_preview.png",
+          "overlay_preview": "reference_pairs_q20/duyuru_render_overlay_q20_preview.png",
+          "width": 2160,
+          "height": 3840,
+          "source_sha256": "530f2b98adbcbcc68525e2bc46c21b79d6a1b59b9169bc0d10d2bb90c010126d",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 3.1843680823604608,
+            "median_error": 2.3333332538604736,
+            "p90_error": 5.333333492279053,
+            "p95_error": 7.333333492279053,
+            "p99_error": 14.0,
+            "max_error": 77.0,
+            "channel_rmse": 4.363947127237106,
+            "display_clipped_percent": 0.26176697530864196,
+            "jpeg_bytes": 264401,
+            "analysis_ms": 84.14345799246803
+          }
+        }
+      }
+    },
+    {
+      "name": "karga",
+      "files": {
+        "control": {
+          "jpeg": "reference_pairs_q20/karga_control_q20.jpg",
+          "ela_preview": "reference_pairs_q20/karga_control_ela_q20_preview.png",
+          "overlay_preview": "reference_pairs_q20/karga_control_overlay_q20_preview.png",
+          "width": 4284,
+          "height": 5712,
+          "source_sha256": "af4581ae3994005f88d22f564b320f218e8e2d9ddbff6944663f51a8666b83b6",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 2.3718217641114694,
+            "median_error": 2.0,
+            "p90_error": 3.6666667461395264,
+            "p95_error": 4.333333492279053,
+            "p99_error": 8.0,
+            "max_error": 51.33333206176758,
+            "channel_rmse": 3.147417920382197,
+            "display_clipped_percent": 0.020441183009151372,
+            "jpeg_bytes": 502259,
+            "analysis_ms": 262.22274999599904
+          }
+        },
+        "render": {
+          "jpeg": "reference_pairs_q20/karga_render_q20.jpg",
+          "ela_preview": "reference_pairs_q20/karga_render_ela_q20_preview.png",
+          "overlay_preview": "reference_pairs_q20/karga_render_overlay_q20_preview.png",
+          "width": 4284,
+          "height": 5712,
+          "source_sha256": "f21d66977767d16abf0dc260045a7bbcd5318ce9b1ed27a392fe3ac0edf20d76",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 2.370413916110478,
+            "median_error": 2.0,
+            "p90_error": 3.6666667461395264,
+            "p95_error": 4.333333492279053,
+            "p99_error": 8.0,
+            "max_error": 51.33333206176758,
+            "channel_rmse": 3.1443100828521566,
+            "display_clipped_percent": 0.02041257679542405,
+            "jpeg_bytes": 501718,
+            "analysis_ms": 249.9479999532923
+          }
+        }
+      }
+    },
+    {
+      "name": "error",
+      "files": {
+        "control": {
+          "jpeg": "reference_pairs_q20/error_control_q20.jpg",
+          "ela_preview": "reference_pairs_q20/error_control_ela_q20_preview.png",
+          "overlay_preview": "reference_pairs_q20/error_control_overlay_q20_preview.png",
+          "width": 387,
+          "height": 130,
+          "source_sha256": "5e0e77250c4da6596d2a1838cf3fd15ec9ec4eb2d2dd8ac07311083fefcdf88e",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 6.306069038003014,
+            "median_error": 2.3333332538604736,
+            "p90_error": 15.333333015441895,
+            "p95_error": 24.66666603088379,
+            "p99_error": 50.33333206176758,
+            "max_error": 139.3333282470703,
+            "channel_rmse": 11.911150734781028,
+            "display_clipped_percent": 6.795865633074936,
+            "jpeg_bytes": 4474,
+            "analysis_ms": 0.6897919811308384
+          }
+        },
+        "render": {
+          "jpeg": "reference_pairs_q20/error_render_q20.jpg",
+          "ela_preview": "reference_pairs_q20/error_render_ela_q20_preview.png",
+          "overlay_preview": "reference_pairs_q20/error_render_overlay_q20_preview.png",
+          "width": 387,
+          "height": 130,
+          "source_sha256": "ae0f9b6569f1e3303d62dde40e1e3bfe9231c6242f866dc8c19afaed9b84bf00",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 7.230789106939143,
+            "median_error": 3.0,
+            "p90_error": 18.66666603088379,
+            "p95_error": 28.33333396911621,
+            "p99_error": 50.66666793823242,
+            "max_error": 139.3333282470703,
+            "channel_rmse": 13.239624736188901,
+            "display_clipped_percent": 8.85311071357583,
+            "jpeg_bytes": 4988,
+            "analysis_ms": 0.6541250040754676
+          }
+        }
+      }
+    }
+  ],
+  "analysis_count": 144,
+  "reference_analysis_count": 6
+}

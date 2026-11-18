@@ -1,0 +1,505 @@
+{
+  "id": "06",
+  "source_file": "plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-13.jpg",
+  "source_sha256": "811d4c64d7ea4f24ce9a087dd6c85b161e4a8b09433d8dd1187ef28e42d81df8",
+  "source_format": "JPEG",
+  "source_bytes": 107115,
+  "source_size": [
+    880,
+    663
+  ],
+  "decoded_size": [
+    880,
+    663
+  ],
+  "has_alpha": false,
+  "split_x": 440,
+  "folder": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1",
+  "views": {
+    "whole": {
+      "view": "whole",
+      "width": 880,
+      "height": 663,
+      "source": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/source.png",
+      "edges": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/edges.png",
+      "histogram": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/histogram.png",
+      "raw_maps": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/raw_ela_maps.npz",
+      "metrics_csv": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/metrics.csv",
+      "overview_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overview_q20.png",
+      "jpeg_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg_comparison.png",
+      "ela_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela_comparison.png",
+      "overlay_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay_comparison.png",
+      "rgb_difference_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/difference_rgb_q20_gain10.png",
+      "qualities": {
+        "5": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q05.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q05.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q05.png",
+          "stats": {
+            "jpeg_quality": 5,
+            "mean_error": 10.176792249603364,
+            "median_error": 8.666666984558105,
+            "p90_error": 19.33333396911621,
+            "p95_error": 24.0,
+            "p99_error": 36.33333206176758,
+            "max_error": 157.6666717529297,
+            "channel_rmse": 14.194572836377343,
+            "display_clipped_percent": 8.872377622377622,
+            "jpeg_bytes": 13635,
+            "analysis_ms": 6.477999966591597
+          }
+        },
+        "10": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q10.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q10.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q10.png",
+          "stats": {
+            "jpeg_quality": 10,
+            "mean_error": 7.028299980151091,
+            "median_error": 5.333333492279053,
+            "p90_error": 14.0,
+            "p95_error": 17.66666603088379,
+            "p99_error": 27.33333396911621,
+            "max_error": 105.33333587646484,
+            "channel_rmse": 10.116370125346508,
+            "display_clipped_percent": 3.275572466748937,
+            "jpeg_bytes": 18353,
+            "analysis_ms": 6.858290988020599
+          }
+        },
+        "20": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q20.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q20.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q20.png",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 4.861475611342881,
+            "median_error": 3.0,
+            "p90_error": 10.666666984558105,
+            "p95_error": 13.666666984558105,
+            "p99_error": 20.66666603088379,
+            "max_error": 88.33333587646484,
+            "channel_rmse": 7.527519783631648,
+            "display_clipped_percent": 1.10105580693816,
+            "jpeg_bytes": 26756,
+            "analysis_ms": 6.311249977443367
+          }
+        },
+        "40": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q40.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q40.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q40.png",
+          "stats": {
+            "jpeg_quality": 40,
+            "mean_error": 3.516066205927822,
+            "median_error": 2.0,
+            "p90_error": 8.333333015441895,
+            "p95_error": 10.666666984558105,
+            "p99_error": 15.666666984558105,
+            "max_error": 47.0,
+            "channel_rmse": 5.842160712350356,
+            "display_clipped_percent": 0.28211984094337034,
+            "jpeg_bytes": 40510,
+            "analysis_ms": 6.867291987873614
+          }
+        },
+        "60": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q60.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q60.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q60.png",
+          "stats": {
+            "jpeg_quality": 60,
+            "mean_error": 2.996680035606184,
+            "median_error": 2.0,
+            "p90_error": 7.333333492279053,
+            "p95_error": 9.0,
+            "p99_error": 13.333333015441895,
+            "max_error": 37.66666793823242,
+            "channel_rmse": 5.0791092496760575,
+            "display_clipped_percent": 0.07575757575757576,
+            "jpeg_bytes": 53497,
+            "analysis_ms": 6.576708983629942
+          }
+        },
+        "80": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q80.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q80.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q80.png",
+          "stats": {
+            "jpeg_quality": 80,
+            "mean_error": 1.873903630283325,
+            "median_error": 1.0,
+            "p90_error": 5.0,
+            "p95_error": 6.666666507720947,
+            "p99_error": 9.666666984558105,
+            "max_error": 26.33333396911621,
+            "channel_rmse": 3.6629704922250808,
+            "display_clipped_percent": 0.002913752913752914,
+            "jpeg_bytes": 83652,
+            "analysis_ms": 7.122708018869162
+          }
+        },
+        "90": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q90.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q90.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q90.png",
+          "stats": {
+            "jpeg_quality": 90,
+            "mean_error": 1.2209213186851253,
+            "median_error": 0.6666666865348816,
+            "p90_error": 3.3333332538604736,
+            "p95_error": 4.666666507720947,
+            "p99_error": 7.333333492279053,
+            "max_error": 24.0,
+            "channel_rmse": 2.6300567616316672,
+            "display_clipped_percent": 0.0005141916906622789,
+            "jpeg_bytes": 111892,
+            "analysis_ms": 7.715041982010007
+          }
+        },
+        "95": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/jpeg/q95.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/ela/q95.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/whole/overlay/q95.png",
+          "stats": {
+            "jpeg_quality": 95,
+            "mean_error": 0.9426173517179884,
+            "median_error": 0.3333333432674408,
+            "p90_error": 2.6666667461395264,
+            "p95_error": 3.6666667461395264,
+            "p99_error": 6.0,
+            "max_error": 19.33333396911621,
+            "channel_rmse": 2.177287042532258,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 151836,
+            "analysis_ms": 7.923999975901097
+          }
+        }
+      }
+    },
+    "left": {
+      "view": "left",
+      "width": 440,
+      "height": 663,
+      "source": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/source.png",
+      "edges": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/edges.png",
+      "histogram": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/histogram.png",
+      "raw_maps": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/raw_ela_maps.npz",
+      "metrics_csv": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/metrics.csv",
+      "overview_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overview_q20.png",
+      "jpeg_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg_comparison.png",
+      "ela_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela_comparison.png",
+      "overlay_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay_comparison.png",
+      "rgb_difference_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/difference_rgb_q20_gain10.png",
+      "qualities": {
+        "5": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q05.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q05.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q05.png",
+          "stats": {
+            "jpeg_quality": 5,
+            "mean_error": 10.923490565107647,
+            "median_error": 9.333333015441895,
+            "p90_error": 20.66666603088379,
+            "p95_error": 25.33333396911621,
+            "p99_error": 37.0,
+            "max_error": 157.6666717529297,
+            "channel_rmse": 15.069685852481813,
+            "display_clipped_percent": 10.650966680378446,
+            "jpeg_bytes": 7453,
+            "analysis_ms": 2.98024999210611
+          }
+        },
+        "10": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q10.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q10.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q10.png",
+          "stats": {
+            "jpeg_quality": 10,
+            "mean_error": 7.6104929450293035,
+            "median_error": 5.666666507720947,
+            "p90_error": 15.0,
+            "p95_error": 18.66666603088379,
+            "p99_error": 28.0,
+            "max_error": 98.0,
+            "channel_rmse": 10.828879412244069,
+            "display_clipped_percent": 3.744343891402715,
+            "jpeg_bytes": 10302,
+            "analysis_ms": 3.121624991763383
+          }
+        },
+        "20": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q20.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q20.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q20.png",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 5.460329537214087,
+            "median_error": 4.0,
+            "p90_error": 11.333333015441895,
+            "p95_error": 14.0,
+            "p99_error": 21.0,
+            "max_error": 88.33333587646484,
+            "channel_rmse": 8.16407220994118,
+            "display_clipped_percent": 1.2179487179487178,
+            "jpeg_bytes": 15424,
+            "analysis_ms": 3.152332967147231
+          }
+        },
+        "40": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q40.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q40.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q40.png",
+          "stats": {
+            "jpeg_quality": 40,
+            "mean_error": 4.100038850513318,
+            "median_error": 3.0,
+            "p90_error": 9.0,
+            "p95_error": 11.0,
+            "p99_error": 16.0,
+            "max_error": 47.0,
+            "channel_rmse": 6.377454439954067,
+            "display_clipped_percent": 0.31228575346222404,
+            "jpeg_bytes": 23572,
+            "analysis_ms": 3.2629999914206564
+          }
+        },
+        "60": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q60.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q60.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q60.png",
+          "stats": {
+            "jpeg_quality": 60,
+            "mean_error": 3.5093274368449534,
+            "median_error": 2.6666667461395264,
+            "p90_error": 7.666666507720947,
+            "p95_error": 9.333333015441895,
+            "p99_error": 13.333333015441895,
+            "max_error": 37.66666793823242,
+            "channel_rmse": 5.535042766979011,
+            "display_clipped_percent": 0.08055669820375702,
+            "jpeg_bytes": 31460,
+            "analysis_ms": 3.4072090056724846
+          }
+        },
+        "80": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q80.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q80.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q80.png",
+          "stats": {
+            "jpeg_quality": 80,
+            "mean_error": 2.266432425129766,
+            "median_error": 1.6666666269302368,
+            "p90_error": 5.333333492279053,
+            "p95_error": 6.666666507720947,
+            "p99_error": 9.666666984558105,
+            "max_error": 21.33333396911621,
+            "channel_rmse": 3.9497010343103662,
+            "display_clipped_percent": 0.0006855889208830385,
+            "jpeg_bytes": 49754,
+            "analysis_ms": 3.561708959750831
+          }
+        },
+        "90": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q90.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q90.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q90.png",
+          "stats": {
+            "jpeg_quality": 90,
+            "mean_error": 1.4645584822619475,
+            "median_error": 1.0,
+            "p90_error": 3.6666667461395264,
+            "p95_error": 4.666666507720947,
+            "p99_error": 7.0,
+            "max_error": 15.0,
+            "channel_rmse": 2.7409014145005566,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 66747,
+            "analysis_ms": 3.601333999540657
+          }
+        },
+        "95": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/jpeg/q95.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/ela/q95.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/left/overlay/q95.png",
+          "stats": {
+            "jpeg_quality": 95,
+            "mean_error": 1.1153560510701306,
+            "median_error": 1.0,
+            "p90_error": 3.0,
+            "p95_error": 3.6666667461395264,
+            "p99_error": 5.666666507720947,
+            "max_error": 15.0,
+            "channel_rmse": 2.203613150974148,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 90530,
+            "analysis_ms": 4.145416954997927
+          }
+        }
+      }
+    },
+    "right": {
+      "view": "right",
+      "width": 440,
+      "height": 663,
+      "source": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/source.png",
+      "edges": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/edges.png",
+      "histogram": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/histogram.png",
+      "raw_maps": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/raw_ela_maps.npz",
+      "metrics_csv": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/metrics.csv",
+      "overview_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overview_q20.png",
+      "jpeg_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg_comparison.png",
+      "ela_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela_comparison.png",
+      "overlay_comparison": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay_comparison.png",
+      "rgb_difference_q20": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/difference_rgb_q20_gain10.png",
+      "qualities": {
+        "5": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q05.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q05.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q05.png",
+          "stats": {
+            "jpeg_quality": 5,
+            "mean_error": 9.412550856224017,
+            "median_error": 8.0,
+            "p90_error": 17.66666603088379,
+            "p95_error": 23.0,
+            "p99_error": 35.0,
+            "max_error": 155.6666717529297,
+            "channel_rmse": 13.238367068140738,
+            "display_clipped_percent": 7.142122583299054,
+            "jpeg_bytes": 6974,
+            "analysis_ms": 3.520291007589549
+          }
+        },
+        "10": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q10.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q10.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q10.png",
+          "stats": {
+            "jpeg_quality": 10,
+            "mean_error": 6.429441491420661,
+            "median_error": 4.666666507720947,
+            "p90_error": 12.666666984558105,
+            "p95_error": 16.66666603088379,
+            "p99_error": 26.66666603088379,
+            "max_error": 105.66666412353516,
+            "channel_rmse": 9.317846129963097,
+            "display_clipped_percent": 2.8270259152612094,
+            "jpeg_bytes": 8841,
+            "analysis_ms": 3.5564590361900628
+          }
+        },
+        "20": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q20.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q20.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q20.png",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 4.262491423487316,
+            "median_error": 2.6666667461395264,
+            "p90_error": 9.666666984558105,
+            "p95_error": 13.0,
+            "p99_error": 20.0,
+            "max_error": 71.33333587646484,
+            "channel_rmse": 6.833246380038913,
+            "display_clipped_percent": 0.9886192239133416,
+            "jpeg_bytes": 12135,
+            "analysis_ms": 3.196417004801333
+          }
+        },
+        "40": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q40.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q40.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q40.png",
+          "stats": {
+            "jpeg_quality": 40,
+            "mean_error": 2.9279560317014504,
+            "median_error": 1.3333333730697632,
+            "p90_error": 7.666666507720947,
+            "p95_error": 10.0,
+            "p99_error": 15.666666984558105,
+            "max_error": 49.0,
+            "channel_rmse": 5.248034331519328,
+            "display_clipped_percent": 0.24646921705745234,
+            "jpeg_bytes": 17668,
+            "analysis_ms": 3.232999995816499
+          }
+        },
+        "60": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q60.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q60.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q60.png",
+          "stats": {
+            "jpeg_quality": 60,
+            "mean_error": 2.4915192648492592,
+            "median_error": 1.3333333730697632,
+            "p90_error": 6.666666507720947,
+            "p95_error": 8.666666984558105,
+            "p99_error": 13.333333015441895,
+            "max_error": 32.33333206176758,
+            "channel_rmse": 4.573980897180467,
+            "display_clipped_percent": 0.07027286439051145,
+            "jpeg_bytes": 22805,
+            "analysis_ms": 3.2206670148298144
+          }
+        },
+        "80": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q80.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q80.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q80.png",
+          "stats": {
+            "jpeg_quality": 80,
+            "mean_error": 1.491346726743904,
+            "median_error": 0.6666666865348816,
+            "p90_error": 4.666666507720947,
+            "p95_error": 6.333333492279053,
+            "p99_error": 10.0,
+            "max_error": 24.66666603088379,
+            "channel_rmse": 3.381121687518418,
+            "display_clipped_percent": 0.006855889208830386,
+            "jpeg_bytes": 34613,
+            "analysis_ms": 3.3620409667491913
+          }
+        },
+        "90": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q90.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q90.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q90.png",
+          "stats": {
+            "jpeg_quality": 90,
+            "mean_error": 0.9926093529520106,
+            "median_error": 0.0,
+            "p90_error": 3.0,
+            "p95_error": 4.333333492279053,
+            "p99_error": 8.0,
+            "max_error": 21.0,
+            "channel_rmse": 2.546468362221537,
+            "display_clipped_percent": 0.0006855889208830385,
+            "jpeg_bytes": 45878,
+            "analysis_ms": 3.784500004258007
+          }
+        },
+        "95": {
+          "jpeg": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/jpeg/q95.jpg",
+          "ela": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/ela/q95.png",
+          "overlay": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/right/overlay/q95.png",
+          "stats": {
+            "jpeg_quality": 95,
+            "mean_error": 0.7729946540518176,
+            "median_error": 0.0,
+            "p90_error": 2.3333332538604736,
+            "p95_error": 3.6666667461395264,
+            "p99_error": 6.666666507720947,
+            "max_error": 19.66666603088379,
+            "channel_rmse": 2.1536833203222328,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 62253,
+            "analysis_ms": 3.575667040422559
+          }
+        }
+      }
+    }
+  },
+  "report": "images/06_plus-size-celebrity-photoshopped-thinner-project-harpoon-thinnerbeauty-1/report.html",
+  "status": "Unverified side-by-side comparison image; left/right are spatial labels, not authenticity labels"
+}

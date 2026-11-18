@@ -1,0 +1,505 @@
+{
+  "id": "01",
+  "source_file": "596fa37556152c22b45c6eb2.avif",
+  "source_sha256": "ad1b652b50d5848d48cdf47646f90c841bbd87535e1293b690196d6d8ede9cad",
+  "source_format": "AVIF",
+  "source_bytes": 225949,
+  "source_size": [
+    1920,
+    640
+  ],
+  "decoded_size": [
+    1920,
+    640
+  ],
+  "has_alpha": false,
+  "split_x": 960,
+  "folder": "images/01_596fa37556152c22b45c6eb2",
+  "views": {
+    "whole": {
+      "view": "whole",
+      "width": 1920,
+      "height": 640,
+      "source": "images/01_596fa37556152c22b45c6eb2/whole/source.png",
+      "edges": "images/01_596fa37556152c22b45c6eb2/whole/edges.png",
+      "histogram": "images/01_596fa37556152c22b45c6eb2/whole/histogram.png",
+      "raw_maps": "images/01_596fa37556152c22b45c6eb2/whole/raw_ela_maps.npz",
+      "metrics_csv": "images/01_596fa37556152c22b45c6eb2/whole/metrics.csv",
+      "overview_q20": "images/01_596fa37556152c22b45c6eb2/whole/overview_q20.png",
+      "jpeg_comparison": "images/01_596fa37556152c22b45c6eb2/whole/jpeg_comparison.png",
+      "ela_comparison": "images/01_596fa37556152c22b45c6eb2/whole/ela_comparison.png",
+      "overlay_comparison": "images/01_596fa37556152c22b45c6eb2/whole/overlay_comparison.png",
+      "rgb_difference_q20": "images/01_596fa37556152c22b45c6eb2/whole/difference_rgb_q20_gain10.png",
+      "qualities": {
+        "5": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q05.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q05.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q05.png",
+          "stats": {
+            "jpeg_quality": 5,
+            "mean_error": 12.032445204152634,
+            "median_error": 9.666666984558105,
+            "p90_error": 23.33333396911621,
+            "p95_error": 30.33333396911621,
+            "p99_error": 46.0,
+            "max_error": 121.0,
+            "channel_rmse": 16.24086016000936,
+            "display_clipped_percent": 13.628580729166666,
+            "jpeg_bytes": 34745,
+            "analysis_ms": 16.486833977978677
+          }
+        },
+        "10": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q10.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q10.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q10.png",
+          "stats": {
+            "jpeg_quality": 10,
+            "mean_error": 8.436581217512673,
+            "median_error": 6.0,
+            "p90_error": 17.66666603088379,
+            "p95_error": 23.0,
+            "p99_error": 35.33333206176758,
+            "max_error": 113.33333587646484,
+            "channel_rmse": 11.757343798336183,
+            "display_clipped_percent": 7.11572265625,
+            "jpeg_bytes": 52677,
+            "analysis_ms": 13.3382499916479
+          }
+        },
+        "20": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q20.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q20.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q20.png",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 6.064025607178895,
+            "median_error": 4.333333492279053,
+            "p90_error": 13.0,
+            "p95_error": 17.33333396911621,
+            "p99_error": 26.66666603088379,
+            "max_error": 74.33333587646484,
+            "channel_rmse": 8.655404340962678,
+            "display_clipped_percent": 3.0828450520833335,
+            "jpeg_bytes": 83292,
+            "analysis_ms": 14.226708968635648
+          }
+        },
+        "40": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q40.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q40.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q40.png",
+          "stats": {
+            "jpeg_quality": 40,
+            "mean_error": 4.412356500576667,
+            "median_error": 3.0,
+            "p90_error": 10.0,
+            "p95_error": 13.0,
+            "p99_error": 20.33333396911621,
+            "max_error": 61.33333206176758,
+            "channel_rmse": 6.4559806492633784,
+            "display_clipped_percent": 1.0310872395833333,
+            "jpeg_bytes": 126564,
+            "analysis_ms": 14.092166966293007
+          }
+        },
+        "60": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q60.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q60.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q60.png",
+          "stats": {
+            "jpeg_quality": 60,
+            "mean_error": 3.5859708673038644,
+            "median_error": 2.3333332538604736,
+            "p90_error": 8.0,
+            "p95_error": 10.666666984558105,
+            "p99_error": 16.66666603088379,
+            "max_error": 47.33333206176758,
+            "channel_rmse": 5.263759431927419,
+            "display_clipped_percent": 0.3521321614583333,
+            "jpeg_bytes": 166145,
+            "analysis_ms": 14.531707973219454
+          }
+        },
+        "80": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q80.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q80.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q80.png",
+          "stats": {
+            "jpeg_quality": 80,
+            "mean_error": 2.4371202274592116,
+            "median_error": 1.6666666269302368,
+            "p90_error": 5.666666507720947,
+            "p95_error": 7.333333492279053,
+            "p99_error": 11.333333015441895,
+            "max_error": 27.33333396911621,
+            "channel_rmse": 3.670817593018656,
+            "display_clipped_percent": 0.012939453125,
+            "jpeg_bytes": 238342,
+            "analysis_ms": 15.293707954697311
+          }
+        },
+        "90": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q90.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q90.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q90.png",
+          "stats": {
+            "jpeg_quality": 90,
+            "mean_error": 1.5045328802732063,
+            "median_error": 1.0,
+            "p90_error": 3.3333332538604736,
+            "p95_error": 4.333333492279053,
+            "p99_error": 6.666666507720947,
+            "max_error": 17.66666603088379,
+            "channel_rmse": 2.303900583641915,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 345555,
+            "analysis_ms": 16.04624994797632
+          }
+        },
+        "95": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/whole/jpeg/q95.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/whole/ela/q95.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/whole/overlay/q95.png",
+          "stats": {
+            "jpeg_quality": 95,
+            "mean_error": 0.8784931134847284,
+            "median_error": 1.0,
+            "p90_error": 2.0,
+            "p95_error": 2.3333332538604736,
+            "p99_error": 3.3333332538604736,
+            "max_error": 14.333333015441895,
+            "channel_rmse": 1.3925999357903167,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 467265,
+            "analysis_ms": 16.58966700779274
+          }
+        }
+      }
+    },
+    "left": {
+      "view": "left",
+      "width": 960,
+      "height": 640,
+      "source": "images/01_596fa37556152c22b45c6eb2/left/source.png",
+      "edges": "images/01_596fa37556152c22b45c6eb2/left/edges.png",
+      "histogram": "images/01_596fa37556152c22b45c6eb2/left/histogram.png",
+      "raw_maps": "images/01_596fa37556152c22b45c6eb2/left/raw_ela_maps.npz",
+      "metrics_csv": "images/01_596fa37556152c22b45c6eb2/left/metrics.csv",
+      "overview_q20": "images/01_596fa37556152c22b45c6eb2/left/overview_q20.png",
+      "jpeg_comparison": "images/01_596fa37556152c22b45c6eb2/left/jpeg_comparison.png",
+      "ela_comparison": "images/01_596fa37556152c22b45c6eb2/left/ela_comparison.png",
+      "overlay_comparison": "images/01_596fa37556152c22b45c6eb2/left/overlay_comparison.png",
+      "rgb_difference_q20": "images/01_596fa37556152c22b45c6eb2/left/difference_rgb_q20_gain10.png",
+      "qualities": {
+        "5": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q05.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q05.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q05.png",
+          "stats": {
+            "jpeg_quality": 5,
+            "mean_error": 12.026113282188938,
+            "median_error": 9.666666984558105,
+            "p90_error": 23.33333396911621,
+            "p95_error": 30.33333396911621,
+            "p99_error": 46.0,
+            "max_error": 121.0,
+            "channel_rmse": 16.23296302409596,
+            "display_clipped_percent": 13.60595703125,
+            "jpeg_bytes": 17664,
+            "analysis_ms": 6.7428749753162265
+          }
+        },
+        "10": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q10.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q10.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q10.png",
+          "stats": {
+            "jpeg_quality": 10,
+            "mean_error": 8.446207139564503,
+            "median_error": 6.0,
+            "p90_error": 17.66666603088379,
+            "p95_error": 23.0,
+            "p99_error": 35.33333206176758,
+            "max_error": 83.33333587646484,
+            "channel_rmse": 11.774784619808633,
+            "display_clipped_percent": 7.159016927083333,
+            "jpeg_bytes": 26625,
+            "analysis_ms": 6.54554198263213
+          }
+        },
+        "20": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q20.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q20.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q20.png",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 6.057861869729871,
+            "median_error": 4.333333492279053,
+            "p90_error": 13.0,
+            "p95_error": 17.33333396911621,
+            "p99_error": 26.66666603088379,
+            "max_error": 73.0,
+            "channel_rmse": 8.642437115335854,
+            "display_clipped_percent": 3.0548502604166665,
+            "jpeg_bytes": 41971,
+            "analysis_ms": 7.154625025577843
+          }
+        },
+        "40": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q40.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q40.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q40.png",
+          "stats": {
+            "jpeg_quality": 40,
+            "mean_error": 4.414249133116536,
+            "median_error": 3.0,
+            "p90_error": 10.0,
+            "p95_error": 13.0,
+            "p99_error": 20.33333396911621,
+            "max_error": 61.33333206176758,
+            "channel_rmse": 6.458268816882053,
+            "display_clipped_percent": 1.0341796875,
+            "jpeg_bytes": 63521,
+            "analysis_ms": 6.879125023260713
+          }
+        },
+        "60": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q60.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q60.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q60.png",
+          "stats": {
+            "jpeg_quality": 60,
+            "mean_error": 3.590037436314839,
+            "median_error": 2.3333332538604736,
+            "p90_error": 8.0,
+            "p95_error": 10.666666984558105,
+            "p99_error": 16.66666603088379,
+            "max_error": 38.66666793823242,
+            "channel_rmse": 5.267561927386726,
+            "display_clipped_percent": 0.35302734375,
+            "jpeg_bytes": 83363,
+            "analysis_ms": 7.439333014190197
+          }
+        },
+        "80": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q80.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q80.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q80.png",
+          "stats": {
+            "jpeg_quality": 80,
+            "mean_error": 2.4391623281788393,
+            "median_error": 1.6666666269302368,
+            "p90_error": 5.666666507720947,
+            "p95_error": 7.333333492279053,
+            "p99_error": 11.333333015441895,
+            "max_error": 27.33333396911621,
+            "channel_rmse": 3.672535401604955,
+            "display_clipped_percent": 0.013671875,
+            "jpeg_bytes": 119475,
+            "analysis_ms": 7.338916999287903
+          }
+        },
+        "90": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q90.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q90.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q90.png",
+          "stats": {
+            "jpeg_quality": 90,
+            "mean_error": 1.5056532144951051,
+            "median_error": 1.0,
+            "p90_error": 3.3333332538604736,
+            "p95_error": 4.333333492279053,
+            "p99_error": 6.666666507720947,
+            "max_error": 17.66666603088379,
+            "channel_rmse": 2.3051532603754232,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 173259,
+            "analysis_ms": 7.8566669835709035
+          }
+        },
+        "95": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/left/jpeg/q95.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/left/ela/q95.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/left/overlay/q95.png",
+          "stats": {
+            "jpeg_quality": 95,
+            "mean_error": 0.87764106268849,
+            "median_error": 1.0,
+            "p90_error": 2.0,
+            "p95_error": 2.3333332538604736,
+            "p99_error": 3.3333332538604736,
+            "max_error": 14.333333015441895,
+            "channel_rmse": 1.39202566789174,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 234046,
+            "analysis_ms": 8.587874996010214
+          }
+        }
+      }
+    },
+    "right": {
+      "view": "right",
+      "width": 960,
+      "height": 640,
+      "source": "images/01_596fa37556152c22b45c6eb2/right/source.png",
+      "edges": "images/01_596fa37556152c22b45c6eb2/right/edges.png",
+      "histogram": "images/01_596fa37556152c22b45c6eb2/right/histogram.png",
+      "raw_maps": "images/01_596fa37556152c22b45c6eb2/right/raw_ela_maps.npz",
+      "metrics_csv": "images/01_596fa37556152c22b45c6eb2/right/metrics.csv",
+      "overview_q20": "images/01_596fa37556152c22b45c6eb2/right/overview_q20.png",
+      "jpeg_comparison": "images/01_596fa37556152c22b45c6eb2/right/jpeg_comparison.png",
+      "ela_comparison": "images/01_596fa37556152c22b45c6eb2/right/ela_comparison.png",
+      "overlay_comparison": "images/01_596fa37556152c22b45c6eb2/right/overlay_comparison.png",
+      "rgb_difference_q20": "images/01_596fa37556152c22b45c6eb2/right/difference_rgb_q20_gain10.png",
+      "qualities": {
+        "5": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q05.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q05.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q05.png",
+          "stats": {
+            "jpeg_quality": 5,
+            "mean_error": 12.039278428239292,
+            "median_error": 9.666666984558105,
+            "p90_error": 23.33333396911621,
+            "p95_error": 30.33333396911621,
+            "p99_error": 46.0,
+            "max_error": 114.33333587646484,
+            "channel_rmse": 16.250106002592293,
+            "display_clipped_percent": 13.6513671875,
+            "jpeg_bytes": 17700,
+            "analysis_ms": 6.208458973560482
+          }
+        },
+        "10": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q10.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q10.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q10.png",
+          "stats": {
+            "jpeg_quality": 10,
+            "mean_error": 8.427770725116279,
+            "median_error": 6.0,
+            "p90_error": 17.33333396911621,
+            "p95_error": 23.0,
+            "p99_error": 35.33333206176758,
+            "max_error": 113.33333587646484,
+            "channel_rmse": 11.741379239111218,
+            "display_clipped_percent": 7.07275390625,
+            "jpeg_bytes": 26657,
+            "analysis_ms": 7.560666999779642
+          }
+        },
+        "20": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q20.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q20.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q20.png",
+          "stats": {
+            "jpeg_quality": 20,
+            "mean_error": 6.070837673613326,
+            "median_error": 4.333333492279053,
+            "p90_error": 13.0,
+            "p95_error": 17.33333396911621,
+            "p99_error": 27.0,
+            "max_error": 74.33333587646484,
+            "channel_rmse": 8.669448359176641,
+            "display_clipped_percent": 3.11083984375,
+            "jpeg_bytes": 41962,
+            "analysis_ms": 7.133709033951163
+          }
+        },
+        "40": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q40.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q40.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q40.png",
+          "stats": {
+            "jpeg_quality": 40,
+            "mean_error": 4.411015083330518,
+            "median_error": 3.0,
+            "p90_error": 10.0,
+            "p95_error": 13.0,
+            "p99_error": 20.33333396911621,
+            "max_error": 59.33333206176758,
+            "channel_rmse": 6.454507561405676,
+            "display_clipped_percent": 1.0279947916666667,
+            "jpeg_bytes": 63688,
+            "analysis_ms": 6.990750029217452
+          }
+        },
+        "60": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q60.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q60.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q60.png",
+          "stats": {
+            "jpeg_quality": 60,
+            "mean_error": 3.5824614814494757,
+            "median_error": 2.3333332538604736,
+            "p90_error": 8.0,
+            "p95_error": 10.666666984558105,
+            "p99_error": 16.66666603088379,
+            "max_error": 47.33333206176758,
+            "channel_rmse": 5.260813361692515,
+            "display_clipped_percent": 0.3512369791666667,
+            "jpeg_bytes": 83396,
+            "analysis_ms": 6.9847500417381525
+          }
+        },
+        "80": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q80.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q80.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q80.png",
+          "stats": {
+            "jpeg_quality": 80,
+            "mean_error": 2.4355056440989817,
+            "median_error": 1.6666666269302368,
+            "p90_error": 5.666666507720947,
+            "p95_error": 7.333333492279053,
+            "p99_error": 11.333333015441895,
+            "max_error": 27.33333396911621,
+            "channel_rmse": 3.6697304612172963,
+            "display_clipped_percent": 0.01220703125,
+            "jpeg_bytes": 119565,
+            "analysis_ms": 7.514709024690092
+          }
+        },
+        "90": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q90.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q90.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q90.png",
+          "stats": {
+            "jpeg_quality": 90,
+            "mean_error": 1.5037179931003386,
+            "median_error": 1.0,
+            "p90_error": 3.3333332538604736,
+            "p95_error": 4.333333492279053,
+            "p99_error": 6.666666507720947,
+            "max_error": 17.0,
+            "channel_rmse": 2.303175056933785,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 172989,
+            "analysis_ms": 8.031499979551882
+          }
+        },
+        "95": {
+          "jpeg": "images/01_596fa37556152c22b45c6eb2/right/jpeg/q95.jpg",
+          "ela": "images/01_596fa37556152c22b45c6eb2/right/ela/q95.png",
+          "overlay": "images/01_596fa37556152c22b45c6eb2/right/overlay/q95.png",
+          "stats": {
+            "jpeg_quality": 95,
+            "mean_error": 0.8795442745224864,
+            "median_error": 1.0,
+            "p90_error": 2.0,
+            "p95_error": 2.3333332538604736,
+            "p99_error": 3.3333332538604736,
+            "max_error": 14.0,
+            "channel_rmse": 1.393561973490355,
+            "display_clipped_percent": 0.0,
+            "jpeg_bytes": 233811,
+            "analysis_ms": 8.024417038541287
+          }
+        }
+      }
+    }
+  },
+  "report": "images/01_596fa37556152c22b45c6eb2/report.html",
+  "status": "Unverified side-by-side comparison image; left/right are spatial labels, not authenticity labels"
+}

@@ -1,0 +1,9 @@
+Input filename: error2.png
+Format: PNG
+Size (height, width): (130, 387)
+JPEG quality: 80
+Display max: 20
+Overlay alpha: 0.5
+Mean absolute error: 1.8891
+Analysis time, memory JPEG round trip (ms): 9.43
+ELA values are pixel differences, not forgery probabilities.

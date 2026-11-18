@@ -1,0 +1,211 @@
+{
+  "activeLayerID" : "49557295-432B-4407-88C1-BBA0ABFF8672",
+  "colorSpace" : "sRGB",
+  "documentID" : "13E2224C-6395-44FE-A3AE-224A85C2A712",
+  "format" : "com.compositor.project",
+  "height" : 3840,
+  "layers" : [
+    {
+      "blendMode" : "Normal",
+      "id" : "C2A2986D-A1A8-4276-B9A3-095C37E2A651",
+      "imageFile" : "C2A2986D-A1A8-4276-B9A3-095C37E2A651.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "test_image - 1 (1)",
+      "opacity" : 1,
+      "transform" : {
+        "flipX" : false,
+        "flipY" : false,
+        "origin" : [
+          0,
+          0
+        ],
+        "rotation" : 0,
+        "sampling" : "High quality",
+        "size" : [
+          2160,
+          3840
+        ]
+      }
+    },
+    {
+      "blendMode" : "Normal",
+      "id" : "AF31A94F-E7C6-416C-BA73-5B578143344C",
+      "imageFile" : "AF31A94F-E7C6-416C-BA73-5B578143344C.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "Layer 6",
+      "opacity" : 1,
+      "transform" : {
+        "flipX" : false,
+        "flipY" : true,
+        "origin" : [
+          2023,
+          268
+        ],
+        "rotation" : -2,
+        "sampling" : "High quality",
+        "size" : [
+          58,
+          264
+        ]
+      }
+    },
+    {
+      "blendMode" : "Normal",
+      "id" : "5DC5F0C0-01A7-4FF3-9349-A3267B4A20B9",
+      "imageFile" : "5DC5F0C0-01A7-4FF3-9349-A3267B4A20B9.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "Layer 5",
+      "opacity" : 1,
+      "transform" : {
+        "flipX" : false,
+        "flipY" : false,
+        "origin" : [
+          1101.9551781380949,
+          1228.0174524064369
+        ],
+        "rotation" : -89,
+        "sampling" : "High quality",
+        "size" : [
+          53,
+          32
+        ]
+      }
+    },
+    {
+      "blendMode" : "Normal",
+      "id" : "49557295-432B-4407-88C1-BBA0ABFF8672",
+      "imageFile" : "49557295-432B-4407-88C1-BBA0ABFF8672.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "0 212 444 00 44",
+      "opacity" : 0.6401319781553398,
+      "text" : {
+        "alignment" : "Left",
+        "blue" : 1,
+        "boxSize" : [
+          537,
+          112
+        ],
+        "content" : "0 212 444 00 44",
+        "fontName" : "SFPro-CompressedBold",
+        "fontSize" : 90,
+        "green" : 1,
+        "leading" : 0,
+        "red" : 1,
+        "tracking" : 0
+      },
+      "transform" : {
+        "flipX" : false,
+        "flipY" : false,
+        "origin" : [
+          1898.9841520990872,
+          368.2612701012961
+        ],
+        "rotation" : 269,
+        "sampling" : "High quality",
+        "size" : [
+          291.482254697286,
+          51
+        ]
+      }
+    },
+    {
+      "blendMode" : "Normal",
+      "id" : "E0A7E1EE-E2AE-471F-B08C-6B2B3815D6F4",
+      "imageFile" : "E0A7E1EE-E2AE-471F-B08C-6B2B3815D6F4.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "Layer 4",
+      "opacity" : 1,
+      "transform" : {
+        "flipX" : false,
+        "flipY" : false,
+        "origin" : [
+          1071,
+          2680
+        ],
+        "rotation" : 0,
+        "sampling" : "High quality",
+        "size" : [
+          168,
+          195
+        ]
+      }
+    },
+    {
+      "blendMode" : "Normal",
+      "id" : "D61AFAA0-85C8-438B-8285-FD4321F1263B",
+      "imageFile" : "D61AFAA0-85C8-438B-8285-FD4321F1263B.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "Layer 3",
+      "opacity" : 1,
+      "transform" : {
+        "flipX" : false,
+        "flipY" : false,
+        "origin" : [
+          1615,
+          973
+        ],
+        "rotation" : 0,
+        "sampling" : "High quality",
+        "size" : [
+          100,
+          167
+        ]
+      }
+    },
+    {
+      "blendMode" : "Normal",
+      "id" : "DD28FD41-8812-447C-9A71-8B01CFB19C28",
+      "imageFile" : "DD28FD41-8812-447C-9A71-8B01CFB19C28.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "Layer 1",
+      "opacity" : 1,
+      "transform" : {
+        "flipX" : false,
+        "flipY" : false,
+        "origin" : [
+          1103,
+          949
+        ],
+        "rotation" : 0,
+        "sampling" : "High quality",
+        "size" : [
+          136,
+          167
+        ]
+      }
+    },
+    {
+      "blendMode" : "Normal",
+      "id" : "40976452-A181-4DCE-940E-05DC73C1D437",
+      "imageFile" : "40976452-A181-4DCE-940E-05DC73C1D437.png",
+      "isGroup" : false,
+      "isVisible" : true,
+      "name" : "Layer 2",
+      "opacity" : 1,
+      "transform" : {
+        "flipX" : false,
+        "flipY" : false,
+        "origin" : [
+          823,
+          949
+        ],
+        "rotation" : 0,
+        "sampling" : "High quality",
+        "size" : [
+          100,
+          167
+        ]
+      }
+    }
+  ],
+  "resolution" : 72,
+  "version" : 11,
+  "width" : 2160
+}

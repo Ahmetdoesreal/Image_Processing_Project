@@ -1,0 +1,9 @@
+Input filename: astronaut.png
+Format: PNG
+Size (height, width): (512, 512)
+JPEG quality: 80
+Display max: 20
+Overlay alpha: 0.5
+Mean absolute error: 2.9480
+Analysis time, memory JPEG round trip (ms): 3.11
+ELA values are pixel differences, not forgery probabilities.
