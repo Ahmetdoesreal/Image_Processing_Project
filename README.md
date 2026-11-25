@@ -27,7 +27,7 @@ Notebook'ta hücreleri yukarıdan aşağıya çalıştır veya **Run All** seç.
 - ELA önce fonksiyonsuz gösterilir: JPEG olarak kaydet, geri oku, piksel farkını al, üç renk kanalının ortalamasını hesapla.
 - Sonra aynı satırlar `calculate_ela` fonksiyonuna alınır. Fonksiyonun girdileri ve döndürdüğü sonuç açıklanır.
 - Karşılaştırma: Kalite 80 / 90 / 95; kontrol ve düzenlenmiş görüntülerde aynı alanın ortalama farkı; işlem süreleri.
-- Son hücrede `custom_image_path` ayarlanarak başka bir yerel görüntü incelenebilir.
+- Son bölümdeki kod hücreleri `deneme/` klasöründeki JPEG, AVIF ve WebP görsellerini ayrı ayrı analiz eder. Her hücre tek başına çalışır; dosyayı okuyup JPEG kalite 80 ile yeniden sıkıştırır, ELA haritasını gösterir ve `outputs/deneme_<dosya_adı>_ela.png` olarak kaydeder. Hücredeki dosya adı değiştirilerek başka bir görsel seçilebilir.
 
 `outputs/` klasörüne kontrol ve düzenlenmiş JPEG'ler, bilinen maske, karşılaştırma grafikleri, `ela_overlay.png` ve `quality_comparison.csv` yazılır. `recompressed.jpg`, ELA için tekrar kullanılan çalışma dosyasıdır. Yeniden çalıştırma aynı adlı demo çıktılarını günceller. Görüntüler bir servise yüklenmez.
 
@@ -38,5 +38,7 @@ Kodda iç içe döngü, sözlük veya karmaşık tablo biçimlendirmesi yok. Gö
 ELA bir gerçek/sahte sınıflandırıcısı değildir. Doku, keskin kenarlar ve normal JPEG sıkıştırması da parlak bölgeler oluşturabilir. Maske, bizim oluşturduğumuz düzenlemenin bilinen konumudur; algoritmanın bulduğu bir bölge değildir. Ortalama farklar bir yüzde veya sahte olma olasılığı değildir.
 
 Bu örnek, farklı sıkıştırma geçmişlerini özellikle oluşturur. Tek örnekten genel tespit başarısı çıkarılamaz. Grafikler aynı renk ölçeğini kullanır; ölçümler görüntüleme için kırpılmaz. Anlaşılır olması için JPEG dosyası diske yazılıp geri okunur. Ölçülen sürelere bu yazma ve okuma işlemleri dahildir; çizim dahil değildir.
+
+Deneme bölümündeki bağımsız hücreler JPEG dönüşümünü bellekte yapar. AVIF ve WebP örneklerindeki haritalar JPEG'e dönüşüm farklarını gösterir; bu dosyalardan JPEG sıkıştırma geçmişi veya sahtecilik hakkında kesin sonuç çıkarılmaz.
 
 Şimdiki teslim notebook demosudur. V1'deki Electron entegrasyonu ve daha geniş veriyle değerlendirme sonraki aşamadadır.
