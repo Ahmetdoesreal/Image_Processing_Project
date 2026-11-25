@@ -1,6 +1,6 @@
 numpy
 opencv-python
 matplotlib
-pillow
+pillow>=11.3
 jupyterlab
 ipykernel

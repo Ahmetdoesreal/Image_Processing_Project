@@ -4,7 +4,7 @@ Bu klasörde deney sürümleri ve V1'in proje anlatımı ayrı dosyalarda tutulu
 
 | Sürüm | Dosya | İçerik |
 |---|---|---|
-| Mevcut çalışma | [Image_Spatter_Demo.ipynb](Image_Spatter_Demo.ipynb) | Önceki adım adım demo ve kullanıcı ayarları. |
+| Ana demo | [Image_Spatter_Demo.ipynb](Image_Spatter_Demo.ipynb) | Kontrollü ELA deneyi, kendi görüntünü inceleme ve İrem’in altı örneğini yeniden hesaplama. |
 | V2 — Anlatımlı demo | [Image_Spatter_Demo_V2_Anlatimli.ipynb](Image_Spatter_Demo_V2_Anlatimli.ipynb) | Çalışan kod, kayıtlı grafikler ve her işlemin nedenini anlatan metin. |
 | V3 — Günlük dille anlatım | [Image_Spatter_V3_Sade_Anlatim.html](Image_Spatter_V3_Sade_Anlatim.html) | Teknik bilgi gerektirmeyen, etkileşimli ve tek dosyalık açıklama. |
 | V1 proje anlatımı | [Image_Spatter_V1_Proje_Anlatimi.ipynb](Image_Spatter_V1_Proje_Anlatimi.ipynb) | V1 Academic MVP planına dayalı, çoğunlukla sunumda okunabilecek sade açıklamalar ve temsili görseller. |

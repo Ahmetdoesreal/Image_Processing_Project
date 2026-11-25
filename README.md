@@ -1,4 +1,4 @@
-# Image Spatter — ilk notebook demosu
+# Image Spatter — ELA notebook demosu
 
 Görüntülerdeki JPEG yeniden sıkıştırma farklarını ELA (Error Level Analysis) ile inceleyen, adım adım açıklanmış bir ders demosu. Kod, önceki ders notebooklarındaki OpenCV / NumPy / Matplotlib yapısını izler.
 
@@ -6,7 +6,7 @@ Görüntülerdeki JPEG yeniden sıkıştırma farklarını ELA (Error Level Anal
 
 | Dosya | Ne için? |
 |---|---|
-| [Mevcut demo](Image_Spatter_Demo.ipynb) | Önceki notebook ve kişisel ayarların. |
+| [Ana demo](Image_Spatter_Demo.ipynb) | Kontrollü ELA deneyi, kendi görüntünü inceleme ve İrem’in altı örneğini yeniden hesaplama. |
 | [V2 — Anlatımlı notebook](Image_Spatter_Demo_V2_Anlatimli.ipynb) | Her adımda ne yaptığımızı, neden yaptığımızı ve sonucu nasıl okuyacağını doğal bir dille anlatır. Türkçe metin içinde İngilizce terimler açıklanır. |
 | [V3 — Sade anlatımlı HTML](Image_Spatter_V3_Sade_Anlatim.html) | Kod bilmeden okunabilir. Gerçek demo sonuçları arasında geçiş, kalite karşılaştırması, opaklık ayarı ve küçük bir sayı örneği içerir. |
 | [V1 — Proje anlatımı](Image_Spatter_V1_Proje_Anlatimi.ipynb) | V1 planından hareketle amacımızı, nasıl yapacağımızı, değerlendirmeyi ve teslim hedeflerini basit dille anlatan kısa sunum notu. Temsili ekran ve çalışma akışı içerir. |
@@ -44,11 +44,15 @@ Notebook'ta hücreleri yukarıdan aşağıya çalıştır veya **Run All** seç.
 - ELA önce fonksiyonsuz gösterilir: JPEG olarak kaydet, geri oku, piksel farkını al, üç renk kanalının ortalamasını hesapla.
 - Sonra aynı satırlar `calculate_ela` fonksiyonuna alınır. Fonksiyonun girdileri ve döndürdüğü sonuç açıklanır.
 - Karşılaştırma: Kalite **5 / 10 / 20 / 40 / 60 / 80 / 90 / 95**; kontrol ve düzenlenmiş görüntülerde aynı alanın ortalama farkı; işlem süreleri. Çok düşük kalite aralığı da dahildir.
-- **Custom image / Kendi görüntünü incele** bölümü, üstteki demo çalışmadan da kullanılabilir. Mevcut `custom_image_path` ve `custom_quality` ayarların korunur.
+- **Custom image / Kendi görüntünü incele** bölümü, üstteki demo çalışmadan da kullanılabilir. Başlangıçta örnek görüntü kullanılır. Kendi dosyan için `custom_image_path` değerini güncelle.
 
 `outputs/` klasörüne kontrol ve düzenlenmiş JPEG'ler, bilinen maske, karşılaştırma grafikleri, `ela_overlay.png` ve `quality_comparison.csv` yazılır. `recompressed.jpg`, ELA için tekrar kullanılan çalışma dosyasıdır. Yeniden çalıştırma aynı adlı demo çıktılarını günceller. Görüntüler bir servise yüklenmez.
 
 Kodda iç içe döngü, sözlük veya karmaşık tablo biçimlendirmesi yok. Görüntüden parça seçme, `mean(axis=2)`, `subplot`, `alpha`, fonksiyon ve döngü yazımı kullanıldığı yerde açıklanır.
+
+## İrem örnekleri
+
+Ana notebook’taki **9. İrem örneklerini karşılaştır** hücresini proje klasöründe tek başına çalıştırabilirsin. `data/iremimg/` içindeki altı JPEG, WebP ve AVIF dosyasını kalite 80 ile yeniden sıkıştırır ve ortak renk ölçeğindeki grafikleri `outputs/irem_examples/` içine kaydeder. Yalnızca seçtiğin dosyalar için `example_filenames` listesini düzenle. Farklı JPEG kalitelerini ve sol/sağ görünümleri incelemek için [hazır raporu](data/iremimg/outputs/index.html) aç.
 
 ## Custom image / Kendi görüntünü incele
 
