@@ -6,12 +6,13 @@ const { pathToFileURL } = require('node:url');
 const { promisify } = require('node:util');
 
 const runFile = promisify(execFile);
+const projectDir = path.join(__dirname, '..');
 const indexPath = path.join(__dirname, 'index.html');
 const indexURL = pathToFileURL(indexPath).href;
 const pngSignature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
 const samplePaths = {
-  control: path.join(__dirname, '..', 'outputs', 'control.jpg'),
-  edited: path.join(__dirname, '..', 'outputs', 'edited.jpg'),
+  control: path.join(projectDir, 'outputs', 'control.jpg'),
+  edited: path.join(projectDir, 'outputs', 'edited.jpg'),
 };
 
 let window;
@@ -52,9 +53,10 @@ ipcMain.handle('image:analyze', async (event, qualities) => {
   }
 
   const python = process.env.IMAGE_SPATTER_PYTHON || (process.platform === 'win32' ? 'python' : 'python3');
-  const args = [path.join(__dirname, 'engine.py'), selectedPath, ...qualities.map(String)];
+  const args = ['-m', 'image_spatter', selectedPath, ...qualities.map(String)];
   try {
     const { stdout } = await runFile(python, args, {
+      cwd: projectDir,
       timeout: 120_000,
       maxBuffer: 24 * 1024 * 1024,
       windowsHide: true,

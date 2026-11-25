@@ -4,7 +4,7 @@ Bu klasörde deney sürümleri ve V1'in proje anlatımı ayrı dosyalarda tutulu
 
 | Sürüm | Dosya | İçerik |
 |---|---|---|
-| Ana demo | [Image_Spatter_Demo.ipynb](Image_Spatter_Demo.ipynb) | Kontrollü ELA deneyi, kendi görüntünü inceleme ve İrem’in altı örneğini yeniden hesaplama. |
+| Ana demo | [Image_Spatter_Demo.ipynb](Image_Spatter_Demo.ipynb) | Elle ELA adımları, ortak Python motoru, kendi görüntünü inceleme ve İrem’in altı örneği. |
 | V2 — Anlatımlı demo | [Image_Spatter_Demo_V2_Anlatimli.ipynb](Image_Spatter_Demo_V2_Anlatimli.ipynb) | Çalışan kod, kayıtlı grafikler ve her işlemin nedenini anlatan metin. |
 | V3 — Günlük dille anlatım | [Image_Spatter_V3_Sade_Anlatim.html](Image_Spatter_V3_Sade_Anlatim.html) | Teknik bilgi gerektirmeyen, etkileşimli ve tek dosyalık açıklama. |
 | Masaüstü 1.1 | [Kullanım](README.md#v1-masaüstü-uygulaması) | Üç panelde eşzamanlı yakınlaştırma ve kaydırma, yerel PNG karşılaştırma çıktısı. |

@@ -1,4 +1,4 @@
-"""Generate the controlled V1 evaluation CSV using the application's ELA engine."""
+"""Generate the controlled V1 evaluation CSV using the shared ELA engine."""
 
 import argparse
 import csv
@@ -8,7 +8,7 @@ from time import perf_counter
 
 import numpy as np
 
-from engine import calculate_ela, jpeg_roundtrip, read_image
+from .ela import ela_channel_sum, jpeg_roundtrip, read_image
 
 QUALITIES = (20, 80, 95)
 REPEATS = 7
@@ -16,11 +16,11 @@ POSITIONS = ((390, 40), (230, 165), (45, 245))
 
 
 def timed_ela(image, quality):
-    calculate_ela(image, quality)
+    ela_channel_sum(image, quality)
     times = []
     for _ in range(REPEATS):
         start = perf_counter()
-        result = calculate_ela(image, quality)
+        result = ela_channel_sum(image, quality)
         times.append((perf_counter() - start) * 1000)
     return result, median(times)
 

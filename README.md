@@ -1,6 +1,11 @@
-# Image Spatter — ELA notebook demosu
+# Image Spatter
 
-Görüntülerdeki JPEG yeniden sıkıştırma farklarını ELA (Error Level Analysis) ile inceleyen, adım adım açıklanmış bir ders demosu. Kod, önceki ders notebooklarındaki OpenCV / NumPy / Matplotlib yapısını izler.
+Image Spatter, JPEG yeniden sıkıştırma farklarını ELA (Error Level Analysis) ile inceler. İki kullanım biçimi aynı [Python motorunu](image_spatter/ela.py) kullanır.
+
+- **Jupyter demosu** · [Ana notebook](Image_Spatter_Demo.ipynb) yöntemi adım adım gösterir ve ortak motorla kontrollü örnekler çalıştırır. Electron kurulumu gerekmez.
+- **Etkileşimli masaüstü** · Electron yerel dosya seçimi, eşzamanlı görüntü inceleme ve PNG dışa aktarma sağlar. Hesaplama Python motorunda yapılır.
+
+[Bu dalda eklenenler ve değişiklik miktarı](CANDIDATE_CHANGES.md)
 
 ## V1 masaüstü uygulaması
 
@@ -72,7 +77,7 @@ Notebook'ta hücreleri yukarıdan aşağıya çalıştır veya **Run All** seç.
 - `data/astronaut.png`: Çalışma alanında önceden bulunan ve ders notebookunda kullanılan örnek görüntünün kopyası. İnternetten indirilmez.
 - Kontrollü deney: JPEG kalite 75 ile oluşturulan arka plana PNG kaynaktan bir arma eklenir. Kontrol ve düzenlenmiş örneklerin ikisi de son aşamada kalite 95 ile kaydedilir.
 - ELA önce fonksiyonsuz gösterilir: JPEG olarak kaydet, geri oku, piksel farkını al, üç renk kanalının ortalamasını hesapla.
-- Sonra aynı satırlar `calculate_ela` fonksiyonuna alınır. Fonksiyonun girdileri ve döndürdüğü sonuç açıklanır.
+- Ortak motorun `calculate_ela` fonksiyonu içe aktarılır. Notebook elle hesaplanan harita ile motorun sonucunu karşılaştırır.
 - Karşılaştırma: Kalite **5 / 10 / 20 / 40 / 60 / 80 / 90 / 95**; kontrol ve düzenlenmiş görüntülerde aynı alanın ortalama farkı; işlem süreleri. Çok düşük kalite aralığı da dahildir.
 - **Custom image / Kendi görüntünü incele** bölümü, üstteki demo çalışmadan da kullanılabilir. Başlangıçta örnek görüntü kullanılır. Kendi dosyan için `custom_image_path` değerini güncelle.
 
@@ -103,7 +108,7 @@ Kaliteyi iyice düşürmek için **5, 10 ve 20**, ara karşılaştırmalar için
 
 Pillow gerçek dosya formatını okur, EXIF yön bilgisini uygular ve saydam alanları gerektiğinde beyaz zeminle birleştirir. Analiz 8-bit renkli pikseller üzerinde, yeniden boyutlandırmadan yapılır. JPEG dışındaki bir girdide sonuç, girdinin JPEG'e çevrilme farkıdır.
 
-Custom analiz JPEG'i bellekte oluşturup çözer; süreye dosya yükleme, çizim ve dışa aktarma dahil değildir. Üstteki öğretici demo ise adımları göstermek için diskte bir çalışma dosyası kullanmaya devam eder.
+Ortak motor JPEG’i bellekte oluşturup çözer. Ölçülen süreye dosya yükleme, çizim ve dışa aktarma dahil değildir. Elle yapılan öğretici adımlar JPEG kopyasını diske yazar.
 
 `custom_save_outputs = True` olduğunda `outputs/custom/<dosya_adı>/` altında her çalıştırma için yeni bir klasör açılır. Karşılaştırma ve heatmap PNG'leri, ham `ela_raw.npy`, kalite ölçümlerinin CSV'si ve kısa bir özet kaydedilir. ROI seçilmişse onun görseli ve CSV'si de eklenir. Önceki sonuçların ve giriş dosyasının üzerine yazılmaz. `custom_image_path = None` analizi atlar; `custom_save_outputs = False` dosya kaydetmeyi kapatır.
 
@@ -117,6 +122,6 @@ English: Recompress the input, compute absolute differences, and inspect the map
 
 ELA bir gerçek/sahte sınıflandırıcısı değildir. Doku, keskin kenarlar ve normal JPEG sıkıştırması da parlak bölgeler oluşturabilir. Maske, bizim oluşturduğumuz düzenlemenin bilinen konumudur; algoritmanın bulduğu bir bölge değildir. Ortalama farklar bir yüzde veya sahte olma olasılığı değildir.
 
-Bu örnek, farklı sıkıştırma geçmişlerini özellikle oluşturur. Tek örnekten genel tespit başarısı çıkarılamaz. Grafikler aynı renk ölçeğini kullanır; ölçümler görüntüleme için kırpılmaz. Anlaşılır olması için JPEG dosyası diske yazılıp geri okunur. Ölçülen sürelere bu yazma ve okuma işlemleri dahildir; çizim dahil değildir.
+Bu örnek, farklı sıkıştırma geçmişlerini özellikle oluşturur. Tek örnekten genel tespit başarısı çıkarılamaz. Grafikler aynı renk ölçeğini kullanır; ölçümler görüntüleme için kırpılmaz. İlk adımlarda JPEG dosyaya yazılıp geri okunur. Ölçülen süreler ortak motorun bellek içi işlemini kapsar.
 
 Ders tesliminde masaüstü uygulaması, kontrollü deney bulguları, teknik rapor ve sunum birlikte yer alır.

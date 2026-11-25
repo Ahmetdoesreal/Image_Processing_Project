@@ -39,7 +39,7 @@ Ayrıntılı ölçümlerde kontrol ve düzenlenmiş görüntüler için medyan i
 Proje klasöründe `imagepr_env` etkin iken aşağıdaki komut ham ölçümleri yeni bir dosyaya yazar. İşlem süreleri donanım ve yükle değişebilir.
 
 ```bash
-python desktop/evaluate.py /tmp/image-spatter-evaluation.csv
+python -m image_spatter.evaluate /tmp/image-spatter-evaluation.csv
 ```
 
 Uygulamayı [çalıştırma adımlarıyla](../README.md) aç. **Kontrol** ve **Kontrollü düzenleme** örneklerini sırayla seçip 80 ve 95'i karşılaştır. Ardından 20'yi deneyerek arka plandaki farkların nasıl değiştiğini göster. [Ders sunumu](presentation.html)
