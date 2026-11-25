@@ -26,6 +26,8 @@ IMAGE_SPATTER_PYTHON="$HOME/anaconda3/envs/imagepr_env/bin/python" \
 
 Sınıf demosunda **Kontrol** ve **Kontrollü düzenleme** örnekleriyle başla. **Görüntü aç** yerel dosyalar içindir. **JPEG A** ve **JPEG B** ile iki kalite seç. Haritayı giriş üzerinde incelemek için **Üst üste göster** seçeneğini aç.
 
+Masaüstü arayüzü 1.1 sürümünde yakınlaştırma üç paneli birlikte büyütür. Herhangi bir görüntüyü sürükle veya karşılaştırma alanına odaklanıp ok tuşlarını kullan. **Yakınlaştırmayı sıfırla** tam görüntüye döner. **PNG olarak kaydet**, giriş görüntüsü ve iki ELA haritasını seçili opaklık, JPEG ayarları ve ölçümlerle tek dosyaya yazar. PNG tam görüntüyü kullanır, ekrandaki yakınlaştırmayı kırpma olarak uygulamaz.
+
 - [Teknik rapor](academic/REPORT.md)
 - [Deney ölçümleri](academic/evaluation.csv)
 - [Ders sunumu](academic/presentation.html) · Dosyayı tarayıcıda aç ve ok tuşlarıyla ilerle.

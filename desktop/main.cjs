@@ -1,5 +1,6 @@
 const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const { execFile } = require('node:child_process');
+const { mkdtemp, rename, rm, writeFile } = require('node:fs/promises');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
 const { promisify } = require('node:util');
@@ -7,6 +8,7 @@ const { promisify } = require('node:util');
 const runFile = promisify(execFile);
 const indexPath = path.join(__dirname, 'index.html');
 const indexURL = pathToFileURL(indexPath).href;
+const pngSignature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
 const samplePaths = {
   control: path.join(__dirname, '..', 'outputs', 'control.jpg'),
   edited: path.join(__dirname, '..', 'outputs', 'edited.jpg'),
@@ -65,6 +67,40 @@ ipcMain.handle('image:analyze', async (event, qualities) => {
     }
     throw new Error(error.stderr?.trim().split('\n').at(-1) || 'Analiz tamamlanamadı.');
   }
+});
+
+ipcMain.handle('image:saveComparison', async (event, bytes) => {
+  checkSender(event);
+  if (!(bytes instanceof ArrayBuffer) || bytes.byteLength > 8 * 1024 * 1024) {
+    throw new Error('PNG verisi geçersiz veya çok büyük.');
+  }
+  const png = Buffer.from(bytes);
+  if (!png.subarray(0, pngSignature.length).equals(pngSignature)) {
+    throw new Error('Geçerli bir PNG oluşturulamadı.');
+  }
+
+  const inputPath = selectedPath;
+  const result = await dialog.showSaveDialog(window, {
+    defaultPath: 'image-spatter-comparison.png',
+    filters: [{ name: 'PNG görüntüsü', extensions: ['png'] }],
+  });
+  if (result.canceled || !result.filePath) return null;
+  if (path.extname(result.filePath).toLowerCase() !== '.png') {
+    throw new Error('Dosya adı .png ile bitmeli.');
+  }
+  if (inputPath && path.resolve(result.filePath) === path.resolve(inputPath)) {
+    throw new Error('Giriş görüntüsünü korumak için farklı bir dosya adı seç.');
+  }
+
+  const staging = await mkdtemp(path.join(path.dirname(result.filePath), '.image-spatter-'));
+  try {
+    const temporaryPng = path.join(staging, 'comparison.png');
+    await writeFile(temporaryPng, png);
+    await rename(temporaryPng, result.filePath);
+  } finally {
+    await rm(staging, { recursive: true, force: true });
+  }
+  return path.basename(result.filePath);
 });
 
 function createWindow() {

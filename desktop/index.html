@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src data:">
   <title>Image Spatter</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="comparison-export.js"></script>
   <script defer src="renderer.js"></script>
 </head>
 <body>
@@ -30,6 +31,7 @@
         <label>JPEG B <input id="quality-b" type="number" min="1" max="100" required value="95"></label>
         <button id="analyze" type="submit">Karşılaştır</button>
       </form>
+      <button id="save" type="button" disabled>PNG olarak kaydet</button>
     </section>
     <section class="inspection" aria-label="Görüntü ve ELA sonuçları">
       <div class="inspection-top">
@@ -38,12 +40,14 @@
           <p id="status" role="status">Bir görüntü aç veya örnek seç.</p>
         </div>
         <div class="view-controls">
-          <label>Yakınlaştır <select id="zoom"><option value="100">Sığdır</option><option value="150">%150</option><option value="200">%200</option></select></label>
-          <label class="check"><input id="overlay" type="checkbox"> Üst üste göster</label>
+          <label>Yakınlaştır <select id="zoom" disabled><option value="100">Sığdır</option><option value="150">%150</option><option value="200">%200</option><option value="300">%300</option></select></label>
+          <button id="reset-view" type="button" disabled>Yakınlaştırmayı sıfırla</button>
+          <label class="check"><input id="overlay" type="checkbox" disabled> Üst üste göster</label>
           <label>Opaklık <input id="opacity" aria-label="Üst üste gösterim opaklığı" type="range" min="0" max="100" value="65" disabled></label>
         </div>
       </div>
-      <div class="viewport" tabindex="0" aria-label="Görüntü karşılaştırması">
+      <p id="pan-hint" hidden>Görüntüleri birlikte kaydırmak için sürükle veya odaktayken ok tuşlarını kullan.</p>
+      <div id="viewport" class="viewport" tabindex="0" aria-label="Görüntü karşılaştırması" aria-describedby="pan-hint">
         <div id="gallery" class="gallery"></div>
       </div>
       <footer><span class="legend" aria-hidden="true"></span><span>ELA renk ölçeği 0–20</span><span>Parlaklık piksel farkını gösterir.</span></footer>
@@ -52,7 +56,12 @@
   <template id="panel">
     <figure>
       <figcaption></figcaption>
-      <div class="picture"><img class="source" alt=""><img class="heatmap" alt="" hidden></div>
+      <div class="picture">
+        <div class="picture-content">
+          <img class="source" alt="" draggable="false">
+          <img class="heatmap" alt="" draggable="false" hidden>
+        </div>
+      </div>
       <p class="metrics"></p>
     </figure>
   </template>

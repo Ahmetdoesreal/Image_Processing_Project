@@ -4,4 +4,5 @@ contextBridge.exposeInMainWorld('imageSpatter', {
   open: () => ipcRenderer.invoke('image:open'),
   sample: (sample) => ipcRenderer.invoke('image:sample', sample),
   analyze: (qualities) => ipcRenderer.invoke('image:analyze', qualities),
+  saveComparison: (bytes) => ipcRenderer.invoke('image:saveComparison', bytes),
 });

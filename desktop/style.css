@@ -40,7 +40,7 @@ button, select, input[type="number"] {
   font: inherit;
 }
 button { cursor: pointer; font-size: 14px; font-weight: 650; }
-button:disabled { cursor: wait; opacity: .55; }
+button:disabled { cursor: default; opacity: .55; }
 button.primary { background: var(--accent); border-color: transparent; color: #231d12; }
 input[type="number"] { width: 72px; }
 input { accent-color: var(--accent); }
@@ -59,11 +59,27 @@ h2 { font-size: 18px; overflow-wrap: anywhere; }
 .check { display: flex; align-items: center; align-self: center; gap: 5px; }
 input[type="range"] { width: 92px; min-height: 32px; }
 .viewport { overflow: auto; max-height: 58vh; padding-bottom: 6px; }
-.gallery { display: grid; width: var(--zoom, 100%); grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 figure { min-width: 0; background: #1b222e; }
 figcaption { font-weight: 620; padding: 9px 10px; }
-.picture { position: relative; }
-.picture img { display: block; width: 100%; height: auto; }
+#pan-hint { font-size: 13px; margin-bottom: 9px; }
+.picture {
+  position: relative;
+  overflow: hidden;
+  width: min(100%, calc(48vh * var(--image-ratio, 1)));
+  margin-inline: auto;
+  aspect-ratio: var(--image-ratio, 1);
+}
+.gallery[data-zoomed] .picture { cursor: grab; touch-action: none; }
+.gallery[data-panning] .picture { cursor: grabbing; }
+.picture-content {
+  position: absolute;
+  inset: 0;
+  transform: translate(var(--pan-x, 0%), var(--pan-y, 0%)) scale(var(--zoom, 1));
+  pointer-events: none;
+  user-select: none;
+}
+.picture img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .picture img[hidden] { display: none; }
 .picture .heatmap { position: absolute; inset: 0; opacity: var(--opacity, 1); }
 .metrics { min-height: 46px; padding: 8px 10px; font-size: 13px; font-variant-numeric: tabular-nums; }
