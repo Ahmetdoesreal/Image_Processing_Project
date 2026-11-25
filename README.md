@@ -2,6 +2,34 @@
 
 Görüntülerdeki JPEG yeniden sıkıştırma farklarını ELA (Error Level Analysis) ile inceleyen, adım adım açıklanmış bir ders demosu. Kod, önceki ders notebooklarındaki OpenCV / NumPy / Matplotlib yapısını izler.
 
+## V1 masaüstü uygulaması
+
+Image Spatter, Electron içinde yerel görüntü açar. Python ve OpenCV analizi, giriş görüntüsünü iki JPEG kalitesinde yeniden sıkıştırarak ELA haritalarını yan yana gösterir.
+
+Proje klasöründe Node.js 22.12 veya üzeri ve Python 3.10 veya üzeri gerekir. Ders ortamıyla çalıştırmak için:
+
+```bash
+conda activate imagepr_env
+npm --prefix desktop ci
+npm --prefix desktop start
+```
+
+İlk kurulum Electron paketlerini indirir. Sonraki açılışlarda `npm --prefix desktop start` yeterlidir. Ayrı Python ortamı kullanıyorsan `python -m pip install -r requirements.txt` çalıştır. Belirli bir Python yorumlayıcısı için `IMAGE_SPATTER_PYTHON` ortam değişkenini yürütülebilir dosyanın yoluna ayarla.
+
+Bu Ubuntu sanal makinesindeki sistem Node.js sürümü 16 ise aşağıdaki komutlarla Node.js 22'yi sistem sürümünü değiştirmeden kullanabilirsin:
+
+```bash
+npx --yes --package=node@22 -c 'npm --prefix desktop ci'
+IMAGE_SPATTER_PYTHON="$HOME/anaconda3/envs/imagepr_env/bin/python" \
+  npx --yes --package=node@22 -c 'npm --prefix desktop start'
+```
+
+Sınıf demosunda **Kontrol** ve **Kontrollü düzenleme** örnekleriyle başla. **Görüntü aç** yerel dosyalar içindir. **JPEG A** ve **JPEG B** ile iki kalite seç. Haritayı giriş üzerinde incelemek için **Üst üste göster** seçeneğini aç.
+
+- [Teknik rapor](academic/REPORT.md)
+- [Deney ölçümleri](academic/evaluation.csv)
+- [Ders sunumu](academic/presentation.html) · Dosyayı tarayıcıda aç ve ok tuşlarıyla ilerle.
+
 ## Ayrı sürümler
 
 | Dosya | Ne için? |
@@ -89,4 +117,4 @@ ELA bir gerçek/sahte sınıflandırıcısı değildir. Doku, keskin kenarlar ve
 
 Bu örnek, farklı sıkıştırma geçmişlerini özellikle oluşturur. Tek örnekten genel tespit başarısı çıkarılamaz. Grafikler aynı renk ölçeğini kullanır; ölçümler görüntüleme için kırpılmaz. Anlaşılır olması için JPEG dosyası diske yazılıp geri okunur. Ölçülen sürelere bu yazma ve okuma işlemleri dahildir; çizim dahil değildir.
 
-Şimdiki teslim notebook demosudur. V1'deki Electron entegrasyonu ve daha geniş veriyle değerlendirme sonraki aşamadadır.
+Ders tesliminde masaüstü uygulaması, kontrollü deney bulguları, teknik rapor ve sunum birlikte yer alır.

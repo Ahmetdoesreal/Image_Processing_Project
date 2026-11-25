@@ -6,3 +6,5 @@ __pycache__/
 *.npy
 *.npz
 /outputs/irem_examples/
+
+/desktop/node_modules/

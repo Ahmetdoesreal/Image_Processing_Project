@@ -7,6 +7,7 @@ Bu klasörde deney sürümleri ve V1'in proje anlatımı ayrı dosyalarda tutulu
 | Ana demo | [Image_Spatter_Demo.ipynb](Image_Spatter_Demo.ipynb) | Kontrollü ELA deneyi, kendi görüntünü inceleme ve İrem’in altı örneğini yeniden hesaplama. |
 | V2 — Anlatımlı demo | [Image_Spatter_Demo_V2_Anlatimli.ipynb](Image_Spatter_Demo_V2_Anlatimli.ipynb) | Çalışan kod, kayıtlı grafikler ve her işlemin nedenini anlatan metin. |
 | V3 — Günlük dille anlatım | [Image_Spatter_V3_Sade_Anlatim.html](Image_Spatter_V3_Sade_Anlatim.html) | Teknik bilgi gerektirmeyen, etkileşimli ve tek dosyalık açıklama. |
+| V1 — Academic MVP | [Masaüstü uygulaması](README.md#v1-masaüstü-uygulaması) · [Teknik rapor](academic/REPORT.md) · [Sunum](academic/presentation.html) | Yerel görüntü açma, iki ELA kalitesini karşılaştırma ve kontrollü deney. |
 | V1 proje anlatımı | [Image_Spatter_V1_Proje_Anlatimi.ipynb](Image_Spatter_V1_Proje_Anlatimi.ipynb) | V1 Academic MVP planına dayalı, çoğunlukla sunumda okunabilecek sade açıklamalar ve temsili görseller. |
 | Compositor örnekleri | [Image_Spatter_Compositor_Denemeleri.ipynb](Image_Spatter_Compositor_Denemeleri.ipynb) | İki `.comp` paketinin katmanlarından tam boyutlu PNG oluşturma ve kontrolle ELA karşılaştırması. |
 | iremimg veri incelemesi | [HTML raporu](data/iremimg/outputs/index.html) · [Notebook](data/iremimg/outputs/Analiz_Raporu.ipynb) | 6 kaynağın bütün/sol/sağ görünümlerinde 144 ELA hesabı ve önceki örneklerin Q20 kopyaları. |
@@ -29,7 +30,7 @@ ELA tam çözünürlükte, her kalite için aynı PNG girdiden hesaplanır. Bu P
 
 Bu notebook, “Amacımız bu, şunları şöyle yapacağız” diye projeyi anlatmak içindir. Kod çalıştırmak gerekmez. Amaç, kullanıcı akışı, aday yöntemler, Electron–Python bağlantısı, test yaklaşımı, 7 haftalık plan ve tamamlanma ölçütlerini içerir. Sondaki kısa konuşma metni sunumda kullanılabilir.
 
-Temsili ekran ve akış çizimi notebook'un içine gömülüdür. Ekran taslağı tamamlanmış Electron uygulaması olarak sunulmaz. ELA, mevcut ilk denemedir; nihai yöntem seçimi V1 planındaki gibi açık tutulur. Buradaki V1 uygulama kapsamının adıdır; V2/V3 deney anlatımlarının üzerine yazmaz.
+Temsili ekran ve akış çizimi notebook'un içine gömülüdür. Ekran taslağı tamamlanmış Electron uygulaması olarak sunulmaz. Bu notebook proje planını yansıtır. Tamamlanan V1 uygulamasının yöntemi ELA'dır. Buradaki V1 uygulama kapsamının adıdır; V2/V3 deney anlatımlarının üzerine yazmaz.
 
 ## V2'yi kullanma
 

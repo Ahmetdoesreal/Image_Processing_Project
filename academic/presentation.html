@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Spatter V1 · COM0418</title>
+  <link rel="stylesheet" href="presentation.css">
+  <script defer src="presentation.js"></script>
+</head>
+<body>
+  <main aria-label="Image Spatter V1 sunumu">
+    <section class="slide cover">
+      <div>
+        <p class="accent">COM0418 Görüntü İşleme</p>
+        <h1>Image<br>Spatter V1</h1>
+        <p class="lead">Yerel görüntülerde JPEG sıkıştırma farklarının incelenmesi</p>
+      </div>
+      <img src="../data/astronaut.png" alt="Deneyde kullanılan astronot fotoğrafı">
+    </section>
+    <section class="slide" hidden>
+      <h2>Hata Seviyesi Analizi</h2>
+      <p class="lead">Yeniden sıkıştırma, bazı piksel değerlerini değiştirir.</p>
+      <ol>
+        <li>Görüntüyü seçilen kalitede bellekte JPEG’e kodla ve geri aç.</li>
+        <li>Her pikselde üç kanalın mutlak farkını al ve ortalamasını hesapla.</li>
+        <li>İki kaliteyi aynı 0–20 renk ölçeğinde yan yana göster.</li>
+      </ol>
+      <p class="caption">Electron yerel dosyayı seçer. Python ve OpenCV analizi hesaplar. Sonuç Electron penceresinde gösterilir.</p>
+    </section>
+    <section class="slide" hidden>
+      <h2>Kontrollü deney</h2>
+      <div class="experiment">
+        <div>
+          <p>512 × 512 piksel kaynak görüntüden üç eşleştirilmiş deney üretildi.</p>
+          <p>Kontrol ve düzenlenmiş kopyalar aynı son kaliteyle kaydedildi. Düzenlenmiş kopyalarda aynı 80 × 80 parça üç ayrı konuma taşındı.</p>
+          <p class="caption">Ölçümler, bilinen bölge içi ortalama farkı ve bölgeyi çevresinden ayıran piksel ROC-AUC değerini içerir.</p>
+        </div>
+        <figure>
+          <img src="../outputs/known_mask.png" alt="Siyah zemin üzerinde beyaz kareyle gösterilen bilinen yapıştırma maskesi">
+          <figcaption>İlk deneydeki bilinen yapıştırma bölgesi</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="slide" hidden>
+      <h2>Kalite 80, üç konumda da en iyi ayrımı verdi</h2>
+      <table>
+        <thead><tr><th scope="col">Analiz kalitesi</th><th scope="col">Ortalama ROC-AUC</th><th scope="col">Bölge ortalama farkı, kontrol ile düzenlenmiş</th></tr></thead>
+        <tbody>
+          <tr><td>20</td><td>0,853</td><td>9,074–10,737</td></tr>
+          <tr class="highlight"><td>80</td><td>0,957</td><td>5,231–5,781</td></tr>
+          <tr><td>95</td><td>0,877</td><td>1,320–1,773</td></tr>
+        </tbody>
+      </table>
+      <p>Kalite 20’de düzenlenen bölgedeki fark büyüdü. Arka plandaki farkların da artması, bölgeyi ayırmayı zorlaştırdı.</p>
+      <p class="caption">ROC-AUC üç yerleşimin ortalamasıdır. Süre, yedi analiz çalıştırmasının medyanı olarak yaklaşık 40–70 ms aralığındaydı.</p>
+    </section>
+    <section class="slide demo" hidden>
+      <h2>Uygulama demosu</h2>
+      <div class="demo-layout">
+        <img src="app-comparison.png" alt="Image Spatter uygulamasında giriş görüntüsü, kalite 80 ve kalite 95 ELA haritaları">
+        <ol>
+          <li>Kontrol ve kontrollü düzenleme örneklerini aç.</li>
+          <li>80 ve 95’i karşılaştır. Ardından A’yı 20’ye indir.</li>
+          <li>Üst üste göster ve yapıştırılan bölgeye yakınlaş.</li>
+        </ol>
+      </div>
+    </section>
+    <section class="slide" hidden>
+      <h2>Sonuçların yorumlanması</h2>
+      <p class="lead">ELA haritası, seçilen JPEG kalitesiyle oluşan piksel farklarını gösterir.</p>
+      <p>Yüksek farklar doğal kenarlarda, dokularda ve farklı sıkıştırma geçmişi olan bölgelerde görülebilir. Harita, fotoğrafın geçmişine ilişkin bir inceleme ipucudur.</p>
+      <p>Deney tek fotoğraf ve tek parça kullanır. Genel performans için farklı görüntüler, sıkıştırma geçmişleri ve düzenleme türleriyle bağımsız test gerekir.</p>
+      <p class="caption">Yöntem, ham ölçümler ve yeniden çalıştırma komutu teknik raporda yer alır.</p>
+    </section>
+  </main>
+  <nav aria-label="Sunum denetimleri">
+    <button id="previous" type="button">Geri</button>
+    <span id="position" aria-live="polite"></span>
+    <button id="next" type="button">İleri</button>
+    <button id="fullscreen" type="button">Tam ekran</button>
+  </nav>
+</body>
+</html>
