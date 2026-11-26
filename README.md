@@ -5,6 +5,8 @@ Image Spatter, JPEG yeniden sıkıştırma farklarını ELA (Error Level Analysi
 - **Jupyter demosu** · [Ana notebook](Image_Spatter_Demo.ipynb) yöntemi adım adım gösterir ve ortak motorla kontrollü örnekler çalıştırır. Electron kurulumu gerekmez.
 - **Etkileşimli masaüstü** · Electron yerel dosya seçimi, eşzamanlı görüntü inceleme ve PNG dışa aktarma sağlar. Hesaplama Python motorunda yapılır.
 
+**[Electron GIF demosunu izle](ELECTRON_DEMO.md)**
+
 [Bu dalda eklenenler ve değişiklik miktarı](CANDIDATE_CHANGES.md)
 
 ## V1 masaüstü uygulaması
