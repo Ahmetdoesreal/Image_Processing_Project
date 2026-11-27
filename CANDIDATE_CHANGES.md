@@ -10,7 +10,7 @@ This branch contains a [Jupyter demo](Image_Spatter_Demo.ipynb) and an [interact
 | Shared engine · `d3d9e82` | Moved ELA computation into `image_spatter/ela.py`. The notebooks verify their manual calculation against it, and Electron calls it through a local subprocess. |
 | GIF walkthrough · `d69666e` | Recorded the desktop workflow and linked it from the README. |
 | Desktop 1.2 | Localized the current interface and teaching text to English, added copy-move candidates and metadata provenance highlights, and added focused tests. |
-| Desktop 1.3 | Added a local noise-residual map and notebook experiment, clarified the Copy-move detection panel, and tested a rotated pasted patch. |
+| Desktop 1.3 | Added a local noise-residual map and notebook experiment, clarified the Copy-move detection panel, and tested a rotated pasted patch. Refreshed the notebook outputs and recorded the full 1.3 walkthrough, including the noise panel. |
 
 ## Snapshot from the shared-engine milestone
 

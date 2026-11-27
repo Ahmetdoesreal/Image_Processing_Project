@@ -5,7 +5,7 @@ Image Spatter is a local image-inspection project. It compares JPEG recompressio
 - **Jupyter demo** · [Run the notebook](Image_Spatter_Demo.ipynb) to follow the ELA calculation and try the shared Python engine.
 - **Interactive desktop app** · Open images, compare two JPEG qualities, inspect copy-move candidates, noise patterns, and metadata, and save a PNG comparison.
 
-**[Watch the Electron GIF demo](ELECTRON_DEMO.md)** · [Candidate changes](CANDIDATE_CHANGES.md)
+**[Watch the Desktop 1.3 GIF walkthrough](ELECTRON_DEMO.md)** · [Candidate changes](CANDIDATE_CHANGES.md)
 
 ## Desktop application
 
@@ -65,7 +65,7 @@ The **Custom image** section runs independently. Set `custom_image_path` to a lo
 
 The notebook’s **Compare İrem’s examples** section runs the six bundled JPEG, WebP, and AVIF examples at quality 80 using a shared color scale. Adjust `example_filenames` to select a subset. It saves plots to `outputs/irem_examples/`. The [full report](data/iremimg/outputs/index.html) includes additional JPEG qualities and left/right views.
 
-The final two sections demonstrate copy-move detection and metadata clues on a local file, and noise analysis on a synthetic image with a known noisy patch.
+Sections 10 and 11 use the same copy-move, metadata, and noise routines as Electron. Section 10 marks potential copies on the bundled edited JPEG. Section 11 compares a synthetic noisy patch with its flat background using the same noise scale as the desktop app.
 
 ELA visualizes mean absolute differences across three color channels after recompression. For non-JPEG inputs it displays differences introduced by conversion to JPEG. Ordinary texture and sharp edges can produce large values. The known mask in the controlled demo marks the patch placement from the experiment. [Forensically’s ELA explanation](https://29a.ch/photo-forensics/#error-level-analysis)
 

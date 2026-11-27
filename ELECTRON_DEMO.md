@@ -1,6 +1,6 @@
 # Image Spatter Electron demo
 
-These recordings use the bundled control and controlled-edit samples.
+Recorded in Desktop 1.3. The walkthrough uses the bundled control and edited images, plus synthetic noise and metadata fixtures.
 
 ## Compare JPEG qualities
 
@@ -16,7 +16,9 @@ Zoom to 200% and drag a panel to pan all three together. Use **Show overlay** an
 
 ## Compare noise and copy-move results
 
-In the current app, **Copy-move detection** labels candidate matching patches on the input with A/B markers. Open **Noise analysis** below the comparison to see the input beside the local residual map. Brighter regions contain stronger fine-scale variation.
+In **Controlled edit**, **Copy-move detection** marks the original badge and its pasted copy with paired A/B boxes. **Show matches on input** toggles those markers. The recording then opens a synthetic image with a known noisy rectangle. **Noise analysis** shows the input beside the local residual map and reports the median and P95. Brighter regions contain stronger fine-scale variation.
+
+![Toggling copy-move boxes and opening the noise map for a synthetic noisy patch](docs/electron-demo/copy-move-and-noise.gif)
 
 ## Review metadata provenance clues
 
@@ -30,4 +32,4 @@ The demonstration image has synthetic camera and editor tags. **Metadata** highl
 
 ![Saving the PNG and the app confirming the filename](docs/electron-demo/png-export.gif)
 
-[Setup and launch](README.md#desktop-application)
+[Setup and launch](README.md#desktop-application) · [Jupyter experiments](Image_Spatter_Demo.ipynb)

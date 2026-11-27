@@ -42,7 +42,7 @@ From the repository root, run:
 python -m image_spatter.evaluate /tmp/image-spatter-evaluation.csv
 ```
 
-Start the app using the [desktop instructions](../README.md#desktop-application). Select **Control** and **Controlled edit**, compare qualities 80 and 95, then change A to 20 to see how the background response changes. The current desktop release also marks the matching patch pair and can display metadata clues. [Class slides](presentation.html)
+Start the app using the [desktop instructions](../README.md#desktop-application). Select **Control** and **Controlled edit**, compare qualities 80 and 95, then change A to 20 to see how the background response changes. The current desktop release also marks the matching patch pair, maps local noise residuals, and displays metadata clues. The [Jupyter demo](../Image_Spatter_Demo.ipynb) includes a separate controlled noise example. The benchmark above measures ELA. [Class slides](presentation.html)
 
 | Submission requirement | Evidence |
 |---|---|

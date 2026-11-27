@@ -2,8 +2,8 @@
 
 | Resource | Purpose |
 |---|---|
-| [Desktop 1.3](README.md#desktop-application) | English interface, copy-move candidates, local noise maps, metadata provenance clues, linked pan and zoom, and local PNG export |
-| [Main notebook](Image_Spatter_Demo.ipynb) | Manual ELA calculation, shared Python engine, custom image, and İrem’s six samples |
+| [Desktop 1.3](README.md#desktop-application) | English interface, copy-move candidates, local noise maps, metadata provenance clues, linked pan and zoom, and local PNG export. [GIF walkthrough](ELECTRON_DEMO.md) |
+| [Main notebook](Image_Spatter_Demo.ipynb) | Manual ELA calculation, custom images, İrem’s samples, and current copy-move, metadata, and noise experiments |
 | [V2 guided notebook](Image_Spatter_Demo_V2_Anlatimli.ipynb) | Step-by-step explanation with separate outputs under `outputs/v2_anlatimli/` |
 | [V3 HTML explanation](Image_Spatter_V3_Sade_Anlatim.html) | Offline visual demo of JPEG quality, opacity, and the pixel difference calculation |
 | [V1 academic project overview](Image_Spatter_V1_Proje_Anlatimi.ipynb) | Original scope, timeline, evaluation plan, and presentation script |
