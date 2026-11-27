@@ -97,7 +97,7 @@ div.finding { display: flex; gap: 15px; align-items: center; justify-content: sp
 .finding h2, .finding summary { font-size: 16px; font-weight: 650; }
 .finding p { margin-top: 5px; font-size: 13px; }
 .finding summary { cursor: pointer; }
-#metadata-status { color: var(--muted); font-size: 13px; font-weight: 400; }
+#metadata-status, #noise-status { color: var(--muted); font-size: 13px; font-weight: 400; }
 #metadata-panel .check { margin-block: 10px; }
 .metadata-table { max-height: 280px; overflow: auto; }
 .metadata-table table { border-collapse: collapse; width: 100%; font-size: 13px; }
@@ -112,3 +112,8 @@ div.finding { display: flex; gap: 15px; align-items: center; justify-content: sp
 .pair-2 { --region-color: #aad0ff; }
 .pair-3 { --region-color: #ffa6cc; }
 .hide-duplicates .region-mark { display: none; }
+
+.noise-views { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; max-width: 840px; margin-top: 12px; }
+.noise-views img { display: block; width: 100%; max-height: 53vh; object-fit: contain; background: #131820; }
+.noise-legend { display: flex; align-items: center; gap: 8px; }
+.noise-scale { width: 112px; height: 8px; background: linear-gradient(90deg, #440154, #3b528b, #21918c, #5ec962, #fde725); }

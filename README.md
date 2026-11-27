@@ -1,9 +1,9 @@
 # Image Spatter
 
-Image Spatter is a local image-inspection project. It compares JPEG recompression differences, highlights possible repeated regions, and shows metadata clues about capture and editing.
+Image Spatter is a local image-inspection project. It compares JPEG recompression differences, highlights possible repeated regions, maps local noise variation, and shows metadata clues about capture and editing.
 
 - **Jupyter demo** · [Run the notebook](Image_Spatter_Demo.ipynb) to follow the ELA calculation and try the shared Python engine.
-- **Interactive desktop app** · Open images, compare two JPEG qualities, inspect repeated regions and metadata, and save a PNG comparison.
+- **Interactive desktop app** · Open images, compare two JPEG qualities, inspect copy-move candidates, noise patterns, and metadata, and save a PNG comparison.
 
 **[Watch the Electron GIF demo](ELECTRON_DEMO.md)** · [Candidate changes](CANDIDATE_CHANGES.md)
 
@@ -32,9 +32,10 @@ IMAGE_SPATTER_PYTHON="$HOME/anaconda3/envs/imagepr_env/bin/python" \
 
 1. Choose **Open image** or use the bundled **Control** and **Controlled edit** samples.
 2. Set **JPEG A** and **JPEG B**, then select **Compare** to recompute the ELA maps. Drag any zoomed panel or use the arrow keys to pan all three. **Show overlay** and **Opacity** blend the heatmap with the input.
-3. Check **Duplicate regions** for matching patches. Numbered A/B boxes mark each candidate pair on the input. Turn off **Show matches** to inspect the image without boxes.
-4. Open **Metadata** to review the original file’s readable EXIF, GPS, PNG text, and XMP fields. **Highlighted fields only** filters to provenance clues.
-5. Use **Save PNG** to export the full input and both ELA views with JPEG settings, measurements, and overlay opacity. The comparison export does not include the metadata table or duplicate markers.
+3. Check **Copy-move detection** for matching patches within the image. Numbered A/B boxes mark each candidate pair on the input. Turn off **Show matches on input** to inspect the image without boxes.
+4. Open **Noise analysis** to compare the input with a fixed-scale map of local residual strength. The median and 95th percentile summarize the full-resolution map.
+5. Open **Metadata** to review the original file’s readable EXIF, GPS, PNG text, and XMP fields. **Highlighted fields only** filters to provenance clues.
+6. Use **Save PNG** to export the full input and both ELA views with JPEG settings, measurements, and overlay opacity. The comparison export contains only the ELA comparison.
 
 | Metadata highlight | How to read it |
 |---|---|
@@ -46,6 +47,8 @@ IMAGE_SPATTER_PYTHON="$HOME/anaconda3/envs/imagepr_env/bin/python" \
 The editor signatures are defined in [the metadata module](image_spatter/metadata.py). Metadata can be modified or removed. Missing camera information and absent edit markers leave provenance uncertain. [Pillow metadata API](https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.getexif)
 
 Duplicate detection matches local SIFT features within one image and uses geometric agreement to group likely pairs. The desktop app processes the image locally and reports up to four candidates. Smooth, small, or heavily transformed copies can be missed, and genuine repeated patterns can produce matches. The boxes show feature-supported regions rather than exact masks. [OpenCV feature matching](https://docs.opencv.org/4.x/d5/d6f/tutorial_feature_flann_matcher.html)
+
+Noise analysis subtracts a Gaussian-blurred grayscale image (σ = 1.2) and measures local residual RMS in a 15 × 15 window. The heatmap uses a fixed 0–20 grayscale-level display range, so different regions and images can be compared on the same scale. Highlighted areas can contain noise, texture, sharp edges, or compression artifacts. [OpenCV image filters](https://docs.opencv.org/3.4.9/d4/d86/group__imgproc__filter.html)
 
 ## Notebook demo
 
@@ -61,6 +64,8 @@ Select **Run All**. The controlled experiment adds a known patch to the bundled 
 The **Custom image** section runs independently. Set `custom_image_path` to a local image or `None` to skip. Quality, display scale, opacity, and an optional `(x, y, width, height)` region can be adjusted. Custom exports in `outputs/custom/` contain the comparison, raw ELA array, quality metrics, and an optional region summary. Change `custom_save_outputs` to disable writes.
 
 The notebook’s **Compare İrem’s examples** section runs the six bundled JPEG, WebP, and AVIF examples at quality 80 using a shared color scale. Adjust `example_filenames` to select a subset. It saves plots to `outputs/irem_examples/`. The [full report](data/iremimg/outputs/index.html) includes additional JPEG qualities and left/right views.
+
+The final two sections demonstrate copy-move detection and metadata clues on a local file, and noise analysis on a synthetic image with a known noisy patch.
 
 ELA visualizes mean absolute differences across three color channels after recompression. For non-JPEG inputs it displays differences introduced by conversion to JPEG. Ordinary texture and sharp edges can produce large values. The known mask in the controlled demo marks the patch placement from the experiment. [Forensically’s ELA explanation](https://29a.ch/photo-forensics/#error-level-analysis)
 

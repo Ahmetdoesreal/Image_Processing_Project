@@ -14,6 +14,7 @@ from PIL import Image
 from .duplicates import detect_duplicates
 from .ela import decode_image, ela_channel_sum
 from .metadata import read_metadata
+from .noise import NOISE_DISPLAY_MAX, noise_map
 
 PREVIEW_EDGE = 1200
 DISPLAY_MAX = 20
@@ -33,6 +34,19 @@ def png_data(image):
     if not success:
         raise OSError("Could not create the preview.")
     return "data:image/png;base64," + base64.b64encode(encoded).decode("ascii")
+
+
+def noise_preview(image):
+    values = noise_map(image)
+    median, p95 = np.percentile(values, (50, 95))
+    intensity = np.rint(np.minimum(preview(values), NOISE_DISPLAY_MAX) * (255 / NOISE_DISPLAY_MAX)).astype(np.uint8)
+    heatmap = cv2.applyColorMap(intensity, cv2.COLORMAP_VIRIDIS)
+    return {
+        "median": float(median),
+        "p95": float(p95),
+        "displayMax": NOISE_DISPLAY_MAX,
+        "heatmap": png_data(heatmap),
+    }
 
 
 def analyze(path, qualities):
@@ -68,6 +82,7 @@ def analyze(path, qualities):
         "preview": png_data(preview(image)),
         "results": results,
         "duplicates": detect_duplicates(image),
+        "noise": noise_preview(image),
         "metadata": metadata,
     }
 

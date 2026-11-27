@@ -55,9 +55,18 @@
     </section>
     <section id="evidence" class="evidence" aria-label="Image analysis clues" hidden>
       <div class="finding">
-        <div><h2>Duplicate regions</h2><p id="duplicate-status"></p></div>
-        <label class="check"><input id="show-duplicates" type="checkbox" checked> Show matches</label>
+        <div><h2>Copy-move detection</h2><p id="duplicate-status"></p></div>
+        <label class="check"><input id="show-duplicates" type="checkbox" checked> Show matches on input</label>
       </div>
+      <details class="finding" id="noise-panel">
+        <summary>Noise analysis <span id="noise-status"></span></summary>
+        <p>Compare the input with a map of fine-scale variation. Grain, edges, texture, and compression can all brighten the map.</p>
+        <div class="noise-views">
+          <figure><figcaption>Input</figcaption><img id="noise-input" alt="Input image for the noise comparison"></figure>
+          <figure><figcaption>Local residual strength</figcaption><img id="noise-map" alt="Noise residual heatmap"></figure>
+        </div>
+        <p class="noise-legend"><span>0</span><span class="noise-scale" aria-hidden="true"></span><span id="noise-display-max"></span></p>
+      </details>
       <details class="finding" id="metadata-panel">
         <summary>Metadata <span id="metadata-status"></span></summary>
         <p id="metadata-note">Camera tags can survive an edit. Editor tags can describe an export, and absent tags can be stripped.</p>

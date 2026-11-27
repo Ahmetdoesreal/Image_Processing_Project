@@ -1,6 +1,10 @@
 const evidence = document.getElementById('evidence');
 const duplicateStatus = document.getElementById('duplicate-status');
 const duplicateToggle = document.getElementById('show-duplicates');
+const noiseStatus = document.getElementById('noise-status');
+const noiseInput = document.getElementById('noise-input');
+const noiseHeatmap = document.getElementById('noise-map');
+const noiseDisplayMax = document.getElementById('noise-display-max');
 const metadataStatus = document.getElementById('metadata-status');
 const metadataNote = document.getElementById('metadata-note');
 const metadataFilter = document.getElementById('metadata-filter');
@@ -13,6 +17,8 @@ let metadataFields = [];
 
 function clearFindings() {
   evidence.hidden = true;
+  noiseInput.removeAttribute('src');
+  noiseHeatmap.removeAttribute('src');
   metadataFields = [];
   metadataRows.replaceChildren();
 }
@@ -53,12 +59,16 @@ function addRegionMarkers(image, pairs) {
   }
 }
 
-function renderFindings({ duplicates, metadata }, image) {
+function renderFindings({ duplicates, metadata, noise, preview }, image) {
   addRegionMarkers(image, duplicates);
   duplicateToggle.disabled = duplicates.length === 0;
   duplicateStatus.textContent = duplicates.length
-    ? `${duplicates.length} candidate ${duplicates.length === 1 ? 'pair' : 'pairs'} · ${duplicates.map((pair) => pair.matches).join(', ')} matching features per pair.`
+    ? `${duplicates.length} candidate ${duplicates.length === 1 ? 'pair' : 'pairs'} · ${duplicates.map((pair) => pair.matches).join(', ')} matching features per pair. Repeated textures can also match.`
     : 'No matching regions detected.';
+  noiseInput.src = preview;
+  noiseHeatmap.src = noise.heatmap;
+  noiseStatus.textContent = `· Median ${formatNumber.format(noise.median)} · P95 ${formatNumber.format(noise.p95)}`;
+  noiseDisplayMax.textContent = `${noise.displayMax}+ grayscale levels (RMS)`;
   metadataFields = metadata.fields;
   const cameraCount = metadataFields.filter((field) => field.flag === 'Camera information').length;
   const editCount = metadataFields.filter((field) => editFlags.has(field.flag)).length;

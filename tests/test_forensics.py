@@ -2,6 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import cv2
 import numpy as np
 from PIL import Image, PngImagePlugin
 
@@ -9,6 +10,7 @@ from image_spatter.__main__ import analyze
 from image_spatter.duplicates import detect_duplicates
 from image_spatter.ela import read_image
 from image_spatter.metadata import read_metadata
+from image_spatter.noise import NOISE_DISPLAY_MAX, noise_map
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -23,9 +25,36 @@ class CopyMoveTests(unittest.TestCase):
         centers = {(round(x + w / 2, 1), round(y + h / 2, 1)) for x, y, w, h in pair["regions"]}
         self.assertEqual(centers, {(0.3, 0.7), (0.8, 0.2)})
 
+    def test_rotated_paste_is_localized(self):
+        source, _ = read_image(ROOT / "data/astronaut.png")
+        patch = source[40:190, 140:290]
+        matrix = cv2.getRotationMatrix2D((75, 75), 15, 0.92)
+        moved = cv2.warpAffine(patch, matrix, (150, 150), borderMode=cv2.BORDER_REFLECT)
+        image = np.full((400, 580, 3), 128, dtype=np.uint8)
+        image[40:190, 50:200] = patch
+        image[210:360, 340:490] = moved
+        strongest = max(detect_duplicates(image), key=lambda candidate: candidate["matches"])
+        centers = sorted((x + w / 2, y + h / 2) for x, y, w, h in strongest["regions"])
+        np.testing.assert_allclose(centers, [(125 / 580, 115 / 400), (415 / 580, 285 / 400)], atol=0.06)
+
     def test_flat_or_very_small_image_has_no_matches(self):
         for shape in ((28, 120, 3), (140, 140, 3)):
             self.assertEqual(detect_duplicates(np.zeros(shape, dtype=np.uint8)), [])
+
+
+class NoiseTests(unittest.TestCase):
+    def test_noisy_patch_exceeds_the_smooth_background(self):
+        clean = np.full((192, 288, 3), 128, dtype=np.uint8)
+        self.assertLess(noise_map(clean).max(), 1e-4)
+        noisy = clean.copy()
+        rng = np.random.default_rng(42)
+        patch = np.clip(np.rint(128 + rng.normal(0, 12, (96, 104))), 0, 255).astype(np.uint8)
+        noisy[48:144, 92:196] = patch[..., None]
+        values = noise_map(noisy)
+        self.assertEqual(values.shape, clean.shape[:2])
+        self.assertTrue(np.isfinite(values).all())
+        self.assertGreater(np.median(values[60:130, 105:185]), 8)
+        self.assertLess(np.median(values[60:130, 15:75]), 1e-4)
 
 
 class MetadataTests(unittest.TestCase):
@@ -46,6 +75,9 @@ class MetadataTests(unittest.TestCase):
             self.assertEqual(fields["DateTimeOriginal"]["flag"], "Capture / creation time")
             self.assertEqual(len(response["results"]), 2)
             self.assertEqual(response["duplicates"], [])
+            self.assertEqual(response["noise"]["displayMax"], NOISE_DISPLAY_MAX)
+            self.assertLess(response["noise"]["p95"], 1e-4)
+            self.assertTrue(response["noise"]["heatmap"].startswith("data:image/png;base64,"))
 
     def test_ordinary_software_and_missing_fields(self):
         with tempfile.TemporaryDirectory() as directory:

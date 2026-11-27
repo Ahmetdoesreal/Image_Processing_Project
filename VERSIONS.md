@@ -2,7 +2,7 @@
 
 | Resource | Purpose |
 |---|---|
-| [Desktop 1.2](README.md#desktop-application) | English interface, copy-move candidates, metadata provenance clues, linked pan and zoom, and local PNG export |
+| [Desktop 1.3](README.md#desktop-application) | English interface, copy-move candidates, local noise maps, metadata provenance clues, linked pan and zoom, and local PNG export |
 | [Main notebook](Image_Spatter_Demo.ipynb) | Manual ELA calculation, shared Python engine, custom image, and İrem’s six samples |
 | [V2 guided notebook](Image_Spatter_Demo_V2_Anlatimli.ipynb) | Step-by-step explanation with separate outputs under `outputs/v2_anlatimli/` |
 | [V3 HTML explanation](Image_Spatter_V3_Sade_Anlatim.html) | Offline visual demo of JPEG quality, opacity, and the pixel difference calculation |

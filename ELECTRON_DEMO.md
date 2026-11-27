@@ -14,6 +14,10 @@ Zoom to 200% and drag a panel to pan all three together. Use **Show overlay** an
 
 ![Linked zoom and panning, overlay opacity, and reset](docs/electron-demo/linked-inspection.gif)
 
+## Compare noise and copy-move results
+
+In the current app, **Copy-move detection** labels candidate matching patches on the input with A/B markers. Open **Noise analysis** below the comparison to see the input beside the local residual map. Brighter regions contain stronger fine-scale variation.
+
 ## Review metadata provenance clues
 
 The demonstration image has synthetic camera and editor tags. **Metadata** highlights the camera make and model and a recognized editor in the Software field. **Highlighted fields only** hides the other entries.
