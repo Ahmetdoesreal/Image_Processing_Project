@@ -1,23 +1,29 @@
-# Image Spatter Electron demosu
+# Image Spatter Electron demo
 
-Kayıtlar, uygulamayla gelen kontrol ve kontrollü düzenleme örneklerini kullanır. Üç panelde giriş görüntüsü ve iki JPEG kalitesinin ELA haritaları gösterilir.
+These recordings use the bundled control and controlled-edit samples.
 
-## JPEG kalitelerini karşılaştır
+## Compare JPEG qualities
 
-**Örnek** menüsünden **Kontrollü düzenleme** seçilir. Ardından **JPEG A** değeri 80’den 20’ye düşürülür ve **Karşılaştır** ile haritalar yeniden hesaplanır.
+Switch to **Controlled edit**, change **JPEG A** from 80 to 20, and select **Compare** to run the analysis again. The input panel shows the matched patch pair automatically.
 
-![Kontrol örneğinden düzenlenmiş örneğe geçiş ve JPEG A kalitesinin 80’den 20’ye düşürülmesi](docs/electron-demo/ela-quality-comparison.gif)
+![Switching samples and changing JPEG quality from 80 to 20](docs/electron-demo/ela-quality-comparison.gif)
 
-## Aynı bölgeyi üç panelde incele
+## Inspect the same area in all three panels
 
-%200 yakınlaştırmada bir paneli sürükleyince üç görünüm birlikte kayar. **Üst üste göster** ile ELA haritaları görüntünün üzerine gelir. Opaklık değiştirildikten sonra **Yakınlaştırmayı sıfırla** tam görüntüye döner.
+Zoom to 200% and drag a panel to pan all three together. Use **Show overlay** and adjust **Opacity** to compare the heatmaps against the input. **Reset zoom** restores the full view.
 
-![Bağlantılı yakınlaştırma ve kaydırma, ELA katmanı opaklık kontrolü ve görünümü sıfırlama](docs/electron-demo/linked-inspection.gif)
+![Linked zoom and panning, overlay opacity, and reset](docs/electron-demo/linked-inspection.gif)
 
-## Karşılaştırmayı PNG olarak kaydet
+## Review metadata provenance clues
 
-**PNG olarak kaydet** ile giriş görüntüsü ve iki ELA sonucu tek bir dosyaya yazılır. PNG, tam görüntüleri JPEG kalite değerleri, ölçümler ve seçilen ELA katmanı opaklığıyla birlikte içerir.
+The demonstration image has synthetic camera and editor tags. **Metadata** highlights the camera make and model and a recognized editor in the Software field. **Highlighted fields only** hides the other entries.
 
-![PNG olarak kaydet düğmesi ve dosyanın kaydedildiğini bildiren uygulama mesajı](docs/electron-demo/png-export.gif)
+![Camera make and model and a Photoshop software tag highlighted in the metadata viewer](docs/electron-demo/metadata-provenance.gif)
 
-[Kurulum ve çalıştırma](README.md#v1-masaüstü-uygulaması)
+## Save a PNG comparison
+
+**Save PNG** exports the full input and both ELA views, including the JPEG settings, measurements, and overlay opacity.
+
+![Saving the PNG and the app confirming the filename](docs/electron-demo/png-export.gif)
+
+[Setup and launch](README.md#desktop-application)

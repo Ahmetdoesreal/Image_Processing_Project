@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,76 +8,76 @@
   <script defer src="presentation.js"></script>
 </head>
 <body>
-  <main aria-label="Image Spatter V1 sunumu">
+  <main aria-label="Image Spatter V1 presentation">
     <section class="slide cover">
       <div>
-        <p class="accent">COM0418 Görüntü İşleme</p>
+        <p class="accent">COM0418 Image Processing</p>
         <h1>Image<br>Spatter V1</h1>
-        <p class="lead">Yerel görüntülerde JPEG sıkıştırma farklarının incelenmesi</p>
+        <p class="lead">Inspecting JPEG recompression differences in local images</p>
       </div>
-      <img src="../data/astronaut.png" alt="Deneyde kullanılan astronot fotoğrafı">
+      <img src="../data/astronaut.png" alt="Astronaut photograph used in the experiment">
     </section>
     <section class="slide" hidden>
-      <h2>Hata Seviyesi Analizi</h2>
-      <p class="lead">Yeniden sıkıştırma, bazı piksel değerlerini değiştirir.</p>
+      <h2>Error Level Analysis</h2>
+      <p class="lead">Recompression changes some pixel values.</p>
       <ol>
-        <li>Görüntüyü seçilen kalitede bellekte JPEG’e kodla ve geri aç.</li>
-        <li>Her pikselde üç kanalın mutlak farkını al ve ortalamasını hesapla.</li>
-        <li>İki kaliteyi aynı 0–20 renk ölçeğinde yan yana göster.</li>
+        <li>Encode the image as JPEG at the selected quality and decode it in memory.</li>
+        <li>Compute the absolute difference across all three color channels and average it per pixel.</li>
+        <li>Compare the two qualities on the same 0–20 color scale.</li>
       </ol>
-      <p class="caption">Electron yerel dosyayı seçer. Python ve OpenCV analizi hesaplar. Sonuç Electron penceresinde gösterilir.</p>
+      <p class="caption">Electron opens the local file. Python and OpenCV calculate the maps, and Electron displays them.</p>
     </section>
     <section class="slide" hidden>
-      <h2>Kontrollü deney</h2>
+      <h2>Controlled experiment</h2>
       <div class="experiment">
         <div>
-          <p>512 × 512 piksel kaynak görüntüden üç eşleştirilmiş deney üretildi.</p>
-          <p>Kontrol ve düzenlenmiş kopyalar aynı son kaliteyle kaydedildi. Düzenlenmiş kopyalarda aynı 80 × 80 parça üç ayrı konuma taşındı.</p>
-          <p class="caption">Ölçümler, bilinen bölge içi ortalama farkı ve bölgeyi çevresinden ayıran piksel ROC-AUC değerini içerir.</p>
+          <p>Three paired trials use the same 512 × 512 source image.</p>
+          <p>The control and edited versions share a final JPEG quality. The same 80 × 80 patch was pasted at three positions.</p>
+          <p class="caption">We measured the mean difference in the known region and pixel ROC-AUC for separating it from the surrounding image.</p>
         </div>
         <figure>
-          <img src="../outputs/known_mask.png" alt="Siyah zemin üzerinde beyaz kareyle gösterilen bilinen yapıştırma maskesi">
-          <figcaption>İlk deneydeki bilinen yapıştırma bölgesi</figcaption>
+          <img src="../outputs/known_mask.png" alt="The known paste region shown as a white square on a black background">
+          <figcaption>Known patch mask for the first trial</figcaption>
         </figure>
       </div>
     </section>
     <section class="slide" hidden>
-      <h2>Kalite 80, üç konumda da en iyi ayrımı verdi</h2>
+      <h2>Quality 80 led at all three placements</h2>
       <table>
-        <thead><tr><th scope="col">Analiz kalitesi</th><th scope="col">Ortalama ROC-AUC</th><th scope="col">Bölge ortalama farkı, kontrol ile düzenlenmiş</th></tr></thead>
+        <thead><tr><th scope="col">Analysis quality</th><th scope="col">Mean ROC-AUC</th><th scope="col">Mean region difference, edited minus control</th></tr></thead>
         <tbody>
-          <tr><td>20</td><td>0,853</td><td>9,074–10,737</td></tr>
-          <tr class="highlight"><td>80</td><td>0,957</td><td>5,231–5,781</td></tr>
-          <tr><td>95</td><td>0,877</td><td>1,320–1,773</td></tr>
+          <tr><td>20</td><td>0.853</td><td>9.074–10.737</td></tr>
+          <tr class="highlight"><td>80</td><td>0.957</td><td>5.231–5.781</td></tr>
+          <tr><td>95</td><td>0.877</td><td>1.320–1.773</td></tr>
         </tbody>
       </table>
-      <p>Kalite 20’de düzenlenen bölgedeki fark büyüdü. Arka plandaki farkların da artması, bölgeyi ayırmayı zorlaştırdı.</p>
-      <p class="caption">ROC-AUC üç yerleşimin ortalamasıdır. Süre, yedi analiz çalıştırmasının medyanı olarak yaklaşık 40–70 ms aralığındaydı.</p>
+      <p>Quality 20 produced a larger difference in the patch and also raised differences in the background.</p>
+      <p class="caption">ROC-AUC is averaged across the three placements. Median analysis times over seven runs were about 40–70 ms.</p>
     </section>
     <section class="slide demo" hidden>
-      <h2>Uygulama demosu</h2>
+      <h2>Desktop demo</h2>
       <div class="demo-layout">
-        <img src="app-comparison.png" alt="Image Spatter uygulamasında giriş görüntüsü, kalite 80 ve kalite 95 ELA haritaları">
+        <img src="app-comparison.png" alt="Image Spatter showing the input and two ELA maps at qualities 80 and 95">
         <ol>
-          <li>Kontrol ve kontrollü düzenleme örneklerini aç.</li>
-          <li>80 ve 95’i karşılaştır. Ardından A’yı 20’ye indir.</li>
-          <li>Üst üste göster ve yapıştırılan bölgeye yakınlaş.</li>
+          <li>Open the Control and Controlled edit samples.</li>
+          <li>Compare 80 and 95, then reduce A to 20.</li>
+          <li>Turn on Show overlay and zoom in on the pasted badge.</li>
         </ol>
       </div>
     </section>
     <section class="slide" hidden>
-      <h2>Sonuçların yorumlanması</h2>
-      <p class="lead">ELA haritası, seçilen JPEG kalitesiyle oluşan piksel farklarını gösterir.</p>
-      <p>Yüksek farklar doğal kenarlarda, dokularda ve farklı sıkıştırma geçmişi olan bölgelerde görülebilir. Harita, fotoğrafın geçmişine ilişkin bir inceleme ipucudur.</p>
-      <p>Deney tek fotoğraf ve tek parça kullanır. Genel performans için farklı görüntüler, sıkıştırma geçmişleri ve düzenleme türleriyle bağımsız test gerekir.</p>
-      <p class="caption">Yöntem, ham ölçümler ve yeniden çalıştırma komutu teknik raporda yer alır.</p>
+      <h2>Interpreting the maps</h2>
+      <p class="lead">The ELA map shows pixel differences at the selected JPEG quality.</p>
+      <p>Hard edges, texture, and different compression histories can all produce larger differences.</p>
+      <p>The experiment uses one photo and one patch. General performance requires independent images, compression histories, and edit types.</p>
+      <p class="caption">The technical report contains the protocol, raw measurements, and reproduction command.</p>
     </section>
   </main>
-  <nav aria-label="Sunum denetimleri">
-    <button id="previous" type="button">Geri</button>
+  <nav aria-label="Slide controls">
+    <button id="previous" type="button">Back</button>
     <span id="position" aria-live="polite"></span>
-    <button id="next" type="button">İleri</button>
-    <button id="fullscreen" type="button">Tam ekran</button>
+    <button id="next" type="button">Next</button>
+    <button id="fullscreen" type="button">Full screen</button>
   </nav>
 </body>
 </html>

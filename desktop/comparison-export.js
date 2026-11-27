@@ -1,6 +1,6 @@
 function resultMetrics(result) {
   const { mean, p95, elapsedMs } = result;
-  return `Ort. ${formatNumber.format(mean)} · P95 ${formatNumber.format(p95)} · ${formatNumber.format(elapsedMs)} ms`;
+  return `Mean ${formatNumber.format(mean)} · P95 ${formatNumber.format(p95)} · ${formatNumber.format(elapsedMs)} ms`;
 }
 
 async function decodePreview(src) {
@@ -32,8 +32,8 @@ async function comparisonPng(result, opacity) {
   context.fillText(result.name, padding, 40, canvas.width - 2 * padding);
   context.fillStyle = '#aab6c8';
   context.font = '16px system-ui, sans-serif';
-  const view = opacity < 1 ? ` · Üst üste gösterim %${Math.round(opacity * 100)}` : '';
-  context.fillText(`${result.format} · ${result.width} × ${result.height} piksel${view}`, padding, 66);
+  const view = opacity < 1 ? ` · Overlay at ${Math.round(opacity * 100)}%` : '';
+  context.fillText(`${result.format} · ${result.width} × ${result.height} pixels${view}`, padding, 66);
 
   for (const [index, image] of [original, ...heatmaps].entries()) {
     const resultEntry = result.results[index - 1];
@@ -43,7 +43,7 @@ async function comparisonPng(result, opacity) {
     context.fillRect(left, top - 34, panelWidth, height + 67);
     context.fillStyle = '#eff2f7';
     context.font = 'bold 17px system-ui, sans-serif';
-    context.fillText(resultEntry ? `JPEG kalite ${resultEntry.quality}` : 'Giriş', left + 10, top - 11);
+    context.fillText(resultEntry ? `JPEG quality ${resultEntry.quality}` : 'Input', left + 10, top - 11);
     context.drawImage(original, imageX, top, width, height);
     if (resultEntry) {
       context.globalAlpha = opacity;
@@ -57,8 +57,8 @@ async function comparisonPng(result, opacity) {
 
   context.fillStyle = '#aab6c8';
   context.font = '15px system-ui, sans-serif';
-  context.fillText('Image Spatter · ELA renk ölçeği 0–20', padding, canvas.height - 24);
+  context.fillText('Image Spatter · ELA color scale 0–20', padding, canvas.height - 24);
   const blob = await new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
-  if (!blob) throw new Error('PNG oluşturulamadı.');
+  if (!blob) throw new Error('Could not create the PNG.');
   return blob.arrayBuffer();
 }

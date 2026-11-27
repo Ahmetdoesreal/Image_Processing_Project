@@ -3200,5 +3200,6 @@
     }
   ],
   "analysis_count": 144,
-  "reference_analysis_count": 6
+  "reference_analysis_count": 6,
+  "raw_ela_maps_included": false
 }

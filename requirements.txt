@@ -4,3 +4,4 @@ matplotlib
 pillow>=11.3
 jupyterlab
 ipykernel
+defusedxml

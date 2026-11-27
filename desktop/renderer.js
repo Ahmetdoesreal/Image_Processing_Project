@@ -13,7 +13,7 @@ const panHint = byId('pan-hint');
 const overlay = byId('overlay');
 const opacity = byId('opacity');
 const zoom = byId('zoom');
-const formatNumber = new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 2 });
+const formatNumber = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
 
 let selectedName;
 let lastResult;
@@ -63,8 +63,8 @@ function errorText(error) {
 }
 
 function resultSummary(result) {
-  const conversion = result.format === 'JPEG' ? '' : ' · Girdinin JPEG’e dönüşüm farkı';
-  return `${result.format} · ${result.width} × ${result.height} piksel${conversion}`;
+  const conversion = result.format === 'JPEG' ? '' : ' · Differences after conversion to JPEG';
+  return `${result.format} · ${result.width} × ${result.height} pixels${conversion}`;
 }
 
 function panel(title, original, result) {
@@ -72,12 +72,12 @@ function panel(title, original, result) {
   figure.querySelector('figcaption').textContent = title;
   const source = figure.querySelector('.source');
   source.src = original;
-  source.alt = 'Giriş görüntüsü';
+  source.alt = 'Input image';
   if (result) {
     source.alt = '';
     const heatmap = figure.querySelector('.heatmap');
     heatmap.src = result.heatmap;
-    heatmap.alt = title + ' ELA haritası';
+    heatmap.alt = title + ' ELA map';
     heatmap.hidden = false;
     figure.querySelector('.metrics').textContent = resultMetrics(result);
   }
@@ -96,31 +96,34 @@ async function run(selectImage) {
       resetPosition();
     }
     if (!selectedName) {
-      showStatus('Önce bir dosya veya örnek aç.');
+      showStatus('Open a file or choose a sample first.');
       return;
     }
 
     const qualities = qualityInputs.map((input) => input.valueAsNumber);
     lastResult = undefined;
     gallery.replaceChildren();
+    clearFindings();
     syncView();
     if (!qualities.every((quality) => Number.isInteger(quality) && quality >= 1 && quality <= 100)) {
-      showStatus('JPEG kalitelerini 1–100 arasında gir.', true);
+      showStatus('Enter JPEG qualities between 1 and 100.', true);
       return;
     }
-    showStatus('Analiz ediliyor…');
+    showStatus('Analyzing…');
     const result = await window.imageSpatter.analyze(qualities);
     lastResult = result;
     gallery.style.setProperty('--image-ratio', result.width / result.height);
     gallery.replaceChildren(
-      panel('Giriş', result.preview),
-      ...result.results.map((item) => panel(`JPEG kalite ${item.quality}`, result.preview, item)),
+      panel('Input', result.preview),
+      ...result.results.map((item) => panel(`JPEG quality ${item.quality}`, result.preview, item)),
     );
+    renderFindings(result, gallery.querySelector(".picture-content"));
     syncView();
     showStatus(resultSummary(result));
   } catch (error) {
     lastResult = undefined;
     gallery.replaceChildren();
+    clearFindings();
     syncView();
     showStatus(errorText(error), true);
   } finally {
@@ -134,7 +137,7 @@ save.addEventListener('click', async () => {
   try {
     const bytes = await comparisonPng(lastResult, overlay.checked ? opacity.valueAsNumber / 100 : 1);
     const savedName = await window.imageSpatter.saveComparison(bytes);
-    if (savedName) showStatus(`${resultSummary(lastResult)} · ${savedName} kaydedildi`);
+    if (savedName) showStatus(`${resultSummary(lastResult)} · Saved ${savedName}`);
   } catch (error) {
     showStatus(errorText(error), true);
   } finally {

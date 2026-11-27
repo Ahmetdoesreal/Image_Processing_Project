@@ -11,7 +11,9 @@ import cv2
 import numpy as np
 from PIL import Image
 
-from .ela import ela_channel_sum, read_image
+from .duplicates import detect_duplicates
+from .ela import decode_image, ela_channel_sum
+from .metadata import read_metadata
 
 PREVIEW_EDGE = 1200
 DISPLAY_MAX = 20
@@ -29,12 +31,15 @@ def preview(image):
 def png_data(image):
     success, encoded = cv2.imencode(".png", image, [cv2.IMWRITE_PNG_COMPRESSION, 1])
     if not success:
-        raise OSError("Önizleme oluşturulamadı.")
+        raise OSError("Could not create the preview.")
     return "data:image/png;base64," + base64.b64encode(encoded).decode("ascii")
 
 
 def analyze(path, qualities):
-    image, source_format = read_image(path)
+    with Image.open(path) as source:
+        source_format = source.format
+        image = decode_image(source)
+        metadata = read_metadata(source)
     height, width = image.shape[:2]
     results = []
     for quality in qualities:
@@ -62,6 +67,8 @@ def analyze(path, qualities):
         "height": height,
         "preview": png_data(preview(image)),
         "results": results,
+        "duplicates": detect_duplicates(image),
+        "metadata": metadata,
     }
 
 

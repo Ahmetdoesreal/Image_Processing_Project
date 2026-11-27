@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,50 +7,69 @@
   <title>Image Spatter</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="comparison-export.js"></script>
+  <script defer src="forensics.js"></script>
   <script defer src="renderer.js"></script>
 </head>
 <body>
   <header>
     <div>
       <h1>Image Spatter</h1>
-      <p>JPEG sıkıştırma farklarını görsel olarak incele</p>
+      <p>Inspect JPEG recompression differences</p>
     </div>
-    <button id="open" class="primary" type="button">Görüntü aç</button>
+    <button id="open" class="primary" type="button">Open image</button>
   </header>
   <main>
-    <section class="toolbar" aria-label="Analiz ayarları">
-      <label>Örnek
+    <section class="toolbar" aria-label="Analysis settings">
+      <label>Sample
         <select id="sample">
-          <option value="">Dosya seç</option>
-          <option value="control">Kontrol</option>
-          <option value="edited">Kontrollü düzenleme</option>
+          <option value="">Choose a sample</option>
+          <option value="control">Control</option>
+          <option value="edited">Controlled edit</option>
         </select>
       </label>
       <form id="controls">
         <label>JPEG A <input id="quality-a" type="number" min="1" max="100" required value="80"></label>
         <label>JPEG B <input id="quality-b" type="number" min="1" max="100" required value="95"></label>
-        <button id="analyze" type="submit">Karşılaştır</button>
+        <button id="analyze" type="submit">Compare</button>
       </form>
-      <button id="save" type="button" disabled>PNG olarak kaydet</button>
+      <button id="save" type="button" disabled>Save PNG</button>
     </section>
-    <section class="inspection" aria-label="Görüntü ve ELA sonuçları">
+    <section class="inspection" aria-label="Image and ELA results">
       <div class="inspection-top">
         <div>
-          <h2 id="filename">Görüntü seç</h2>
-          <p id="status" role="status">Bir görüntü aç veya örnek seç.</p>
+          <h2 id="filename">Choose an image</h2>
+          <p id="status" role="status">Open an image or choose a sample.</p>
         </div>
         <div class="view-controls">
-          <label>Yakınlaştır <select id="zoom" disabled><option value="100">Sığdır</option><option value="150">%150</option><option value="200">%200</option><option value="300">%300</option></select></label>
-          <button id="reset-view" type="button" disabled>Yakınlaştırmayı sıfırla</button>
-          <label class="check"><input id="overlay" type="checkbox" disabled> Üst üste göster</label>
-          <label>Opaklık <input id="opacity" aria-label="Üst üste gösterim opaklığı" type="range" min="0" max="100" value="65" disabled></label>
+          <label>Zoom <select id="zoom" disabled><option value="100">Fit</option><option value="150">150%</option><option value="200">200%</option><option value="300">300%</option></select></label>
+          <button id="reset-view" type="button" disabled>Reset zoom</button>
+          <label class="check"><input id="overlay" type="checkbox" disabled> Show overlay</label>
+          <label>Opacity <input id="opacity" aria-label="Overlay opacity" type="range" min="0" max="100" value="65" disabled></label>
         </div>
       </div>
-      <p id="pan-hint" hidden>Görüntüleri birlikte kaydırmak için sürükle veya odaktayken ok tuşlarını kullan.</p>
-      <div id="viewport" class="viewport" tabindex="0" aria-label="Görüntü karşılaştırması" aria-describedby="pan-hint">
+      <p id="pan-hint" hidden>Drag any panel or use the arrow keys to pan all three.</p>
+      <div id="viewport" class="viewport" tabindex="0" aria-label="Image comparison" aria-describedby="pan-hint">
         <div id="gallery" class="gallery"></div>
       </div>
-      <footer><span class="legend" aria-hidden="true"></span><span>ELA renk ölçeği 0–20</span><span>Parlaklık piksel farkını gösterir.</span></footer>
+      <footer><span class="legend" aria-hidden="true"></span><span>ELA color scale 0–20</span><span>Brighter areas have larger pixel differences.</span></footer>
+    </section>
+    <section id="evidence" class="evidence" aria-label="Image analysis clues" hidden>
+      <div class="finding">
+        <div><h2>Duplicate regions</h2><p id="duplicate-status"></p></div>
+        <label class="check"><input id="show-duplicates" type="checkbox" checked> Show matches</label>
+      </div>
+      <details class="finding" id="metadata-panel">
+        <summary>Metadata <span id="metadata-status"></span></summary>
+        <p id="metadata-note">Camera tags can survive an edit. Editor tags can describe an export, and absent tags can be stripped.</p>
+        <label class="check"><input id="metadata-filter" type="checkbox"> Highlighted fields only</label>
+        <p id="metadata-empty" hidden></p>
+        <div class="metadata-table" id="metadata-table" tabindex="0" aria-label="Image metadata fields">
+          <table>
+            <thead><tr><th scope="col">Source</th><th scope="col">Field</th><th scope="col">Value</th><th scope="col">Clue</th></tr></thead>
+            <tbody id="metadata-rows"></tbody>
+          </table>
+        </div>
+      </details>
     </section>
   </main>
   <template id="panel">

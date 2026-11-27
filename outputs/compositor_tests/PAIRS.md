@@ -1,13 +1,10 @@
-# Kontrol ve render dosyaları
+# Compositor control and render pairs
 
-Kontrol, paketteki arka plan katmanıdır. Render, görünür katmanların birleştirilmiş halidir. Dosyalar PNG olarak, yeniden boyutlandırmadan kaydedildi.
-
-| Örnek | Boyut | Kontrol | Render |
+| Sample | Control | Render | Dimensions |
 |---|---|---|---|
-| duyuru | 2160 × 3840 | [duyuru_control.png](duyuru_control.png) | [duyuru_render.png](duyuru_render.png) |
-| karga | 4284 × 5712 | [karga_control.png](karga_control.png) | [karga_render.png](karga_render.png) |
-| error | 387 × 130 | [error_control.png](error_control.png) | [error_render.png](error_render.png) |
+| duyuru | [Background](duyuru_control.png) | [Composite](duyuru_render.png) | 2160 × 3840 |
+| karga | [Background](karga_control.png) | [Composite](karga_render.png) | 4284 × 5712 |
 
-`error_render.png` metin katmanını ve gölgesini içerir. Arka plan dosyaları özgünlüğü doğrulanmış kamera fotoğrafı olarak etiketlenmez; kontrolün anlamı ek katmanların uygulanmamış olmasıdır.
+The control is the background layer from the project package. The render combines the visible layers according to their stored transforms. The measurements describe how the PNG images change when recompressed as JPEG.
 
-Render, paket içindeki bitmap katmanlarından ayrı bir birleştirmeyle alınır; uygulamanın native export motoru çalıştırılmaz. Dönüşüm örneklemesi ve Gaussian gölge hesabında native çıktıdan küçük piksel farkları olabilir. Kaynak `.comp` paketleri değiştirilmedi. Önceki ELA raporu duyuru ve karga için yapılan denemeyi anlatmaya devam eder; bu işlem error için yeni bir ELA ölçümü eklemez.
+[ELA measurements](ela_measurements.csv) · [Render and analysis details](report.json) · [Compositor notebook](../../Image_Spatter_Compositor_Denemeleri.ipynb)

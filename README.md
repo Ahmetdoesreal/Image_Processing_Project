@@ -1,29 +1,26 @@
 # Image Spatter
 
-Image Spatter, JPEG yeniden sıkıştırma farklarını ELA (Error Level Analysis) ile inceler. İki kullanım biçimi aynı [Python motorunu](image_spatter/ela.py) kullanır.
+Image Spatter is a local image-inspection project. It compares JPEG recompression differences, highlights possible repeated regions, and shows metadata clues about capture and editing.
 
-- **Jupyter demosu** · [Ana notebook](Image_Spatter_Demo.ipynb) yöntemi adım adım gösterir ve ortak motorla kontrollü örnekler çalıştırır. Electron kurulumu gerekmez.
-- **Etkileşimli masaüstü** · Electron yerel dosya seçimi, eşzamanlı görüntü inceleme ve PNG dışa aktarma sağlar. Hesaplama Python motorunda yapılır.
+- **Jupyter demo** · [Run the notebook](Image_Spatter_Demo.ipynb) to follow the ELA calculation and try the shared Python engine.
+- **Interactive desktop app** · Open images, compare two JPEG qualities, inspect repeated regions and metadata, and save a PNG comparison.
 
-**[Electron GIF demosunu izle](ELECTRON_DEMO.md)**
+**[Watch the Electron GIF demo](ELECTRON_DEMO.md)** · [Candidate changes](CANDIDATE_CHANGES.md)
 
-[Bu dalda eklenenler ve değişiklik miktarı](CANDIDATE_CHANGES.md)
+## Desktop application
 
-## V1 masaüstü uygulaması
-
-Image Spatter, Electron içinde yerel görüntü açar. Python ve OpenCV analizi, giriş görüntüsünü iki JPEG kalitesinde yeniden sıkıştırarak ELA haritalarını yan yana gösterir.
-
-Proje klasöründe Node.js 22.12 veya üzeri ve Python 3.10 veya üzeri gerekir. Ders ortamıyla çalıştırmak için:
+From the repository root, use Node.js 22.12 or later and Python 3.10 or later. With the course environment:
 
 ```bash
 conda activate imagepr_env
+python -m pip install -r requirements.txt
 npm --prefix desktop ci
 npm --prefix desktop start
 ```
 
-İlk kurulum Electron paketlerini indirir. Sonraki açılışlarda `npm --prefix desktop start` yeterlidir. Ayrı Python ortamı kullanıyorsan `python -m pip install -r requirements.txt` çalıştır. Belirli bir Python yorumlayıcısı için `IMAGE_SPATTER_PYTHON` ortam değişkenini yürütülebilir dosyanın yoluna ayarla.
+The setup downloads dependencies. Image analysis runs locally and works offline once installed. To select a different Python interpreter, set `IMAGE_SPATTER_PYTHON` to its executable path.
 
-Bu Ubuntu sanal makinesindeki sistem Node.js sürümü 16 ise aşağıdaki komutlarla Node.js 22'yi sistem sürümünü değiştirmeden kullanabilirsin:
+On the Ubuntu VM with system Node.js 16, run with Node.js 22 without replacing the system version:
 
 ```bash
 npx --yes --package=node@22 -c 'npm --prefix desktop ci'
@@ -31,99 +28,53 @@ IMAGE_SPATTER_PYTHON="$HOME/anaconda3/envs/imagepr_env/bin/python" \
   npx --yes --package=node@22 -c 'npm --prefix desktop start'
 ```
 
-Sınıf demosunda **Kontrol** ve **Kontrollü düzenleme** örnekleriyle başla. **Görüntü aç** yerel dosyalar içindir. **JPEG A** ve **JPEG B** ile iki kalite seç. Haritayı giriş üzerinde incelemek için **Üst üste göster** seçeneğini aç.
+### Analyze an image
 
-Masaüstü arayüzü 1.1 sürümünde yakınlaştırma üç paneli birlikte büyütür. Herhangi bir görüntüyü sürükle veya karşılaştırma alanına odaklanıp ok tuşlarını kullan. **Yakınlaştırmayı sıfırla** tam görüntüye döner. **PNG olarak kaydet**, giriş görüntüsü ve iki ELA haritasını seçili opaklık, JPEG ayarları ve ölçümlerle tek dosyaya yazar. PNG tam görüntüyü kullanır, ekrandaki yakınlaştırmayı kırpma olarak uygulamaz.
+1. Choose **Open image** or use the bundled **Control** and **Controlled edit** samples.
+2. Set **JPEG A** and **JPEG B**, then select **Compare** to recompute the ELA maps. Drag any zoomed panel or use the arrow keys to pan all three. **Show overlay** and **Opacity** blend the heatmap with the input.
+3. Check **Duplicate regions** for matching patches. Numbered A/B boxes mark each candidate pair on the input. Turn off **Show matches** to inspect the image without boxes.
+4. Open **Metadata** to review the original file’s readable EXIF, GPS, PNG text, and XMP fields. **Highlighted fields only** filters to provenance clues.
+5. Use **Save PNG** to export the full input and both ELA views with JPEG settings, measurements, and overlay opacity. The comparison export does not include the metadata table or duplicate markers.
 
-- [Teknik rapor](academic/REPORT.md)
-- [Deney ölçümleri](academic/evaluation.csv)
-- [Ders sunumu](academic/presentation.html) · Dosyayı tarayıcıda aç ve ok tuşlarıyla ilerle.
-
-## Ayrı sürümler
-
-| Dosya | Ne için? |
+| Metadata highlight | How to read it |
 |---|---|
-| [Ana demo](Image_Spatter_Demo.ipynb) | Kontrollü ELA deneyi, kendi görüntünü inceleme ve İrem’in altı örneğini yeniden hesaplama. |
-| [V2 — Anlatımlı notebook](Image_Spatter_Demo_V2_Anlatimli.ipynb) | Her adımda ne yaptığımızı, neden yaptığımızı ve sonucu nasıl okuyacağını doğal bir dille anlatır. Türkçe metin içinde İngilizce terimler açıklanır. |
-| [V3 — Sade anlatımlı HTML](Image_Spatter_V3_Sade_Anlatim.html) | Kod bilmeden okunabilir. Gerçek demo sonuçları arasında geçiş, kalite karşılaştırması, opaklık ayarı ve küçük bir sayı örneği içerir. |
-| [V1 — Proje anlatımı](Image_Spatter_V1_Proje_Anlatimi.ipynb) | V1 planından hareketle amacımızı, nasıl yapacağımızı, değerlendirmeyi ve teslim hedeflerini basit dille anlatan kısa sunum notu. Temsili ekran ve çalışma akışı içerir. |
-| [Compositor denemeleri](Image_Spatter_Compositor_Denemeleri.ipynb) | `duyuru.comp` ve `karga.comp` katmanlarından tam boyutlu PNG render'ları ve 5–95 aralığında ELA karşılaştırması. |
-| [iremimg — kapsamlı çıktılar](data/iremimg/outputs/index.html) | 6 görselin bütün/sol/sağ görünümlerinde 144 analiz; JPEG, ELA, overlay, histogram, kenarlar, CSV ve ham diziler. [Kalite 20 dosyaları](data/iremimg/outputs/Q20/index.html) ayrıca toplandı. |
+| Camera information | Make, model, lens, and exposure fields describe a reported capture device. An exported or edited file can retain them. |
+| Known editor | A software or creator-tool tag contains a recognized editor or processing tool, such as Photoshop, Lightroom, GIMP, or ImageMagick. It may identify an export as well as an edit. |
+| Edit history or derived asset | The XMP record describes a processing step or references a source asset. |
+| Software tag, save history, or timestamp | Use the reported tool, save events, and times as context when comparing versions of a file. |
 
-V2'yi proje klasöründe Jupyter ile aç. Bu sürüm örnek görüntüyle başlar; sonuçlarını `outputs/v2_anlatimli/` içine yazar. Önceki notebook'un ayarları ve sonuçları ayrı kalır.
+The editor signatures are defined in [the metadata module](image_spatter/metadata.py). Metadata can be modified or removed. Missing camera information and absent edit markers leave provenance uncertain. [Pillow metadata API](https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.getexif)
 
-V3'ü tarayıcıda açman yeterli. Görseller, stil ve etkileşimler HTML'in içinde; Python, internet veya ek dosya indirme gerektirmez. Düğmeler V2'de hesaplanan örnekler arasında geçiş yapar. Kendi görüntünü analiz etmek için V2'nin custom bölümünü kullan. Sürüm ayrıntıları [VERSIONS.md](VERSIONS.md) içinde.
+Duplicate detection matches local SIFT features within one image and uses geometric agreement to group likely pairs. The desktop app processes the image locally and reports up to four candidates. Smooth, small, or heavily transformed copies can be missed, and genuine repeated patterns can produce matches. The boxes show feature-supported regions rather than exact masks. [OpenCV feature matching](https://docs.opencv.org/4.x/d5/d6f/tutorial_feature_flann_matcher.html)
 
-V1 proje anlatımı, kod çalıştırmadan okunabilen ayrı bir notebook'tur. Tamamı açıklamalardan oluşur; iki temsili görsel dosyanın içine gömülüdür. Sonunda sunumda kullanılabilecek kısa bir konuşma metni bulunur. Buradaki V1, masaüstü uygulamasının hedef kapsamını ifade eder.
+## Notebook demo
 
-## Çalıştırma
-
-Proje klasöründe, mevcut `imagepr_env` ortamını kullanabilirsin:
-
-```bash
-conda activate imagepr_env
-python -m jupyterlab Image_Spatter_Demo.ipynb
-```
-
-Başka bir Python ortamında gerekli paketler:
+From the repository root:
 
 ```bash
 python -m pip install -r requirements.txt
 python -m jupyterlab Image_Spatter_Demo.ipynb
 ```
 
-Notebook'ta hücreleri yukarıdan aşağıya çalıştır veya **Run All** seç. Her küçük işlemin hemen önünde ne yaptığını anlatan bir açıklama var. Kayıtlı grafikler notebook açıldığında da görülebilir.
+Select **Run All**. The controlled experiment adds a known patch to the bundled astronaut image. Both control and edited examples receive the same final JPEG encoding. The notebook demonstrates JPEG recompression and channel differences by hand and compares its calculation with the shared [Python engine](image_spatter/ela.py).
 
-## Demo içeriği
+The **Custom image** section runs independently. Set `custom_image_path` to a local image or `None` to skip. Quality, display scale, opacity, and an optional `(x, y, width, height)` region can be adjusted. Custom exports in `outputs/custom/` contain the comparison, raw ELA array, quality metrics, and an optional region summary. Change `custom_save_outputs` to disable writes.
 
-- `data/astronaut.png`: Çalışma alanında önceden bulunan ve ders notebookunda kullanılan örnek görüntünün kopyası. İnternetten indirilmez.
-- Kontrollü deney: JPEG kalite 75 ile oluşturulan arka plana PNG kaynaktan bir arma eklenir. Kontrol ve düzenlenmiş örneklerin ikisi de son aşamada kalite 95 ile kaydedilir.
-- ELA önce fonksiyonsuz gösterilir: JPEG olarak kaydet, geri oku, piksel farkını al, üç renk kanalının ortalamasını hesapla.
-- Ortak motorun `calculate_ela` fonksiyonu içe aktarılır. Notebook elle hesaplanan harita ile motorun sonucunu karşılaştırır.
-- Karşılaştırma: Kalite **5 / 10 / 20 / 40 / 60 / 80 / 90 / 95**; kontrol ve düzenlenmiş görüntülerde aynı alanın ortalama farkı; işlem süreleri. Çok düşük kalite aralığı da dahildir.
-- **Custom image / Kendi görüntünü incele** bölümü, üstteki demo çalışmadan da kullanılabilir. Başlangıçta örnek görüntü kullanılır. Kendi dosyan için `custom_image_path` değerini güncelle.
+The notebook’s **Compare İrem’s examples** section runs the six bundled JPEG, WebP, and AVIF examples at quality 80 using a shared color scale. Adjust `example_filenames` to select a subset. It saves plots to `outputs/irem_examples/`. The [full report](data/iremimg/outputs/index.html) includes additional JPEG qualities and left/right views.
 
-`outputs/` klasörüne kontrol ve düzenlenmiş JPEG'ler, bilinen maske, karşılaştırma grafikleri, `ela_overlay.png` ve `quality_comparison.csv` yazılır. `recompressed.jpg`, ELA için tekrar kullanılan çalışma dosyasıdır. Yeniden çalıştırma aynı adlı demo çıktılarını günceller. Görüntüler bir servise yüklenmez.
+ELA visualizes mean absolute differences across three color channels after recompression. For non-JPEG inputs it displays differences introduced by conversion to JPEG. Ordinary texture and sharp edges can produce large values. The known mask in the controlled demo marks the patch placement from the experiment. [Forensically’s ELA explanation](https://29a.ch/photo-forensics/#error-level-analysis)
 
-Kodda iç içe döngü, sözlük veya karmaşık tablo biçimlendirmesi yok. Görüntüden parça seçme, `mean(axis=2)`, `subplot`, `alpha`, fonksiyon ve döngü yazımı kullanıldığı yerde açıklanır.
+## Reports and teaching materials
 
-## İrem örnekleri
+| Resource | Contents |
+|---|---|
+| [Technical report](academic/REPORT.md) and [evaluation data](academic/evaluation.csv) | Controlled academic ELA experiment and measured quality comparison |
+| [Class presentation](academic/presentation.html) | Offline slides with keyboard navigation |
+| [V2 guided notebook](Image_Spatter_Demo_V2_Anlatimli.ipynb) | Narrated version of the notebook experiment with its own output directory |
+| [V3 HTML demo](Image_Spatter_V3_Sade_Anlatim.html) | Standalone visual explanation with quality and opacity controls |
+| [V1 project overview](Image_Spatter_V1_Proje_Anlatimi.ipynb) | Original scope, architecture, schedule, and presentation notes |
+| [Compositor experiments](Image_Spatter_Compositor_Denemeleri.ipynb) | Layer renders and full-resolution ELA comparisons |
+| [İrem image report](data/iremimg/outputs/index.html) | Six images, three views each, and eight JPEG settings |
+| [Version guide](VERSIONS.md) | Entry points and output locations |
 
-Ana notebook’taki **9. İrem örneklerini karşılaştır** hücresini proje klasöründe tek başına çalıştırabilirsin. `data/iremimg/` içindeki altı JPEG, WebP ve AVIF dosyasını kalite 80 ile yeniden sıkıştırır ve ortak renk ölçeğindeki grafikleri `outputs/irem_examples/` içine kaydeder. Yalnızca seçtiğin dosyalar için `example_filenames` listesini düzenle. Farklı JPEG kalitelerini ve sol/sağ görünümleri incelemek için [hazır raporu](data/iremimg/outputs/index.html) aç.
-
-## Custom image / Kendi görüntünü incele
-
-Notebook'taki **8. Custom image** başlığından başlayıp o bölümün hücrelerini sırayla çalıştır. Türkçe açıklamaların yanında kısa İngilizce açıklamalar bulunur. Yeni ayarlarla tekrar denemek için bu bölümü baştan çalıştır.
-
-```python
-custom_image_path = "data/astronaut.png"  # Local file / Yerel dosya
-custom_quality = 80
-custom_display_max = 20                  # Color scale / Renk ölçeği
-custom_overlay_alpha = 0.5               # Opacity / Opaklık
-custom_qualities = [5, 10, 20, 40, 60, 80, 90, 95]
-custom_roi = None                        # Optional: (x, y, width, height)
-```
-
-Input, ELA ve overlay yan yana gösterilir. Aynı görüntü farklı JPEG kalitelerinde, ortak renk ölçeğiyle karşılaştırılır. ROI, tam görüntüden hesaplanan ELA haritasının seçtiğin bölümünü yakından gösterir. Üstteki demoda üretilen `outputs/edited.jpg` dosyasında `(390, 40, 80, 80)` eklenen arma bölgesidir. Başka bir custom görüntüde seçilen kutu, kullanıcının seçimi olarak değerlendirilir.
-
-Kaliteyi iyice düşürmek için **5, 10 ve 20**, ara karşılaştırmalar için **40 ve 60**, yüksek kalite için **80, 90 ve 95** kullanılır. Haritalar en fazla dört sütunla çizilir. Düşük kalitenin normal görüntü bölgelerinde de fark oluşturabildiği açıklanır. HTML'de seçilen ayarla yeniden kaydedilmiş gerçek JPEG kopyası da gösterilir; böylece fotoğraftaki kalite kaybı ve ELA haritası birlikte incelenebilir.
-
-Pillow gerçek dosya formatını okur, EXIF yön bilgisini uygular ve saydam alanları gerektiğinde beyaz zeminle birleştirir. Analiz 8-bit renkli pikseller üzerinde, yeniden boyutlandırmadan yapılır. JPEG dışındaki bir girdide sonuç, girdinin JPEG'e çevrilme farkıdır.
-
-Ortak motor JPEG’i bellekte oluşturup çözer. Ölçülen süreye dosya yükleme, çizim ve dışa aktarma dahil değildir. Elle yapılan öğretici adımlar JPEG kopyasını diske yazar.
-
-`custom_save_outputs = True` olduğunda `outputs/custom/<dosya_adı>/` altında her çalıştırma için yeni bir klasör açılır. Karşılaştırma ve heatmap PNG'leri, ham `ela_raw.npy`, kalite ölçümlerinin CSV'si ve kısa bir özet kaydedilir. ROI seçilmişse onun görseli ve CSV'si de eklenir. Önceki sonuçların ve giriş dosyasının üzerine yazılmaz. `custom_image_path = None` analizi atlar; `custom_save_outputs = False` dosya kaydetmeyi kapatır.
-
-## ELA nedir? / What is ELA?
-
-**Error Level Analysis / Hata Seviyesi Analizi**, giriş görüntüsüyle yeniden JPEG olarak sıkıştırılmış sürümünün piksel farklarını görselleştirir. Bu notebook her pikselde üç kanalın mutlak farklarının ortalamasını kullanır. Haritadaki parlaklık daha büyük fark anlamına gelir; sahte olma yüzdesi değildir. [Forensically'nin ELA açıklaması](https://29a.ch/photo-forensics/#error-level-analysis).
-
-English: Recompress the input, compute absolute differences, and inspect the map. JPEG quality changes the measured differences; display max and overlay opacity change their appearance. ELA is a visual inspection aid, and this notebook does not produce an authenticity verdict.
-
-## Yorumlama ve kapsam
-
-ELA bir gerçek/sahte sınıflandırıcısı değildir. Doku, keskin kenarlar ve normal JPEG sıkıştırması da parlak bölgeler oluşturabilir. Maske, bizim oluşturduğumuz düzenlemenin bilinen konumudur; algoritmanın bulduğu bir bölge değildir. Ortalama farklar bir yüzde veya sahte olma olasılığı değildir.
-
-Bu örnek, farklı sıkıştırma geçmişlerini özellikle oluşturur. Tek örnekten genel tespit başarısı çıkarılamaz. Grafikler aynı renk ölçeğini kullanır; ölçümler görüntüleme için kırpılmaz. İlk adımlarda JPEG dosyaya yazılıp geri okunur. Ölçülen süreler ortak motorun bellek içi işlemini kapsar.
-
-Ders tesliminde masaüstü uygulaması, kontrollü deney bulguları, teknik rapor ve sunum birlikte yer alır.
+Run the focused engine tests with `python -m unittest discover -s tests`.

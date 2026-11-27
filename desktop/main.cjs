@@ -22,7 +22,7 @@ function checkSender(event) {
   if (event.sender !== window?.webContents
       || event.senderFrame !== window.webContents.mainFrame
       || event.senderFrame.url !== indexURL) {
-    throw new Error('Bu istek uygulama penceresinden gelmeli.');
+    throw new Error('This request must come from the application window.');
   }
 }
 
@@ -30,7 +30,7 @@ ipcMain.handle('image:open', async (event) => {
   checkSender(event);
   const result = await dialog.showOpenDialog(window, {
     properties: ['openFile'],
-    filters: [{ name: 'Görüntüler', extensions: ['jpg', 'jpeg', 'png', 'webp', 'avif', 'bmp', 'tif', 'tiff'] }],
+    filters: [{ name: 'Images', extensions: ['jpg', 'jpeg', 'png', 'webp', 'avif', 'bmp', 'tif', 'tiff'] }],
   });
   if (result.canceled) return null;
   selectedPath = result.filePaths[0];
@@ -39,17 +39,17 @@ ipcMain.handle('image:open', async (event) => {
 
 ipcMain.handle('image:sample', (event, sample) => {
   checkSender(event);
-  if (!Object.hasOwn(samplePaths, sample)) throw new Error('Örnek bulunamadı.');
+  if (!Object.hasOwn(samplePaths, sample)) throw new Error('Sample not found.');
   selectedPath = samplePaths[sample];
   return path.basename(selectedPath);
 });
 
 ipcMain.handle('image:analyze', async (event, qualities) => {
   checkSender(event);
-  if (!selectedPath) throw new Error('Önce bir görüntü aç.');
+  if (!selectedPath) throw new Error('Open an image first.');
   if (!Array.isArray(qualities) || qualities.length !== 2
       || !qualities.every((quality) => Number.isInteger(quality) && quality >= 1 && quality <= 100)) {
-    throw new Error('İki JPEG kalitesi de 1–100 arasında tam sayı olmalı.');
+    throw new Error('Both JPEG qualities must be integers between 1 and 100.');
   }
 
   const python = process.env.IMAGE_SPATTER_PYTHON || (process.platform === 'win32' ? 'python' : 'python3');
@@ -65,33 +65,33 @@ ipcMain.handle('image:analyze', async (event, qualities) => {
     return JSON.parse(stdout);
   } catch (error) {
     if (error.code === 'ENOENT' || /ModuleNotFoundError/.test(error.stderr || '')) {
-      throw new Error('Python ortamı hazır değil. imagepr_env ortamını etkinleştir veya IMAGE_SPATTER_PYTHON yolunu ayarla.');
+      throw new Error('Activate the imagepr_env Python environment or set IMAGE_SPATTER_PYTHON.');
     }
-    throw new Error(error.stderr?.trim().split('\n').at(-1) || 'Analiz tamamlanamadı.');
+    throw new Error(error.stderr?.trim().split('\n').at(-1) || 'Analysis did not complete.');
   }
 });
 
 ipcMain.handle('image:saveComparison', async (event, bytes) => {
   checkSender(event);
   if (!(bytes instanceof ArrayBuffer) || bytes.byteLength > 8 * 1024 * 1024) {
-    throw new Error('PNG verisi geçersiz veya çok büyük.');
+    throw new Error('The PNG is invalid or too large.');
   }
   const png = Buffer.from(bytes);
   if (!png.subarray(0, pngSignature.length).equals(pngSignature)) {
-    throw new Error('Geçerli bir PNG oluşturulamadı.');
+    throw new Error('Could not create a valid PNG.');
   }
 
   const inputPath = selectedPath;
   const result = await dialog.showSaveDialog(window, {
     defaultPath: 'image-spatter-comparison.png',
-    filters: [{ name: 'PNG görüntüsü', extensions: ['png'] }],
+    filters: [{ name: 'PNG image', extensions: ['png'] }],
   });
   if (result.canceled || !result.filePath) return null;
   if (path.extname(result.filePath).toLowerCase() !== '.png') {
-    throw new Error('Dosya adı .png ile bitmeli.');
+    throw new Error('The filename must end in .png.');
   }
   if (inputPath && path.resolve(result.filePath) === path.resolve(inputPath)) {
-    throw new Error('Giriş görüntüsünü korumak için farklı bir dosya adı seç.');
+    throw new Error('Choose a different filename to protect the input image.');
   }
 
   const staging = await mkdtemp(path.join(path.dirname(result.filePath), '.image-spatter-'));
